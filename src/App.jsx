@@ -1,13 +1,12 @@
-import Navbar from "./Components/Navbar/Navbar";
-import Statistics from "./Components/Statistics/Statistics";
 import './App.css'
-import { Stocks } from "./Components/Stocks/Stocks";
+import Navbar from "./Components/Navbar/Navbar";
+import Help from "./Components/Help/Help";
 
 const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <Stocks />
+      <Help />
     </div>
   );
 };
