@@ -1,11 +1,11 @@
-import "./Signup.css";
+import './Signup.css';
 import React from "react";
 
 const Signup = ()=> {
   return (
     <div className="wrapper">
       <div className="logo">INVO</div>
-      <div className="container">
+      <div className="container_signup">
         <div className="head">Signup</div>
         <form>
           <input type="text" placeholder="Username"></input>
