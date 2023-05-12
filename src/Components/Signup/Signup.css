@@ -1,0 +1,117 @@
+.App {
+    background-color: #ffffff;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    font-size: 60px;
+    padding: 10%;
+  }
+  .xl {
+    font-size: 150px;
+    font-family: "Pacifico", cursive;
+    color: #000000;
+  }
+  .l{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    background-color: #dbedcd;
+    border-radius: 40px;
+    width: 10%;
+    height: 3%;
+    align-items: center;
+    padding: 5% 12% 5% 12%;
+  }
+  .m {
+    font-family: "inter";
+    font-style: italic;
+    color: #0d3653;
+    font-weight: 600;
+  }
+  .s {
+    text-align: center;
+    align-items: center;
+    margin: 1px;
+  }
+  .signup {
+    font-family: "Comfortaa", cursive;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    font-size: 60px;
+  }
+  .xs {
+    font-family: "Comfortaa", cursive;
+    font-weight: 600;
+    color: #100b0bd4;
+    font-size: small;
+    font-style: italic;
+    text-align: left;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-left: 50%;
+    width: 300%;
+    text-size-adjust: 90%;
+  }
+  h4{
+    display: inline;
+    color: #0d72ba;
+  }
+  h4:hover{
+    color: #3d40a6;
+    cursor: pointer;
+  }
+  
+  input[type="text"] {
+    text-align: left;
+    border-radius: 8px;
+    font-weight: 300;
+    font-size: medium;
+    font-family: "Lora", serif;
+    box-sizing: border-box;
+    border: none;
+    padding-left: 5%;
+    height: 50px;
+  }
+  ::placeholder {
+    color: #948989;
+    font-style: italic;
+    font-family: "Comfortaa", cursive;
+    font-weight: 600;
+  }
+  input[type="email"] {
+    text-align: left;
+    border-radius: 8px;
+    font-weight: 300;
+    font-size: medium;
+    font-family: "Lora", serif;
+    box-sizing: border-box;
+    border: none;
+    height: 50px;
+    padding-left: 5%;
+  }
+  input[type="password"] {
+    text-align: left;
+    border-radius: 8px;
+    font-weight: 300;
+    font-size: medium;
+    font-family: "Lora", serif;
+    border: none;
+    height: 50px;
+    padding-left: 5%;
+  }
+  input[type="submit"] {
+    font-family: "Comfortaa", cursive;
+    background-color: #0d3653;
+    font-size: medium;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 105%;
+  }
+  .b1:hover{
+    background-color: #072032;
+  }
