@@ -1,0 +1,80 @@
+.MainContainer{
+    font-family: comfortaa;
+
+}
+
+
+.ContactFormContainer{
+    font-family: comfortaa;
+    
+    background-color: #D8FDD9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    flex-grow: 2;
+    margin-top:30px;
+    border-radius: 10px;
+    margin-right: 30px;
+
+}
+
+.Nav{
+    
+}
+
+form{
+    display: flex;
+    /* background-color: red; */
+    width: 90%;
+    height: 80%;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+.SubmitButton{
+    background-color: #0D3653;
+    border-radius: 10px;
+    max-width: 150px;
+    color: white;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+input{
+    border: none;
+    margin: 2px;
+    border-radius: 10px;
+    
+}
+
+.UserName{
+    width: 284px;
+    height: 50px;
+    font-size: 25px;
+    padding-left: 10px;
+
+}
+.Email{
+    padding-left: 10px;
+    width: 284px;
+    height: 50px;
+    flex-grow: 2;
+    margin-left: 10px;
+
+    font-size: 25px;
+
+}
+
+.NameEmailContainer{
+    display: flex;
+}
+
+.Content{
+    
+    height: 150px;
+    font-size: 25px;
+    padding: 10px 0 400px 10px;
+    margin-top: 10px;
+}
