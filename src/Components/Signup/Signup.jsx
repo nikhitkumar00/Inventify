@@ -1,42 +1,25 @@
 import "./Signup.css";
+import React from "react";
 
-const App = () => {
+const Signup = ()=> {
   return (
-    <div className="App">
-      <div className="xl">INVO</div>
-      <div className="l">
-        <div className="m">
-          <div className="signup">Signup</div>
-          <div className="s">
-            <input type="text" placeholder="Username" size="35"></input>
-          </div>
-          <div className="s">
-            <input type="email" placeholder="Email" size="35"></input>
-          </div>
-          <div className="s">
-            <input
-              type="password"
-              placeholder="Create Password"
-              size="35"
-            ></input>
-          </div>
-          <div className="s">
-            <input
-              type="password"
-              placeholder="Confirm Password"
-              size="35"
-            ></input>
-          </div>
-          <div className="s">
-            <input class="b1" type="submit" value="Signup"></input>
-          </div>
-        </div>
-        <div className="xs">
-          <br></br>Already have an account? <h4>Login</h4>
-        </div>
+    <div className="wrapper">
+      <div className="logo">INVO</div>
+      <div className="container">
+        <div className="head">Signup</div>
+        <form>
+          <input type="text" placeholder="Username"></input>
+          <input type="email" placeholder="Email"></input>
+          <input type="password" placeholder="Create Password"></input>
+          <input type="password" placeholder="Confirm Password"></input>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>
+          Already have an account? <t>Login</t>
+        </p>
       </div>
     </div>
   );
 }
 
-export default App;
+export default Signup;
