@@ -4,7 +4,7 @@ import { Add } from './Add'
 import { Productinfo } from './Productinfo'
 import { Billingtable } from './Billingtable'
 
-const Billing = () => {
+export const Billing = () => {
   return (
     <div className='BillingContainer' >
       <div className='BillingContainerChild1' style={{
@@ -18,5 +18,3 @@ const Billing = () => {
     </div>
   )
 }
-
-export default Billing;
