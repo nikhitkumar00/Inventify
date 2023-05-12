@@ -63,6 +63,10 @@
     background-color: #FFD6D6;
 }
 
+.green:hover, .blue:hover, .yellow:hover, .red:hover, .purple:hover {
+    transform: scale(1.01);
+    transition: all 0.2s ease-in-out;
+}
 
 .info {
     font-size:20px;
