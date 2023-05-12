@@ -1,0 +1,102 @@
+.container {
+    padding: 20px;
+    width: 100vw;
+    height: calc(100vh - 40px);
+    font-family: comfortaa;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-size: 40px;
+    font-weight: bolder;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.head {
+    font-size: 30px;
+    text-align: left;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+}
+
+.single-datas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-child {
+    height: 120px;
+    width : 280px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.green {
+    background-color: #D8FDD9;
+}
+
+.blue {
+    background-color: #D7F0FE;
+}
+
+.yellow {
+    background-color: #FEF1D7;
+}
+
+.purple {
+    background-color: #E4E5FF;
+}
+
+.red {
+    background-color: #FFD6D6;
+}
+
+
+.info {
+    font-size:20px;
+    font-weight: bold;
+}
+
+.info-data {
+    font-size: 35px;
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+
+.tables {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+table {
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+table:last-child {
+    width: 90%;
+}
+
+td {
+    padding: 8px;
+    width: 100px;
+}
+
+th {
+    padding: 10px;
+    border-bottom: 1px dotted black;
+}
