@@ -3,30 +3,30 @@ import "./Statistics.css";
 
 function Statistics() {
   return (
-    <div className="container">
-      <div className="header">Statistics</div>
-      <div className="content">
-        <div className="single-datas">
-          <div className="data-child green">
-            <div className="info">Total Profit</div>
-            <div className="info-data">22k</div>
+    <div className="container_statistics">
+      <div className="header_statistics">Statistics</div>
+      <div className="content_statistics">
+        <div className="single-datas_statistics">
+          <div className="data-child_statistics green_statistics">
+            <div className="info_statistics">Total Profit</div>
+            <div className="info-data_statistics">22k</div>
           </div>
-          <div className="data-child blue">
-            <div className="info">Total Expense</div>
-            <div className="info-data">1232</div>
+          <div className="data-child_statistics blue_statistics">
+            <div className="info_statistics">Total Expense</div>
+            <div className="info-data_statistics">1232</div>
           </div>
-          <div className="data-child yellow">
-            <div className="info">Total Orders</div>
-            <div className="info-data">252</div>
+          <div className="data-child_statistics yellow_statistics">
+            <div className="info_statistics">Total Orders</div>
+            <div className="info-data_statistics">252</div>
           </div>
-          <div className="data-child purple">
-            <div className="info">Growth This Month</div>
-            <div className="info-data">15 %</div>
+          <div className="data-child_statistics purple_statistics">
+            <div className="info_statistics">Growth This Month</div>
+            <div className="info-data_statistics">15 %</div>
           </div>
         </div>
-        <div className="tables">
-          <table className="purple">
-            <div className="head">Status</div>
+        <div className="tables_statistics">
+          <table className="purple_statistics">
+            <div className="head_statistics">Status</div>
             <tr>
               <th>SL No.</th>
               <th>Name</th>
@@ -83,8 +83,8 @@ function Statistics() {
               <td>88%</td>
             </tr>
           </table>
-          <table className="red">
-            <div className="head">Restock Items</div>
+          <table className="red_statistics">
+            <div className="head_statistics">Restock Items</div>
             <tr>
               <th>SL No.</th>
               <th>Name</th>

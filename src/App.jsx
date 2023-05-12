@@ -1,11 +1,13 @@
-import './App.css'
-import Navbar from "./Components/Navbar/Navbar";
-import Signup from './Components/Signup/Signup';
-import Statistics from './Components/Statistics/Statistics';
+import "./App.css";
+import Navbar from "./Components/Navbar/Navbar"
+import Statistics from "./Components/Statistics/Statistics";
 
 const App = () => {
   return (
-      <Signup />
+    <div className="App">
+      <Navbar />
+      <Statistics />
+    </div>
   );
 };
 
