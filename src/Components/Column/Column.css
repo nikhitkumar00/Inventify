@@ -1,114 +1,120 @@
 .wrapper_Column {
   width: 900px;
   height: 100vh;
+}
+.child_wrap_Column{
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
 }
 .h2_Column{
-  margin-left: 25px;
+  margin-left: 55px;
+  font-family: comfortaa;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-.header_Column {
+.header_Column{
+  display: flex;
+  margin-left: 80px;
+}
+.head1_Column,.head2_Column,.head3_Column,.head4_Column{
   display: flex;
   flex-direction: column;
-  gap: 15px;
-}
-.title_Column {
-  display: flex;
-  justify-content: space-evenly;
-}
-.minus_Column {
-  display: flex;
-  /*justify-content: center;*/
-}
-.container_Column {
-  display: flex;
-  justify-content: space-between;
-}
-.plus_Column {
-  background-color: #ffd6d6;
-  padding: 9px 16px;
-  border-radius: 50%;
-  margin-left: 35px;
-  font-weight: 900;
-}
-
-.minus1_Column,.minus2_Column,.minus4_Column,.minus3_Column,.minus5_Column {
-  background-color: #ffd6d6;
-  padding: 9px 16px;
-  border-radius: 50%;
-  font-weight: 900;
-}
-.container_Column {
-  display: flex;
-  margin-left: 100px;
-  width: 1000px;
-}
-.minus1_Column {
-  margin-left: 100px;
-  margin-right: 50px;
-}
-.minus2_Column {
-  margin-left: 70px;
-  margin-right: 50px;
-}
-.minus3_Column {
-  margin-left: 60px;
-  margin-right: 50px;
-}
-.minus4_Column {
-  margin-left: 60px;
-  margin-right: 50px;
-}
-.minus5_Column {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.title_Column {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-weight: bold;
-  align-items: center;
-  width: 150px;
-  margin-left: 0px;
-}
-.title_Column {
-    background-color: #d7f0fe;
-    border-radius: 10px;
-    height: 35px;
-    width: 900px;
-  }
-.table_Column {
-  margin-left: 100px;
-  background-color: #e4e5ff;
-  border-radius: 10px;
+  gap: 18px;
+  height: 80px;
   width: 900px;
-  height: 100px;
-  padding: 8px 40px 8px 0px;
+  align-items: center;
+  font-family: comfortaa;
+  font-weight: 900;
 }
-.odd_Column,
-.even_Column {
-  height: 10px;
+.minus1_Column,.minus2_Column,.minus4_Column,.minus3_Column {
+  background-color: #ffd6d6;
+  text-align: center;
+  padding: 9px 18px;
+  border-radius: 50%;
+  font-weight: 1500;
+  font-size: 20px;
 }
-.even_Column {
-  background-color: #d7d8f6;
+.bg_Column{
+  display: flex;
+  gap: 20px;
 }
-
-.odd_child_Column {
+.head5_Column{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  height: 80px;
+  width: 900px;
+  font-family: comfortaa;
+  font-weight: 900;
+}
+.minus5_Column{
+  background-color: #ffd6d6;
+  padding: 9px 18px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 1500;
+  font-size: 20px;
+  width: 43px;
+  margin-left: 80px;
+}
+.plus_Column{
+  background-color: #ffd6d6;
+  padding: 5px 16px;
+  border-radius: 50%;
+  font-weight: 1500;
+  font-size: 20px;
+}
+.title_child_Column{
+  background-color: #d7f0fe;
+  width: 202.5px;
+  text-align: center;
+  height: 33px;
+  padding: 7px 0px;
   border-right: 3px solid black;
 }
-.title_child_Column {
-  border-right: 3px solid black;
-  padding: 0px 70px;
-  width: 150px;
+.title_child5_Column{
+  background-color: #d7f0fe;
+  width: 202.5px;
+  text-align: center;
+  height: 33px;
+  padding: 7px 0px;
 }
-.input_Column {
-  opacity: 0px;
-  color: #000000;
-  border: none;
+.table_Column{
+  display: flex;
+  margin-left: 80px;
+}
+.odd_Column{
+  background-color: #E4E5FF;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  padding: 17px 50px;
+  border-right: 3px solid black;
+}
+.odd5_Column{
+  background-color: #E4E5FF;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  padding: 17px 50px;
+}
+.even_Column{
+  background-color: #E4E5FF;
+  display: flex;
+  flex-direction: column;
+  padding: 17px 50px;
+  border-right: 3px solid black;
+}
+.odd_child_Column{
+  width: 100px;
   height: 30px;
-  width: 150px;
-  background-color: inherit;
-  padding-left: 10px;
+  font-family: comfortaa;
+  font-weight: 500;
+}
+.even_child_Column{
+  width: 100px;
+  height: 30px;
+  font-family: comfortaa;
+  font-weight: 500;
 }
