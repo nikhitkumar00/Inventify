@@ -1,7 +1,7 @@
 import React from "react";
 import "./Statistics.css";
 
-function Statistics() {
+const Statistics = () => {
   return (
     <div className="container_statistics">
       <div className="header_statistics">Statistics</div>

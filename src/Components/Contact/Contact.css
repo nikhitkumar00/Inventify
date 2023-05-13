@@ -29,7 +29,6 @@
 
 form{
     display: flex;
-    /* background-color: red; */
     width: 90%;
     height: 80%;
     flex-direction: column;
