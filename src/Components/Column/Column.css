@@ -1,0 +1,120 @@
+.wrapper_Column {
+  width: 900px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+h2 {
+  margin-left: 25px;
+}
+.header_Column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.title_Column {
+  display: flex;
+  justify-content: space-evenly;
+}
+.minus_Column {
+  display: flex;
+  /*justify-content: center;*/
+}
+.container_Column {
+  display: flex;
+  justify-content: space-between;
+}
+.plus {
+  background-color: #ffd6d6;
+  padding: 9px 16px;
+  border-radius: 50%;
+  margin-left: 35px;
+  font-weight: bold;
+}
+
+.minus1,
+.minus2,
+.minus4,
+.minus3,
+.minus5 {
+  background-color: #ffd6d6;
+  padding: 9px 16px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+.container_Column {
+  display: flex;
+}
+.minus1 {
+  margin-left: 100px;
+  margin-right: 50px;
+}
+.minus2 {
+  margin-left: 70px;
+  margin-right: 50px;
+}
+.minus3 {
+  margin-left: 60px;
+  margin-right: 50px;
+}
+.minus4 {
+  margin-left: 60px;
+  margin-right: 50px;
+}
+.minus5 {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.title_Column {
+  background-color: #d7f0fe;
+  border-radius: 40px;
+  height: 25px;
+  width: 800px;
+  margin-left: 20px;
+  padding: 5px 10px 9px 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  align-items: center;
+  width: 150px;
+  margin-left: 0px;
+}
+
+.table_Column {
+  margin-left: 20px;
+  background-color: #e4e5ff;
+  border-radius: 10px;
+  width: 700px;
+  height: 100px;
+  padding: 8px 40px 8px 0px;
+}
+.odd,
+.even {
+  height: 10px;
+}
+.even {
+  background-color: #d7d8f6;
+}
+
+table.table_Column tr td {
+  border-right: 3px solid black;
+}
+table.title_Column td {
+  border-right: 3px solid black;
+  padding: 0px 50px;
+}
+input[type="text"] {
+  opacity: 0px;
+  color: #000000;
+  border: none;
+  height: 20px;
+  width: 150px;
+  background-color: inherit;
+  padding-left: 10px;
+}
