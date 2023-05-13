@@ -1,7 +1,7 @@
 import "./Column.css";
 import React from "react";
 
-function Columns() {
+const Columns = () => {
   return (
     <div className="wrapper_Column">
       <h2>COLUMNS</h2>

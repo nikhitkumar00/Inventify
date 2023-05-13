@@ -9,12 +9,6 @@ import { MdContacts } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const navLinkStyles = ({ isActive }) => {
-    return {
-      backgroundColor: isActive ? 'black' : 'white',
-      color: isActive ? 'white' : 'black'
-    }
-  }
   return (
     <div className="nav-grandparent">
       <div className="nav-up">
@@ -23,40 +17,64 @@ const Navbar = () => {
         </div>
 
         <div className="nav-parent">
-          <NavLink to={'/statistics'} style={navLinkStyles}>
-            <div to="statistics" className="nav-child" >
+          <NavLink
+            to={"/statistics"}
+            className={({ isActive }) =>
+              isActive ? "active_navbar" : "inactive_navbar"
+            }
+          >
+            <div to="statistics" className="nav-child">
               <BsGraphUpArrow className="icon" />
               Statistics
-
             </div>
           </NavLink>
-          <NavLink to={'/stocks'}>
+
+          <NavLink to={"/stocks"} className={({ isActive }) =>
+              isActive ? "active_navbar" : "inactive_navbar"
+            }>
             <div className="nav-child">
               <BsDatabaseCheck className="icon" />
               Stocks
+            </div>
+          </NavLink>
 
-            </div></NavLink><NavLink to={'/billing'}>
+          <NavLink to={"/billing"} className={({ isActive }) =>
+              isActive ? "active_navbar" : "inactive_navbar"
+            }>
             <div className="nav-child">
               <FaMoneyBillAlt className="icon" />
               Billing
+            </div>
+          </NavLink>
 
-            </div></NavLink>
-          <div className="nav-child">
-            <BsColumnsGap className="icon" />
-            Columns
-          </div><NavLink to={'/help'}>
+          <NavLink to={"/column"} className={({ isActive }) =>
+              isActive ? "active_navbar" : "inactive_navbar"
+            }>
+            <div className="nav-child">
+              <BsColumnsGap className="icon" />
+              Columns
+            </div>
+          </NavLink>
+
+          <NavLink to={"/help"} className={({ isActive }) =>
+              isActive ? "active_navbar" : "inactive_navbar"
+            }>
             <div className="nav-child">
               <BiHelpCircle className="icon" />
               Help
-
-            </div></NavLink>
+            </div>
+          </NavLink>
         </div>
       </div>
-      <NavLink to={'/contact'}>
+
+      <NavLink to={"/contact"} className={({ isActive }) =>
+              isActive ? "active_navbar" : "inactive_navbar"
+            }>
         <div className="nav-child">
           <MdContacts className="icon" />
           Contact
-        </div></NavLink>
+        </div>
+      </NavLink>
     </div>
   );
 };

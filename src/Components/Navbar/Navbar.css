@@ -38,11 +38,27 @@
     font-weight: bold;
     font-family: 'Comfortaa';
     text-decoration: none;
-    color: black;
 }
 
 .nav-child:hover {
+    transition: all 0.1s ease-in-out;
+    border-radius: 10px;
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+
+}
+
+.active_navbar {
     background-color: black;
     color: white;
     transition: all 0.1s ease-in-out;
+    border-radius: 10px;
+}
+
+.inactive_navbar {
+    color: black;
+}
+
+.active_navbar:hover {
+    background-color: black;
 }
