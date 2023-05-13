@@ -1,10 +1,10 @@
 import React from 'react'
-import './Billingtable.css'
+// import './Billingtable.css'
 
-const Billingtable = () => {
+ export  const Billingtable = () => {
     return (
         <div className='Billingtable'>
-            <table>
+            <table className='Table'>
                 <thead> <tr>
                     <th>Sl.no</th>
                     <th>Name</th>
@@ -76,6 +76,48 @@ const Billingtable = () => {
                         <td>data</td>
                         <td>data</td>
                     </tr>
+                    <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr><tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
+                <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr><tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr><tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                </tr>
                     </tbody>
                     <tfoot>
                         <tr>
@@ -94,4 +136,5 @@ const Billingtable = () => {
     )
 }
 
-export default Billingtable;
+export default Billingtable
+

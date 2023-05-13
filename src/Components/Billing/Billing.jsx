@@ -1,20 +1,16 @@
 import React from 'react'
 import './Billing.css'
-import { Add } from './Add'
-import { Productinfo } from './Productinfo'
-import { Billingtable } from './Billingtable'
-
+import  Add  from './Add'
+import  Productinfo  from './Productinfo'
+import  Billingtable  from './Billingtable'
 const Billing = () => {
   return (
     <div className='BillingContainer' >
-      <div className='BillingContainerChild1' style={{
-        display: 'flex',
-        gap: '20px'
-      }}>
+      <div className='BillingContainerChild1'>
         <Add />
-        <Productinfo />
+        <Productinfo className="Productinfo" />
       </div>
-      <Billingtable/>
+      <Billingtable />
     </div>
   )
 }
