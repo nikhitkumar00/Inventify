@@ -1,12 +1,12 @@
 import './Signup.css';
 import React from "react";
 
-const Signup = ()=> {
+const Signup = () => {
   return (
-    <div className="wrapper">
-      <div className="logo">INVO</div>
+    <div className="wrapper_signup">
+      <div className="logo_signup">INVO</div>
       <div className="container_signup">
-        <div className="head">Signup</div>
+        <div className="head_signup">Signup</div>
         <form>
           <input type="text" placeholder="Username"></input>
           <input type="email" placeholder="Email"></input>
@@ -20,6 +20,6 @@ const Signup = ()=> {
       </div>
     </div>
   );
-}
+};
 
 export default Signup;
