@@ -57,10 +57,16 @@
 
 .purple_statistics {
     background-color: #E4E5FF;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
 }
 
 .red_statistics {
     background-color: #FFD6D6;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
 }
 
 .green_statistics:hover, .blue_statistics:hover, .yellow_statistics:hover, .red_statistics:hover, .purple_statistics:hover {
@@ -85,22 +91,22 @@
     gap: 25px;
 }
 
-table {
+/* table {
     border-radius: 10px;
     width: 100%;
     text-align: center;
-}
+} */
 
-table:last-child {
+.red_statistics:last-child,.purple_statistics:last-child {
     width: 90%;
 }
 
-td {
+.td_statistics{
     padding: 8px;
     width: 100px;
 }
 
-th {
+.th_statistics{
     padding: 10px;
     border-bottom: 1px dotted black;
 }

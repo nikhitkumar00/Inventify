@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Statistics.css";
 
 const Statistics = () => {
@@ -28,106 +28,106 @@ const Statistics = () => {
           <table className="purple_statistics">
             <div className="head_statistics">Status</div>
             <tr>
-              <th>SL No.</th>
-              <th>Name</th>
-              <th>Status</th>
+              <th className="th_statistics">SL No.</th>
+              <th className="th_statistics">Name</th>
+              <th className="th_statistics">Status</th>
             </tr>
             <tr>
-              <td>1</td>
-              <td>Product A</td>
-              <td>80%</td>
+              <td className="td_statistics">1</td>
+              <td className="td_statistics">Product A</td>
+              <td className="td_statistics">80%</td>
             </tr>
             <tr>
-              <td>2</td>
-              <td>Product B</td>
-              <td>60%</td>
+              <td className="td_statistics">2</td>
+              <td className="td_statistics">Product B</td> 
+              <td className="td_statistics">60%</td>
             </tr>
             <tr>
-              <td>3</td>
-              <td>Product C</td>
-              <td>90%</td>
+              <td className="td_statistics">3</td> 
+              <td className="td_statistics">Product C</td>
+              <td className="td_statistics">90%</td>
             </tr>
             <tr>
-              <td>4</td>
-              <td>Product D</td>
-              <td>75%</td>
+              <td className="td_statistics">4</td>
+              <td className="td_statistics">Product D</td>
+              <td className="td_statistics">75%</td>
             </tr>
             <tr>
-              <td>5</td>
-              <td>Product E</td>
-              <td>85%</td>
+              <td className="td_statistics">5</td>
+              <td className="td_statistics">Product E</td>
+              <td className="td_statistics">85%</td>
             </tr>
             <tr>
-              <td>6</td>
-              <td>Product F</td>
-              <td>50%</td>
+              <td className="td_statistics">6</td>
+              <td className="td_statistics">Product F</td>
+              <td className="td_statistics">50%</td> 
             </tr>
             <tr>
-              <td>7</td>
-              <td>Product G</td>
-              <td>95%</td>
+              <td className="td_statistics">7</td>
+              <td className="td_statistics">Product G</td>
+              <td className="td_statistics">95%</td>
             </tr>
             <tr>
-              <td>8</td>
-              <td>Product H</td>
-              <td>70%</td>
+              <td className="td_statistics">8</td>
+              <td className="td_statistics">Product H</td>
+              <td className="td_statistics">70%</td>
             </tr>
             <tr>
-              <td>9</td>
-              <td>Product I</td>
-              <td>65%</td>
+              <td className="td_statistics">9</td>
+              <td className="td_statistics">Product I</td>
+              <td className="td_statistics">65%</td>
             </tr>
             <tr>
-              <td>10</td>
-              <td>Product J</td>
-              <td>88%</td>
+              <td className="td_statistics">10</td>
+              <td className="td_statistics">Product J</td>
+              <td className="td_statistics">88%</td>
             </tr>
           </table>
           <table className="red_statistics">
             <div className="head_statistics">Restock Items</div>
-            <tr>
-              <th>SL No.</th>
-              <th>Name</th>
+            <tr>  
+              <th className="th_statistics">SL No.</th>
+              <th className="th_statistics">Name</th>
             </tr>
             <tr>
-              <td>1</td>
-              <td>Product A</td>
+              <td className="td_statistics">1</td>
+              <td className="td_statistics">Product A</td>
             </tr>
             <tr>
-              <td>2</td>
-              <td>Product B</td>
+              <td className="td_statistics">2</td>
+              <td className="td_statistics">Product B</td>
             </tr>
             <tr>
-              <td>3</td>
-              <td>Product C</td>
+              <td className="td_statistics">3</td>
+              <td className="td_statistics">Product C</td>
             </tr>
             <tr>
-              <td>4</td>
-              <td>Product D</td>
+              <td className="td_statistics">4</td>
+              <td className="td_statistics">Product D</td>
             </tr>
             <tr>
-              <td>5</td>
-              <td>Product E</td>
+              <td className="td_statistics">5</td>
+              <td className="td_statistics">Product E</td>
             </tr>
             <tr>
-              <td>6</td>
-              <td>Product F</td>
+              <td className="td_statistics">6</td>
+              <td className="td_statistics">Product F</td>
             </tr>
             <tr>
-              <td>7</td>
-              <td>Product G</td>
+              <td className="td_statistics">7</td>
+              <td className="td_statistics">Product G</td>
             </tr>
             <tr>
-              <td>8</td>
-              <td>Product H</td>
+              <td className="td_statistics">8</td>
+              <td className="td_statistics">Product H</td>
             </tr>
             <tr>
-              <td>9</td>
-              <td>Product I</td>
+              <td className="td_statistics">9</td>
+              <td className="td_statistics">Product I</td>
             </tr>
             <tr>
-              <td>10</td>
-              <td>Product J</td>
+              <td className="td_statistics">10</td>
+              <td className="td_statistics">Product J</td>
             </tr>
           </table>
         </div>

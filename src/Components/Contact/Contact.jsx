@@ -1,11 +1,11 @@
-import React from "react";
+
 import './Contact.css'
 const Contact = () => {
     return (
         <div className="MainContainer">
             <div className="ContactUsHeader">Contact Us</div>
             <div className="ContactFormContainer">
-                <form >
+                <form className='form_Contact'>
                     <div className="NameEmailContainer">
                         <input type="text" placeholder="Name" className="UserName"/>
                         <input type="text" placeholder="Email" className="Email" />
