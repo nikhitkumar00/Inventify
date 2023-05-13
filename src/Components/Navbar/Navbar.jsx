@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Navbar.css";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { BsDatabaseCheck } from "react-icons/bs";

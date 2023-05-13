@@ -1,11 +1,11 @@
-.MainContainer{
+.MainContainer_Contact{
     font-family: comfortaa;
     flex:1;
 
 }
 
 
-.ContactFormContainer{
+.ContactFormContainer_Contact{
     font-family: comfortaa;
     height: calc(100vh - 120px);
     background-color: #D8FDD9;
@@ -19,7 +19,7 @@
 
 }
 
-.ContactUsHeader{
+.ContactUsHeader_Contact{
     font-size: 40px;
     font-weight: bolder;
     height: 90px;
@@ -27,7 +27,7 @@
     align-items: center;
 }
 
-form{
+.form_Contact{
     display: flex;
     width: 90%;
     height: 80%;
@@ -46,14 +46,11 @@ form{
     padding: 10px 20px 10px 20px
 }
 
-input{
+
+.UserName{
     border: none;
     margin: 5px;
     border-radius: 10px;
-    
-}
-
-.UserName{
     width: 284px;
     height: 50px;
     font-size: 18px;
@@ -61,6 +58,9 @@ input{
 
 }
 .Email{
+    border: none;
+    margin: 5px;
+    border-radius: 10px;
     padding-left: 10px;
     width: 284px;
     height: 50px;
@@ -76,7 +76,9 @@ input{
 }
 
 .Content{
-    
+    border: none;
+    margin: 5px;
+    border-radius: 10px;
     height: 150px;
     font-size: 18px;
     padding: 10px 0 400px 10px;

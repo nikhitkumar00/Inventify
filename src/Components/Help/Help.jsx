@@ -2,12 +2,12 @@ import "./Help.css";
 
 const Help = () => {
   return (
-    <div class="wrapper">
-      <div class="main_content">
-        <div class="header">
+    <div className="wrapper_help">
+      <div className="main_content_help">
+        <div className="header_help">
           <b>HELP</b>
         </div>
-        <div class="info">
+        <div className="info_help">
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed
             nobis ut exercitationem atque accusamus sit natus officiis totam

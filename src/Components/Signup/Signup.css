@@ -21,7 +21,7 @@
   border-radius: 30px;
   background-color: rgb(192, 216, 241);
 }
-p {
+.p_signup{
   display: flex;
 }
 .head_signup {
@@ -37,9 +37,7 @@ form {
   width: 100%;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"] {
+.input_signup{
   height: 35px;
   width: 300px;
   border-radius: 8px;
@@ -48,15 +46,16 @@ input[type="email"] {
   border: 1px solid black;
   background-color: rgb(243, 246, 249);
   border: none;
+  
 }
-::placeholder {
+.input_signup::placeholder {
   color: #948989;
   font-style: italic;
   font-family: "Comfortaa", cursive;
   font-weight: 600;
   font-size: 14px;
 }
-button {
+.button_signup{
   width: 150px;
   height: 40px;
   background-color: #094d7d;
@@ -65,15 +64,15 @@ button {
   border: 0px;
   font-size: 17px;
 }
-button:hover {
+.button_signup:hover {
   background-color: #072032;
 }
-t {
+.t_signup{
   font-weight: bolder;
   margin-left: 5px;
   font-size: large;
   text-decoration: underline;
 }
-p {
+.p_signup{
   font-style: italic;
 }

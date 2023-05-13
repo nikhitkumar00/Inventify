@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Stocks.css";
 
 export const Stocks = () => {
@@ -6,51 +6,51 @@ export const Stocks = () => {
     <div className="Stocks">
       <table className="StocksTable">
         <tr>
-          <th>Sl.no</th>
-          <th>Name</th>
-          <th>Expiry Date</th>
-          <th>MRP</th>
-          <th>Quantity</th>
+          <th className="th_STOCKS">Sl.no</th>
+          <th className="th_STOCKS">Name</th>
+          <th className="th_STOCKS">Expiry Date</th>
+          <th className="th_STOCKS">MRP</th>
+          <th className="th_STOCKS">Quantity</th>
         </tr>
         <tr>
-          <td>data</td>
-          <td>data</td>
-          <td>data</td>
-          <td>data</td>
-          <td>data</td>
+          <td className=".td_STOCKS">data</td>
+          <td className=".td_STOCKS">data</td>
+          <td className=".td_STOCKS">data</td>
+          <td className=".td_STOCKS">data</td>
+          <td className=".td_STOCKS">data</td>
         </tr>
         <tr>
-          <td>Sl.no</td>
-          <td>data</td>
-          <td>data</td>
-          <td>data</td>
-          <td>data</td>
+          <td className=".td_STOCKS">Sl.no</td>
+          <td className=".td_STOCKS">data</td>
+          <td  className=".td_STOCKS">data</td>
+          <td className=".td_STOCKS">data</td>
+          <td className=".td_STOCKS">data</td>
         </tr>
       </table>
       <div>
         <form action="" style={{width:"100%"}}>
           <table className="AddTable">
             <tr>
-              <th>Sl.no</th>
-              <th>Name</th>
-              <th>Expiry Date</th>
-              <th>MRP</th>
-              <th>Quantity</th>
+              <th className="th_STOCKS">Sl.no</th>
+              <th className="th_STOCKS">Name</th>
+              <th className="th_STOCKS">Expiry Date</th>
+              <th className="th_STOCKS">MRP</th>
+              <th className="th_STOCKS">Quantity</th>
             </tr>
             <tr>
-              <td>
+              <td  className=".td_STOCKS">
                 <input type="text" name="" id="" className="StocksInput"/>
               </td>
-              <td>
+              <td  className=".td_STOCKS">
                 <input type="text" name="" id="" className="StocksInput"/>
               </td>
-              <td>
+              <td  className=".td_STOCKS">
                 <input type="text" name="" id="" className="StocksInput"/>
               </td>
-              <td>
+              <td  className=".td_STOCKS">
                 <input type="text" name="" id="" className="StocksInput" />
               </td>
-              <td>
+              <td  className=".td_STOCKS">
                 <input type="text" name="" id="" className="StocksInput"/>
               </td>
             </tr>
