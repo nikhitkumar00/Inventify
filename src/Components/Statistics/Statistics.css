@@ -1,4 +1,4 @@
-.container {
+.container_statistics {
     padding: 20px;
     width: 100vw;
     height: calc(100vh - 40px);
@@ -7,7 +7,7 @@
     flex-direction: column;
 }
 
-.header {
+.header_statistics {
     font-size: 40px;
     font-weight: bolder;
     height: 90px;
@@ -15,25 +15,25 @@
     align-items: center;
 }
 
-.head {
+.head_statistics {
     font-size: 30px;
     text-align: left;
     padding: 10px;
 }
 
-.content {
+.content_statistics {
     display: flex;
     flex-direction: column;
     gap: 30px;
     height: 100%;
 }
 
-.single-datas {
+.single-datas_statistics {
     display: flex;
     justify-content: space-between;
 }
 
-.data-child {
+.data-child_statistics {
     height: 120px;
     width : 280px;
     border-radius: 20px;
@@ -43,43 +43,43 @@
     align-items: center;
 }
 
-.green {
+.green_statistics {
     background-color: #D8FDD9;
 }
 
-.blue {
+.blue_statistics {
     background-color: #D7F0FE;
 }
 
-.yellow {
+.yellow_statistics {
     background-color: #FEF1D7;
 }
 
-.purple {
+.purple_statistics {
     background-color: #E4E5FF;
 }
 
-.red {
+.red_statistics {
     background-color: #FFD6D6;
 }
 
-.green:hover, .blue:hover, .yellow:hover, .red:hover, .purple:hover {
+.green_statistics:hover, .blue_statistics:hover, .yellow_statistics:hover, .red_statistics:hover, .purple_statistics:hover {
     transform: scale(1.01);
     transition: all 0.2s ease-in-out;
 }
 
-.info {
+.info_statistics {
     font-size:20px;
     font-weight: bold;
 }
 
-.info-data {
+.info-data_statistics {
     font-size: 35px;
     margin-bottom: 15px;
     font-weight: bolder;
 }
 
-.tables {
+.tables_statistics {
     display: flex;
     justify-content: space-between;
     gap: 25px;
