@@ -8,9 +8,9 @@ import Stocks from './Components/Stocks/Stocks.jsx'
 import Billing from './Components/Billing/Billing.jsx'
 import Help from './Components/Help/Help.jsx'
 import Contact from './Components/Contact/Contact.jsx'
-// import Signup from './Components/Signup/Signup.jsx'
+import Signup from './Components/Signup/Signup.jsx'
+import Login from './Components/Login/Login.jsx'
 
-//router
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,10 +39,14 @@ const router = createBrowserRouter([
     ],
     
   },
-  // {
-  //     path:'/signup',
-  //     element:<Signup/>
-  //   }
+  {
+    path: '/signup',
+    element: <Signup />
+  },
+  {
+    path: '/login',
+    element: <Login />
+  }
 ])
 
 

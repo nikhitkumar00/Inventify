@@ -1,26 +1,34 @@
-
 import "./Login.css";
 
-const Login = () =>(
-    <div className="wrap_login">
-        <div className="logo_login">
-            INVO
-        </div>
-        < div className="box_login">
-            <div className="head_login">
-                Login
-            </div>
-            
-                <form className="form_login">
-                    <input type="text" placeholder="Type your email"></input>
-                    <input type="password" placeholder="Password"></input>
-                    <button type="submit">Login</button>
-                    <div className="signup_login"><p>
-                    New Here, Create an Account <br></br>Instead <a href="">Sign Up</a></p>
-                    </div>
-                </form>
+const Login = () => (
+  <div className="wrap_login">
+    <div className="logo_login">INVO</div>
+    <div className="box_login">
+      <div className="head_login">Login</div>
 
+      <form className="form_login">
+        <input
+          className="text_login"
+          type="text"
+          placeholder="Type your email"
+                >
+                    
+        </input>
+        <input
+          className="text_login"
+          type="password"
+          placeholder="Password"
+                >
+                    
+        </input>
+        <button className="button_login" type="submit">Login</button>
+        <div className="signup_login">
+          <p>
+            New Here, Create an Account Instead <a>Sign Up</a>
+          </p>
         </div>
+      </form>
     </div>
- );
- export default Login;
+  </div>
+);
+export default Login;
