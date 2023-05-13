@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 30px;
 }
-h2 {
+.h2_Column{
   margin-left: 25px;
 }
 .header_Column {

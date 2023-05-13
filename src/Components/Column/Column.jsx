@@ -1,10 +1,10 @@
 import "./Column.css";
-import React from "react";
 
-const Column = () => {
+
+const Columns = () => {
   return (
     <div className="wrapper_Column">
-      <h2>COLUMNS</h2>
+      <h2 className="h2_Column">COLUMNS</h2>
       <div className="header_Column">
         <div className="minus_Column">
           <div className="minus1_Column">-</div>
