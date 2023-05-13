@@ -4,7 +4,7 @@ import "./Stocks.css";
 export const Stocks = () => {
   return (
     <div className="Stocks">
-      <table>
+      <table className="StocksTable">
         <tr>
           <th>Sl.no</th>
           <th>Name</th>
@@ -28,8 +28,8 @@ export const Stocks = () => {
         </tr>
       </table>
       <div>
-        <form action="">
-          <table>
+        <form action="" style={{width:"100%"}}>
+          <table className="AddTable">
             <tr>
               <th>Sl.no</th>
               <th>Name</th>
@@ -39,47 +39,32 @@ export const Stocks = () => {
             </tr>
             <tr>
               <td>
-                <input type="text" name="" id="" />
+                <input type="text" name="" id="" className="StocksInput"/>
               </td>
               <td>
-                <input type="text" name="" id="" />
+                <input type="text" name="" id="" className="StocksInput"/>
               </td>
               <td>
-                <input type="text" name="" id="" />
+                <input type="text" name="" id="" className="StocksInput"/>
               </td>
               <td>
-                <input type="text" name="" id="" />
+                <input type="text" name="" id="" className="StocksInput" />
               </td>
               <td>
-                <input type="text" name="" id="" />
+                <input type="text" name="" id="" className="StocksInput"/>
               </td>
             </tr>
           </table>
 
-          <div
-            style={{
-              marginTop: "20px",
-              display: "flex",
-              flexDirection: "row-reverse",
-              marginRight: "10px",
-            }}
-          >
-            <input
-              type="submit"
-              style={{
-                fontFamily: "comfortaa",
-                fontSize: "20px",
-                paddingLeft: "40px",
-                paddingRight: "40px",
-                paddingTop: "15px",
-                paddingBottom: "15px",
-                borderRadius: "30px",
-              }}
-              value="Add"
-            />
+          <div className="StocksBottomTableWrapper">
+            <input className="StocksAddButton"
+              type="submit" value="Add"
+              />
           </div>
         </form>
       </div>
     </div>
   );
 };
+
+export default Stocks

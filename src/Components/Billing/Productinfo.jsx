@@ -1,12 +1,14 @@
 import React from 'react'
 var inputStyle={
     input:{
+      border:"1px solid black",  
       borderRadius:"10px",
       padding:'15px',
       margin:'15px',
       fontSize:'15px'
     },
    input1:{
+    border:"1px solid black",  
     borderRadius:"10px",
       padding:'15px',
       flexGrow:'2',

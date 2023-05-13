@@ -15,7 +15,7 @@ th{
     border-right: 1px solid black;
 }
 
-table{
+.StocksTable{
     font-family: comfortaa;
     font-size: 15px;
     width: 100%;
@@ -37,3 +37,28 @@ table tr td:last-child {
   table tr th:last-child {
     border-right: none;
   }
+
+  .Stocks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .AddTable{
+    border: 4px solid black;
+  }
+  .StocksAddButton{
+    font-size: 25px;
+    padding: 10px 40px 10px 40px;
+    border-radius: 20px;
+
+}
+.StocksBottomTableWrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.StocksInput{
+    border: 1px solid black;
+}
