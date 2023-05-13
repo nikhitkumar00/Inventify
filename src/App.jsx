@@ -7,7 +7,8 @@ import Statistics from './Components/Statistics/Statistics';
 const App = () => {
   return (
     <div className="App">
-      <Signup />
+      <Navbar />
+
     </div>
   );
 };
