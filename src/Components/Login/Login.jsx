@@ -24,7 +24,7 @@ const Login = () => {
                     
         </input>
       
-        <Link to={"/"} className="button_login">Sign Up</Link>
+        <Link to={"/"} className="button_login">Login</Link>
         
         
           <p className="signup_login">
