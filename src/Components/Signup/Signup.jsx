@@ -1,4 +1,5 @@
 import './Signup.css';
+import { Link } from 'react-router-dom';
 
 
 const Signup = () => {
@@ -12,10 +13,10 @@ const Signup = () => {
           <input className="input_signup" type="email" placeholder="Email"></input>
           <input className="input_signup" type="password" placeholder="Create Password"></input>
           <input className="input_signup" type="password" placeholder="Confirm Password"></input>
-          <button className="button_signup" type="submit">Sign Up</button>
+          <Link to={"/"} className="button_signup">Sign Up</Link>
         </form>
         <p className='p_signup'>
-          Already have an account? <t className="t_signup">Login</t>
+          Already have an account? <Link to={"/login"} className="t_signup" >Login</Link>
         </p>
       </div>
     </div>
