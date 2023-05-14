@@ -1,6 +1,7 @@
 .wrapper_Column {
   width: 900px;
   height: 100vh;
+  font-family: comfortaa;
 }
 .child_wrap_Column {
   display: flex;
@@ -8,10 +9,11 @@
   gap: 50px;
 }
 .h2_Column {
-  margin-left: 55px;
-  font-family: comfortaa;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: bolder;
+  height: 90px;
+  display: flex;
+  align-items: center;
 }
 .header_Column {
   display: flex;

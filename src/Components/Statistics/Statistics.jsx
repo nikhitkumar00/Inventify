@@ -25,7 +25,7 @@ const Statistics = () => {
           </div>
         </div>
         <div className="tables_statistics">
-          <table className="purple_statistics">
+          <table className="purple_statistics bottom_ststistics">
             <div className="head_statistics">Status</div>
             <tr>
               <th className="th_statistics">SL No.</th>
@@ -83,7 +83,7 @@ const Statistics = () => {
               <td className="td_statistics">88%</td>
             </tr>
           </table>
-          <table className="red_statistics">
+          <table className="red_statistics bottom_ststistics">
             <div className="head_statistics">Restock Items</div>
             <tr>  
               <th className="th_statistics">SL No.</th>
