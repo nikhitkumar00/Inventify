@@ -46,7 +46,9 @@
   }
 
   .AddTable{
-    border: 4px solid black;
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .StocksAddButton{
     font-size: 25px;

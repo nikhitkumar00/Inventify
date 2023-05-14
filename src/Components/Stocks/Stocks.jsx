@@ -1,20 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Stocks.css";
 
 export const Stocks = () => {
   const [stockData, setStockData] = useState([]);
+  const [formData, setFormData] = useState({});
 
   useEffect(() => {
-    fetch('http://127.0.0.1/I_N_V_O%20Backend/retrieve.php')
-      .then(response => response.json())
-      .then(data => setStockData(data))
-      .catch(error => console.log(error));
+    fetch("http://127.0.0.1/I_N_V_O%20Backend/retrieve.php")
+      .then((response) => response.json())
+      .then((data) => setStockData(data))
+      .catch((error) => console.log(error));
   }, []);
 
   const getTableHeaders = () => {
     if (stockData.length > 0) {
       return Object.keys(stockData[0]).map((key, index) => (
-        <th key={index} className="th_STOCKS">{key}</th>
+        <th key={index} className="th_STOCKS">
+          {key}
+        </th>
       ));
     }
     return null;
@@ -24,58 +29,80 @@ export const Stocks = () => {
     return stockData.map((stock, index) => (
       <tr key={index}>
         {Object.values(stock).map((value, index) => (
-          <td key={index} className=".td_STOCKS">{value}</td>
+          <td key={index} className=".td_STOCKS">
+            {value}
+          </td>
         ))}
       </tr>
     ));
+  };
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    fetch("http://127.0.0.1/I_N_V_O%20Backend/add.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        toast(data);
+      })
+      .catch((error) => toast (error));
+  };
+
+  const getFormInputs = () => {
+    if (stockData.length > 0) {
+      const firstStock = stockData[0];
+      return Object.keys(firstStock).map((key, index) => (
+        <td key={index} className=".td_STOCKS">
+          <input
+            type="text"
+            placeholder={key}
+            name={key}
+            id={key}
+            className="StocksInput"
+            onChange={handleInputChange}
+          />
+        </td>
+      ));
+    }
+    return null;
   };
 
   return (
     <div className="Stocks">
       <table className="StocksTable">
         <thead>
-          <tr>
-            {getTableHeaders()}
-          </tr>
+          <tr>{getTableHeaders()}</tr>
         </thead>
-        <tbody>
-          {getTableRows()}
-        </tbody>
+        <tbody>{getTableRows()}</tbody>
       </table>
       <div>
-        <form action="" style={{ width: "100%" }}>
+        <form onSubmit={handleSubmit}>
           <table className="AddTable">
-            <thead>
-              <tr>
-                {getTableHeaders()}
-              </tr>
-            </thead>
             <tbody>
-              <tr>
-                <td className=".td_STOCKS">
-                  <input type="text" name="" id="" className="StocksInput" />
-                </td>
-                <td className=".td_STOCKS">
-                  <input type="text" name="" id="" className="StocksInput" />
-                </td>
-                <td className=".td_STOCKS">
-                  <input type="text" name="" id="" className="StocksInput" />
-                </td>
-                <td className=".td_STOCKS">
-                  <input type="text" name="" id="" className="StocksInput" />
-                </td>
-                <td className=".td_STOCKS">
-                  <input type="text" name="" id="" className="StocksInput" />
-                </td>
-              </tr>
+              <tr>{getFormInputs()}</tr>
             </tbody>
           </table>
 
           <div className="StocksBottomTableWrapper">
-            <input className="StocksAddButton" type="submit" value="Add" />
+            <input onClick={toast("wow")}  className="StocksAddButton" type="submit" value="Add" />
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };
