@@ -1,6 +1,28 @@
 import "./Statistics.css";
+import { useState, useEffect } from "react";
 
 const Statistics = () => {
+  const [restockData, setRestockData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1/I_N_V_O%20Backend/restock.php")
+      .then((response) => response.json())
+      .then((data) => setRestockData(data))
+      .catch((error) => console.log(error));
+  }, []);
+
+  const restockTable = () => {
+    return restockData.map((restock, index) => (
+      <tr key={index}>
+        {Object.values(restock).map((values, index) => (
+          <td key={index} className="td_statistics">
+            {values}
+          </td>
+        ))}
+      </tr>
+    ));
+  };
+
   return (
     <div className="container_statistics">
       <div className="header_statistics">Statistics</div>
@@ -58,16 +80,7 @@ const Statistics = () => {
                     <th className="th_statistics">Name</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td className="td_statistics">1</td>
-                    <td className="td_statistics">Product A</td>
-                  </tr>
-                  <tr>
-                    <td className="td_statistics">2</td>
-                    <td className="td_statistics">Product B</td>
-                  </tr>
-                </tbody>
+                <tbody>{restockTable()}</tbody>
               </table>
             </div>
           </div>
