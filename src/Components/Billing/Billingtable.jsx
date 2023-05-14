@@ -1,10 +1,10 @@
 import React from 'react'
-// import './Billingtable.css'
+import './Billingtable.css'
 
  export  const Billingtable = () => {
     return (
-        <div className='Billingtable'>
-            <table className='Table'>
+        <div className='BillingTable'>
+            <table className='TableBody'>
                 <thead> <tr>
                     <th>Sl.no</th>
                     <th>Name</th>

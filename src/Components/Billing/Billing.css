@@ -49,3 +49,11 @@ tfoot tr{
     z-index: 1;
     background-color: white;
 }
+
+.BillingHeader{
+    font-size: 40px;
+    font-weight: bolder;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}

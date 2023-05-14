@@ -4,31 +4,35 @@
     padding: 15px;
     width: 250px;
     font-size: 20px;
-    
-}
+  }
+
 .th_STOCKS{
     padding: 15px;
     width: 250px;
     font-size: 20px;
-
     border-bottom: 1px solid black;
     border-right: 1px solid black;
 }
 
 .StocksTable{
     font-family: comfortaa;
-    font-size: 15px;
+    font-size: 16px;
     width: 100%;
     margin-top: 20px;
-    border: 4px solid black;
+    background-color: #FEF1D7;
     border-radius: 20px;
+    margin-right: 20px;
     
+}
+.StocksTable:hover{
+  transform: scale(1.01);
+    transition: all 0.2s ease-in-out;
 }
 
 .StocksInput[type="text"]{
     border-radius: 10px;
     padding: 5px;
-    font-size: 15px;
+    font-size: 16px;
 
 }
 
@@ -43,19 +47,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin:16px;
+   
   }
 
   .AddTable{
-      display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .StocksAddButton{
+}
+
+.StocksAddButton{
     font-size: 25px;
     padding: 10px 40px 10px 40px;
     border-radius: 20px;
-
+    margin-top: 20px
 }
+
 .StocksBottomTableWrapper{
     display: flex;
     flex-direction: row-reverse;
@@ -64,4 +72,24 @@
 
 .StocksInput{
     border: 1px solid black;
+}
+
+.StocksHeader{
+  font-size: 40px;
+  font-weight: bolder;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  font-family: comfortaa;
+}
+
+.AddTableInputRow{
+  display: flex;
+  gap: 30px;
+
+}
+
+.StocksInputForm{
+  background-color: #D7F0FE;
+  padding: 20px;
 }

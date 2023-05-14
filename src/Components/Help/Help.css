@@ -7,19 +7,25 @@
     text-decoration: none;
   } */
   
-
+.header_help{
+  font-size: 40px;
+    font-weight: bolder;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
   .wrapper_help{
     background-color: #ffffff;
     display: flex;
     position: relative;
-    margin-bottom: 20px;
+    margin: 20px;
   }
   
     
   .main_content_help{
     width: 100%;
     font-family: 'Comfortaa';
-    margin-left: 80px;
+    /* margin-left: 80px; */
     background-color: #ffffff;
     border-radius: 20px;
     margin-bottom: 20px;

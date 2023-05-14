@@ -10,7 +10,10 @@ var inputStyle={
     borderRadius:'10px',
     width:'100px',
     height:'30px',
-    marginTop:'20px'
+    marginTop:'20px',
+    color:'white',
+    backgroundColor:'#745A8E',
+
     
   }
 }
@@ -27,7 +30,7 @@ export const Add = () => {
         minWidth:'200px',
         maxWidth:'367px',
         height:'250px',
-        border :'4px solid black',
+        backgroundColor:'#D8FDD9',
         borderRadius:'10px',
         fontSize:'30px'
     }
