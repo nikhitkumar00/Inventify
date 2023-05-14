@@ -2,6 +2,7 @@
   width: 900px;
   height: 100vh;
   font-family: comfortaa;
+  padding: 20px;
 }
 .child_wrap_Column {
   display: flex;

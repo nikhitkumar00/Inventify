@@ -3,7 +3,7 @@ import "./Column.css";
 const Columns = () => {
   return (
     <div className="wrapper_Column">
-      <h2 className="h2_Column">CUSTOMIZE COLUMNS</h2>
+      <h2 className="h2_Column">Customise Columns</h2>
       <div className="child_wrap_Column">
         <div className="header_Column">
           <div className="head1_Column">
