@@ -24,13 +24,28 @@ const Columns = () => {
           </div>
           <div className="head5_Column">
             <div className="minus5_Column">-</div>
-            <div className="bg_Column">
-              <div className="title_child5_Column">QTY</div>
-              <div className="plus_Column">+</div>
-            </div>
+            <div className="title_child5_Column">QTY</div>
           </div>
         </div>
-        <table className="table_Column">
+        <form className="table_Column">
+          <div className="container_Column">
+            <input
+              className="newColumn"
+              type="text"
+              placeholder="Column Name"
+            ></input>
+            <div className="dropdown_Column">
+            <select className="type_Column" id="dropdown">
+                <option className="opt1_Column" value="">Select data type</option>
+                <option className="opt_Column" value="text">Text</option>
+                <option className="opt_Column" value="number">Number</option>
+                <option className="opt_Column" value="date">Date</option>
+            </select>
+            </div>
+          </div>
+          <button className="btn_Column">ADD COLUMN</button>
+        </form>
+        {/*<form className="table_Column">
           <div className="odd_Column">
             <div className="odd_child_Column">1</div>
             <div className="even_child_Column">2</div>
@@ -61,7 +76,7 @@ const Columns = () => {
             <div className="odd_child_Column">2.00</div>
             <div className="even_child_Column">1.00</div>
           </div>
-        </table>
+        </form>*/}
       </div>
     </div>
   );
