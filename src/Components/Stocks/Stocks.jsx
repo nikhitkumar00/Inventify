@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import "./Stocks.css";
 
 export const Stocks = () => {
@@ -57,9 +56,10 @@ export const Stocks = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        toast(data);
+        console.log(data);
       })
-      .catch((error) => toast (error));
+      .then(toast.success("Data Added Successful"))
+      .catch((error) => console.log(error));
   };
 
   const getFormInputs = () => {
@@ -98,11 +98,10 @@ export const Stocks = () => {
           </table>
 
           <div className="StocksBottomTableWrapper">
-            <input onClick={toast("wow")}  className="StocksAddButton" type="submit" value="Add" />
+            <button className="StocksAddButton" type="submit" >Add</button>
           </div>
         </form>
       </div>
-      <ToastContainer />
     </div>
   );
 };
