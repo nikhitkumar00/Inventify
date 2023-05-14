@@ -64,15 +64,19 @@
 }
 .table_Column {
   display: flex;
+  flex-direction: column;
   margin-left: 250px;
   border-radius: 8px;
   width: 500px;
   height: 250px;
   background-color: #e4e5ff;
+  padding-top: 30px;
 }
 .container_Column{
   display: flex;
   gap: 40px;
+  margin-top: 43px;
+  margin-left: 43px;
 }
 .btn_Column{
   background-color: azure;
@@ -83,6 +87,7 @@
   border-radius: 7px;
   margin-top: 40px;
   font-weight: 500;
+  margin-left: 180px;
 }
 .newColumn{
   width: 170px;
@@ -104,16 +109,15 @@
 
 }
 .opt_Column{
-  background-color: #e8d8ed;
+  background-color: #fdf8fd;
   font-size: 15px;
 }
-.dropdown_Column::after {
-  content: "";
+.opt1_Column{
+  background-color: #e6d9d9;
+  font-size: 15px;
 }
+
 .dropdown_Column select {
-  appearance: none;
-  background-color: transparent;
-  border: 1px solid #999;
   padding: 5px 30px 5px 10px;
   width: 200px;
 }
