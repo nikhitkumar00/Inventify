@@ -24,7 +24,7 @@ export const Productinfo = () => {
             display: 'flex',
             flexDirection: 'column',
             flexGrow: '2',
-            border:'4px solid black',
+            backgroundColor:'#D7F0FE',
             borderRadius:'10px'
         }} >
             <input type='text' placeholder='Name of the product' style={inputStyle.input} />

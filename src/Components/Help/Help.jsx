@@ -5,7 +5,7 @@ const Help = () => {
     <div className="wrapper_help">
       <div className="main_content_help">
         <div className="header_help">
-          <b>HELP</b>
+          Help
         </div>
         <div className="info_help">
           <p>

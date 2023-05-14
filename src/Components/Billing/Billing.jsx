@@ -6,6 +6,7 @@ import  Billingtable  from './Billingtable'
 const Billing = () => {
   return (
     <div className='BillingContainer' >
+      <div className='BillingHeader'>Billing</div>
       <div className='BillingContainerChild1'>
         <Add />
         <Productinfo className="Productinfo" />

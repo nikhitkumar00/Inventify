@@ -1,11 +1,11 @@
-.MainContainer_Contact{
+.ContactMainContainer{
     font-family: comfortaa;
     flex:1;
 
 }
 
 
-.ContactFormContainer_Contact{
+.ContactFormContainer{
     font-family: comfortaa;
     height: calc(100vh - 120px);
     background-color: #D8FDD9;
@@ -19,7 +19,7 @@
 
 }
 
-.ContactUsHeader_Contact{
+.ContactUsHeader{
     font-size: 40px;
     font-weight: bolder;
     height: 90px;
