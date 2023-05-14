@@ -64,3 +64,14 @@
 .active_navbar:hover {
     background-color: black;
 }
+
+.nav-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-logout {
+    color: rgb(197, 1, 1);
+}
