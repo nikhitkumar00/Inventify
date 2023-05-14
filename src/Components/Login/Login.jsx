@@ -1,6 +1,8 @@
 import "./Login.css";
+import { Link } from 'react-router-dom';
 
-const Login = () => (
+const Login = () => {
+  return(
   <div className="wrap_login">
     <div className="logo_login">INVO</div>
     <div className="box_login">
@@ -21,14 +23,16 @@ const Login = () => (
                 >
                     
         </input>
-        <button className="button_login" type="submit">Login</button>
-        <div className="signup_login">
-          <p>
-            New Here, Create an Account Instead <a>Sign Up</a>
-          </p>
-        </div>
-      </form>
+      
+        <Link to={"/"} className="button_login">Sign Up</Link>
+        
+        
+          <p className="signup_login">
+            New Here, Create an Account Instead <Link to={"/signup"} className="t_login" >Signup</Link>
+          </p></form>
+        
     </div>
   </div>
 );
+};
 export default Login;
