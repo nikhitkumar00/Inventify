@@ -4,32 +4,31 @@
   height: 100vh;
   justify-content: space-around;
   align-items: center;
+  background-color: #e0ecf4;
+  font-family: 'Comfortaa';
 }
 .logo_login{
   font-family: 'Pacifico';
-  font-size: 135px;
-  align-self: center;
-  margin:10% 0 10% 0;
+  font-size: 100px;
+  
+  
 }
 .box_login{
-  width:450px;
-  height:600px;
+  width:400px;
+  height:500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-self:center;
-  box-shadow: 0px 0px 20px #D9D9D9;
-  background:#D7F0FE;
-  border-radius:40px;
-  padding:5%;
-  margin-top:45px;  
+  box-shadow: 15px 10px 20px rgb(157, 157, 157);
+  background:rgb(192, 216, 241);
+  border-radius:30px;
+  
 }
 .head_login{
   color:#0D3653;
   font-size: 50px;
   text-align:center;
-  padding: 35px;
-  font-family:'Times New Roman', Times, serif;
   font-weight: bold;
 }
 
@@ -38,19 +37,20 @@
   flex-direction: column;
   justify-content: center;
   width:100%;
+  gap: 35px;
+  
   align-items: center; 
   }
 
 .text_login{
-  height: 25px;
-  width:300px;
-  margin-bottom:20px;
-  font-size: 18px;
-  padding-left: 10px;
-  border:none;
-  padding: 10px;
+  height: 35px;
+  width: 300px;
   border-radius: 8px;
-  color: #000000;
+  padding-left: 10px;
+  font-size: 18px;
+  background-color: rgb(243, 246, 249);
+  border: none;
+  outline: none;
 }
 
 
@@ -63,16 +63,18 @@
 }
 
 .button_login {
-  background-color:#0D3653;
-  color: white;
-  border: none;
-  width:300px;
-  
-  margin-top:15px;
-  font-size: 20px;
-  border-radius: 15px;
-  cursor: pointer;
-  padding: 10px;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #094d7d;
+  color: #ffffff;
+  border-radius: 20px;
+  border: 0px;
+  font-size: 17px;
+  font-family: 'Comfortaa';
   
 }
 .button_login:hover {
@@ -80,7 +82,16 @@
 }
 
 .signup_login{
-  text-align:center;
-  margin-left: 5px;
-  margin-top:30px;
+  font-style: italic;
+  font-size: small;
+  text-align: center;
 }
+.t_login{
+  font-weight: bolder;
+  margin-left: 5px;
+  font-size: large;
+  text-decoration: underline;
+  font-size: small;
+  color: black;
+}
+
