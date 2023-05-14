@@ -24,7 +24,7 @@ const Columns = () => {
           </div>
           <div className="head5_Column">
             <div className="minus5_Column">-</div>
-            <div className="title_child5_Column">QTY</div>
+            <div className="title_child_Column">QTY</div>
           </div>
         </div>
         <form className="table_Column">

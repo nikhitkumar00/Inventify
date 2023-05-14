@@ -35,21 +35,16 @@
   font-family: comfortaa;
   font-weight: 900;
 }
-.title_child5_Column {
-  background-color: #d7f0fe;
-  text-align: center;
-  min-width: 130px;
-  height: 33px;
-  padding: 7px 0px;
-}
 .title_child_Column {
   background-color: #d7f0fe;
   text-align: center;
-  min-width: 130px;
+  width: 200px;
   height: 33px;
   padding: 7px 0px;
-  border-right: 3px solid black;
+  border-right: 3px solid rgb(68, 70, 73);
+  font-size: 22px;
 }
+
 .minus1_Column,
 .minus2_Column,
 .minus3_Column,
@@ -74,29 +69,38 @@
 }
 .container_Column{
   display: flex;
-  gap: 40px;
+  gap: 30px;
   margin-top: 43px;
-  margin-left: 43px;
+  margin-left: 15px;
 }
 .btn_Column{
   background-color: azure;
   border: none;
-  width: 150px;
+  width: 200px;
   height: 40px;
   padding: 7px 7px;
   border-radius: 7px;
   margin-top: 40px;
-  font-weight: 500;
-  margin-left: 180px;
+  font-weight: 700;
+  margin-left: 150px;
+  font-family: "Comfortaa", cursive;
+  font-size: 22px;
 }
 .newColumn{
-  width: 170px;
+  width: 210px;
   height: 40px;
   padding-left: 10px;
   border: none;
   border-radius: 8px;
-  font-size: 17px;
+  font-size: 20px;
   outline: none;
+}
+.newColumn::placeholder {
+  color: #1a1919;
+  font-style: italic;
+  font-family: "Comfortaa", cursive;
+  font-weight: 600;
+  font-size: 18px;
 }
 .type_Column{
   border: none;
@@ -104,30 +108,32 @@
   height: 40px;
   border-radius: 8px;
   outline: none;
-  font-size: 17px;
+  font-size: 18px;
   padding-left: 10px;
+  font-style: italic;
+  font-family: "Comfortaa", cursive;
+  font-weight: 600;
 
 }
 .opt_Column{
   background-color: #fdf8fd;
-  font-size: 15px;
+  font-style: italic;
+  font-family: "Comfortaa", cursive;
+  font-weight: 600;
+  font-size: 16px;
 }
 .opt1_Column{
-  background-color: #e6d9d9;
-  font-size: 15px;
+  background-color: #969191;
+  font-style: italic;
+  font-family: "Comfortaa", cursive;
+  font-weight: 600;
+  font-size: 12px;
 }
 
 .dropdown_Column select {
   padding: 5px 30px 5px 10px;
-  width: 200px;
+  width: 220px;
 }
 
-.title_child_Column {
-  background-color: #d7f0fe;
-  width: 200px;
-  text-align: center;
-  height: 33px;
-  padding: 7px 0px;
-  border-right: 3px solid black;
-}
+
 
