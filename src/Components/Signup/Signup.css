@@ -28,6 +28,7 @@
 .head_signup {
   font-size: 50px;
   color: #072032;
+  margin-top: 30px;
 }
 .SignUpForm {
   display: flex;
@@ -68,6 +69,7 @@
   border: 0px;
   font-size: 17px;
   font-family: 'Comfortaa';
+  margin-top: 12px;
 }
 .button_signup:hover {
   background-color: #072032;
@@ -83,4 +85,5 @@
 .p_signup{
   font-style: italic;
   font-size: small;
+  margin-bottom: 30px;
 }
