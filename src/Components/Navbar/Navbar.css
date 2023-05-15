@@ -1,4 +1,7 @@
 .nav-grandparent {
+    position: sticky;
+    top: 0px;
+    left: 0px;
     width: 250px;
     height: calc(100vh - 60px);
     padding: 20px;
@@ -6,6 +9,8 @@
     flex-direction: column;
     justify-content: space-between;
     min-width: 250px;
+    background-color: white;
+    z-index: 9999;
 }
 
 .icon {
