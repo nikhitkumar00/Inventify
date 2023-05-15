@@ -26,7 +26,7 @@ export const Stocks = () => {
 
   const getTableRows = () => {
     return stockData.map((stock, index) => (
-      <tr key={index}>
+      <tr key={index} className="row_stocks">
         {Object.values(stock).map((value, index) => (
           <td key={index} className=".td_STOCKS">
             {value}
@@ -90,7 +90,7 @@ export const Stocks = () => {
         <tbody>{getTableRows()}</tbody>
       </table>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="StocksInputForm">
           <table className="AddTable">
             <tbody>
               <tr>{getFormInputs()}</tr>
