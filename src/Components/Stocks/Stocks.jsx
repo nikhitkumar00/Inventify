@@ -1,149 +1,105 @@
 import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "./Stocks.css";
-import { MdStarPurple500 } from "react-icons/md";
 
 export const Stocks = () => {
-  // const [stockData, setStockData] = useState([]);
-  // const [formData, setFormData] = useState({});
+  const [stockData, setStockData] = useState([]);
+  const [formData, setFormData] = useState({});
 
-  // useEffect(() => {
-  //   fetch("http://127.0.0.1/I_N_V_O%20Backend/retrieve.php")
-  //     .then((response) => response.json())
-  //     .then((data) => setStockData(data))
-  //     .catch((error) => console.log(error));
-  // }, []);
+  useEffect(() => {
+    fetch("http://127.0.0.1/I_N_V_O%20Backend/retrieve.php")
+      .then((response) => response.json())
+      .then((data) => setStockData(data))
+      .catch((error) => console.log(error));
+  }, []);
 
-  // const getTableHeaders = () => {
-  //   if (stockData.length > 0) {
-  //     return Object.keys(stockData[0]).map((key, index) => (
-  //       <th key={index} className="th_STOCKS">
-  //         {key}
-  //       </th>
-  //     ));
-  //   }
-  //   return null;
-  // };
+  const getTableHeaders = () => {
+    if (stockData.length > 0) {
+      return Object.keys(stockData[0]).map((key, index) => (
+        <th key={index} className="th_STOCKS">
+          {key}
+        </th>
+      ));
+    }
+    return null;
+  };
 
-  // const getTableRows = () => {
-  //   return stockData.map((stock, index) => (
-  //     <tr key={index}>
-  //       {Object.values(stock).map((value, index) => (
-  //         <td key={index} className=".td_STOCKS">
-  //           {value}
-  //         </td>
-  //       ))}
-  //     </tr>
-  //   ));
-  // };
+  const getTableRows = () => {
+    return stockData.map((stock, index) => (
+      <tr key={index}>
+        {Object.values(stock).map((value, index) => (
+          <td key={index} className=".td_STOCKS">
+            {value}
+          </td>
+        ))}
+      </tr>
+    ));
+  };
 
-  // const handleInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setFormData((prevState) => ({
-  //     ...prevState,
-  //     [name]: value,
-  //   }));
-  // };
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  //   fetch("http://127.0.0.1/I_N_V_O%20Backend/add.php", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(formData),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //     })
-  //     .then(toast.success("Data Added Successful"))
-  //     .catch((error) => console.log(error));
-  // };
+    fetch("http://127.0.0.1/I_N_V_O%20Backend/add.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .then(toast.success("Data Added Successful"))
+      .catch((error) => console.log(error));
+  };
 
-  // const getFormInputs = () => {
-  //   if (stockData.length > 0) {
-  //     const firstStock = stockData[0];
-  //     return Object.keys(firstStock).map((key, index) => (
-  //       <td key={index} className=".td_STOCKS">
-  //         <input
-  //           type="text"
-  //           placeholder={key}
-  //           name={key}
-  //           id={key}
-  //           className="StocksInput"
-  //           onChange={handleInputChange}
-  //         />
-  //       </td>
-  //     ));
-  //   }
-  //   return null;
-  // };
+  const getFormInputs = () => {
+    if (stockData.length > 0) {
+      const firstStock = stockData[0];
+      return Object.keys(firstStock).map((key, index) => (
+        <td key={index} className=".td_STOCKS">
+          <input
+            type="text"
+            placeholder={key}
+            name={key}
+            id={key}
+            className="StocksInput"
+            onChange={handleInputChange}
+          />
+        </td>
+      ));
+    }
+    return null;
+  };
 
   return (
     <div className="Stocks">
-      <div>
-      <div className="StocksHeader">Stocks</div>
       <table className="StocksTable">
         <thead>
-          <tr >
-            <th className="td_STOCKS">Serial No.</th>
-            <th className="td_STOCKS">Name</th>
-            <th className="td_STOCKS">Expiry</th>
-            <th className="td_STOCKS">MRP</th>
-            <th className="td_STOCKS">Quantity</th>
-          </tr>
+          <tr>{getTableHeaders()}</tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-          </tr>
-          <tr>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-          </tr><tr>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-          </tr><tr>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-            <td>data</td>
-          </tr>
-        </tbody>
+        <tbody>{getTableRows()}</tbody>
       </table>
-      </div>
-     
       <div>
-        <form style={{padding:"20px"}} className="StocksInputForm">
+        <form onSubmit={handleSubmit}>
           <table className="AddTable">
             <tbody>
-              <tr className="AddTableInputRow">
-                <input type="text" className="StocksInput"/>
-                <input type="text" className="StocksInput"/>
-                <input type="text" className="StocksInput"/>
-                <input type="text" className="StocksInput"/>
-                <input type="text" className="StocksInput"/>
-                
-              </tr>
+              <tr>{getFormInputs()}</tr>
             </tbody>
           </table>
-
           <div className="StocksBottomTableWrapper">
-            <button className="StocksAddButton" type="submit" >Add</button>
+            <button className="StocksAddButton" type="submit">
+              Add
+            </button>
           </div>
         </form>
       </div>
