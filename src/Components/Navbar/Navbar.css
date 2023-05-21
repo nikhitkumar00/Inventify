@@ -46,9 +46,8 @@
 }
 
 .nav-child:hover {
-    transition: all 0.1s ease-in-out;
-    border-radius: 10px;
-    transform: scale(1.1);
+    background-color: black;
+    color: white;
     transition: all 0.1s ease-in-out;
 
 }

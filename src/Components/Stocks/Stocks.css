@@ -1,10 +1,3 @@
-.td_STOCKS{
-    width: 250px;
-    border-right: 1px solid black; 
-    padding: 15px;
-    width: 250px;
-    font-size: 20px;
-  }
 
 .th_STOCKS{
     padding: 15px;
@@ -96,4 +89,5 @@
 
 .row_stocks {
   height: 30px;
+  padding-left: 10px;
 }
