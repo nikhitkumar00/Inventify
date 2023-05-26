@@ -6,7 +6,7 @@ import { BsColumnsGap } from "react-icons/bs";
 import { BiHelpCircle } from "react-icons/bi";
 import { MdContacts } from "react-icons/md";
 import { RiLogoutCircleRLine } from "react-icons/ri"
-import { NavLink, Link } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 const Navbar = () => {
   return (
