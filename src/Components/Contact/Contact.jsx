@@ -6,19 +6,27 @@ import { Link } from "react-router-dom";
 
 
 const Contact = () => {
+
+    const LinkStyle={
+        textDecoration: "none",
+        marginTop:"20px",
+
+    }
+
     const [state, handleSubmit] = useForm("mzbqqbzg")
     if (state.succeeded) {
         return <>
             <div className='SubmissionMessage'>
-                <h1>Thanks for the feedback</h1>
-                <p>Your Message was delivered to the developers!</p>
-                <Link to={"/contact"} onClick={state.succeeded="false"}>
+                <h1>🙌 Thanks for your feedback! We're on it! 🚀</h1>
+                <Link to={"/contact"} onClick={state.succeeded="false"} style={LinkStyle}>
                     <p>Go Back</p>
                 </Link>
 
             </div>
         </>
     }
+
+
 
     return (
         <div className="ContactMainContainer">
