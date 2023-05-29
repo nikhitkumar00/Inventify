@@ -3,11 +3,17 @@ import { useState, useEffect } from "react";
 
 const Statistics = () => {
   const [restockData, setRestockData] = useState([]);
+  const [expiryData, setExpiryData] = useState([]);
 
   useEffect(() => {
     fetch("http://127.0.0.1/I_N_V_O%20Backend/restock.php")
       .then((response) => response.json())
       .then((data) => setRestockData(data))
+      .catch((error) => console.log(error));
+
+    fetch("http://127.0.0.1/I_N_V_O%20Backend/expiry.php")
+      .then((response) => response.json())
+      .then((data) => setExpiryData(data))
       .catch((error) => console.log(error));
   }, []);
 
@@ -15,6 +21,18 @@ const Statistics = () => {
     return restockData.map((restock, index) => (
       <tr key={index}>
         {Object.values(restock).map((values, index) => (
+          <td key={index} className="td_statistics">
+            {values}
+          </td>
+        ))}
+      </tr>
+    ));
+  };
+
+  const expiryTable = () => {
+    return expiryData.map((expiry, index) => (
+      <tr key={index}>
+        {Object.values(expiry).map((values, index) => (
           <td key={index} className="td_statistics">
             {values}
           </td>
@@ -56,18 +74,7 @@ const Statistics = () => {
                   <th className="th_statistics">Expiry Date</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td className="td_statistics">1</td>
-                  <td className="td_statistics">Product A</td>
-                  <td className="td_statistics">80%</td>
-                </tr>
-                <tr>
-                  <td className="td_statistics">2</td>
-                  <td className="td_statistics">Product B</td>
-                  <td className="td_statistics">60%</td>
-                </tr>
-              </tbody>
+              <tbody>{expiryTable() }</tbody>
             </table>
           </div>
           <div className="flex_statistics2">
