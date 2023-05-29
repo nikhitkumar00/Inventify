@@ -11,3 +11,7 @@
     align-items: center;
     justify-content: center;
   }
+
+  .td_billingtable{
+    padding-left:70px;
+  }

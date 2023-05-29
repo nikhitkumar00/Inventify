@@ -10,7 +10,7 @@ var inputStyle={
     borderRadius:'10px',
     width:'100px',
     height:'30px',
-    marginTop:'20px',
+    marginTop:'15px',
     color:'white',
     backgroundColor:'#745A8E',
 
@@ -32,14 +32,19 @@ export const Add = () => {
         height:'250px',
         backgroundColor:'#D8FDD9',
         borderRadius:'10px',
-        fontSize:'30px'
+        fontSize:'20px',
+
     }
 
     
     }>
-        <label>Seriel No.</label>
+        <label style={{
+          paddingTop:'10px'
+        }}>Seriel No.</label>
         <input type='text' style={inputStyle.input}></input>
-        <label>Quanity</label>
+        <label style={{
+          paddingTop:'10px'
+        }}>Quanity</label>
         <input type='text' style={inputStyle.input}></input>
         <button style={inputStyle.button}>Add</button>
     </div>
