@@ -10,6 +10,7 @@ const Contact = () => {
     const LinkStyle={
         textDecoration: "none",
         marginTop:"20px",
+        backgroundColor:"#0D3653"
 
     }
 
