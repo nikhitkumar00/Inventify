@@ -36,12 +36,13 @@
   font-weight: 900;
 }
 .title_child_Column {
+  border-radius: 20px;
   background-color: #d7f0fe;
   text-align: center;
   width: 200px;
   height: 33px;
   padding: 7px 0px;
-  border-right: 3px solid rgb(68, 70, 73);
+  margin: 5px;
   font-size: 22px;
 }
 
