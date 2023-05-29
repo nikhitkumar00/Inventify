@@ -71,8 +71,14 @@
     transition: all 0.2s ease-in-out;
 }
 
-.bottom_ststistics {
+.bottom_statistics1 {
     border-radius: 20px;
+    width: 100%;
+}
+
+.bottom_statistics2 {
+    border-radius: 20px;
+    width: 100%;
 }
 
 .info_statistics {
@@ -100,4 +106,12 @@
 .th_statistics{
     padding: 10px;
     border-bottom: 1px dotted black;
+}
+
+.flex_statistics1 {
+    flex: 0.6;
+}
+
+.flex_statistics2 {
+    flex: 0.4;
 }

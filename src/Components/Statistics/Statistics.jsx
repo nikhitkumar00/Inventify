@@ -46,14 +46,14 @@ const Statistics = () => {
           </div>
         </div>
         <div className="tables_statistics">
-          <div className="flex_statistics">
-            <div className="head_statistics">Status</div>
-            <table className="purple_statistics bottom_ststistics">
+          <div className="flex_statistics1">
+            <div className="head_statistics">Expiry</div>
+            <table className="purple_statistics bottom_statistics1">
               <thead>
                 <tr>
                   <th className="th_statistics">SL No.</th>
                   <th className="th_statistics">Name</th>
-                  <th className="th_statistics">Status</th>
+                  <th className="th_statistics">Expiry Date</th>
                 </tr>
               </thead>
               <tbody>
@@ -70,23 +70,20 @@ const Statistics = () => {
               </tbody>
             </table>
           </div>
-          <div className="tables_statistics">
-            <div className="flex_statistics">
-              <div className="head_statistics">Restock Items</div>
-              <table className="red_statistics bottom_ststistics">
-                <thead>
-                  <tr>
-                    <th className="th_statistics">SL No.</th>
-                    <th className="th_statistics">Name</th>
-                  </tr>
-                </thead>
-                <tbody>{restockTable()}</tbody>
-              </table>
-            </div>
+          <div className="flex_statistics2">
+            <div className="head_statistics">Restock Items</div>
+            <table className="red_statistics bottom_statistics2">
+              <thead>
+                <tr>
+                  <th className="th_statistics">SL No.</th>
+                  <th className="th_statistics">Name</th>
+                </tr>
+              </thead>
+              <tbody>{restockTable()}</tbody>
+            </table>
           </div>
         </div>
       </div>
-      <div />
     </div>
   );
 };
