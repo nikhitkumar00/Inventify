@@ -10,21 +10,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px;
+    gap: 25px;
   }
   .billing_help_content{
     font-size: 18px;
   }
-  .billing_1{
-      width: 1100px;
-      max-width: 100%;
-      height: auto;
-  }
-  .column_1{
-    width: 750px;
-    max-width: 100%;
-    height: auto;
-  }
+
   
   .header_help{
     font-size: 40px;
@@ -94,13 +85,19 @@
       justify-content: center;
     }
     
-    .statistics-style{
-      width: 750px;
+    .statistics-style,.stocks_style{
+      width: 950px;
       max-width: 100%;
     }
-    .stocks_style{
-      width:650px;
-      height:200px;
+    .billing_1{
+      width: 1300px;
+      max-width: 100%;
+      height: auto;
+    }
+    .column_1{
+      width: 950px;
+      max-width: 100%;
+      height: auto;
     }
     /* .wrapper .main_content .info div{
       margin-bottom: 20px;

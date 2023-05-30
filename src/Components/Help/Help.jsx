@@ -66,7 +66,6 @@ const Help = () => {
 
                 <li className="text_child_help">
                   <div className="subhead_help">
-                    {" "}
                     Products to be Restocked
                   </div>
                   In this section, you will find a list of products that need to
@@ -81,7 +80,7 @@ const Help = () => {
           </div>
           <div className="stocks_help">
             <div className="head_help">Stocks</div>
-            <img src={stocks1} alt="Stocks" className="stocks-style" />
+            <img src={stocks1} alt="Stocks" className="stocks_style" />
             <div className="intro_help">
             Introducing the Stocks Webpage . This pge is designed to empower you with complete control over your product data and inventory status. Whether you want to explore existing stock details, add new products, or update quantities after each purchase, this user-friendly interface has got you covered Let us explore the features and functionalities of this page:
               <ul className="text_help">
@@ -89,7 +88,7 @@ const Help = () => {
                 Product Data Overview  </div>
                 The page displays a comprehensive list of products currently in stock at your shop. It includes essential details such as the product name, description, price, quantity available, and any other relevant information. This overview helps you quickly assess the inventory and understand the range of products you offer.
                 </li></ul>
-                <img src={stocks2} alt="Stocks" className="stocks-style" />
+                <img src={stocks2} alt="Stocks" className="stocks_style" />
                 <ul className="text_help">
                 <li className="text_child_help">
                   <div className="subhead_help">Add New Product</div>
@@ -109,7 +108,7 @@ const Help = () => {
           </div>
 
           <div className="billing_help">
-            <div className="statistics_head_help">Billing Page</div>
+            <div className="head_help">Billing Page</div>
             <img src={billing_1} className="billing_1" />
             <ul className="billing_help_content">
               <li className="billing_help_content_child">
@@ -134,7 +133,7 @@ const Help = () => {
             </ul>
           </div>
           <div className="column_help">
-            <div className="statistics_head_help">Columns Page</div>
+            <div className="head_help">Columns Page</div>
             <img src={column_1} className="column_1" />
             <ul className="billing_help_content">
               <li className="billing_help_content_child">
