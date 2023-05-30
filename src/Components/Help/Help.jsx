@@ -14,7 +14,7 @@ const Help = () => {
           <div className="faqs_help">
             <div className="faqs_title">FAQs</div>
             <div className="faqs_content">
-            We're here to support you every step of the way. If you have any questions or need assistance, feel free to ask!
+            We are here to support you every step of the way. If you have any questions or need assistance, feel free to ask!
               <ul className="faq">
                 <li className="faq_bullet">
                   How to add new column to the table ?
@@ -122,8 +122,8 @@ const Help = () => {
             <div className="billing_help_head">Billing</div>
             <img src={billing_1} className="billing_1" />
             <ul className="billing_help_content">
-            <li className="billing_help_content_child">The billing page is where you can easily create and print invoices for your customers' purchases.</li> 
-            <li className="billing_help_content_child">To add items to the invoice, simply enter the serial number and quantity of each product in the provided columns and click the 'Add' button.</li>
+            <li className="billing_help_content_child">The billing page is where you can easily create and print invoices for your customers purchases.</li> 
+            <li className="billing_help_content_child">To add items to the invoice, simply enter the serial number and quantity of each product in the provided columns and click the Add button.</li>
             <li className="billing_help_content_child">The respective item will be added to the table. Repeat this process for all the required products.</li> 
             <li className="billing_help_content_child">Once you have added all the items to the invoice, you can easily calculate the total amount. The page will automatically sum up the individual item prices and display the total amount. This ensures accurate and efficient billing for your customers.</li> 
             </ul>
