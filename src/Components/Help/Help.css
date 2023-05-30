@@ -98,7 +98,10 @@
       width: 750px;
       max-width: 100%;
     }
-    
+    .stocks_style{
+      width:650px;
+      height:200px;
+    }
     /* .wrapper .main_content .info div{
       margin-bottom: 20px;
     }

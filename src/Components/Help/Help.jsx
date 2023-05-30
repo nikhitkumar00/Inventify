@@ -150,7 +150,7 @@ const Help = () => {
               </li>
               <li className="billing_help_content_child">
                 After entering the column name and selecting the data type,
-                click the "Add Column" button. This action instantly adds the new
+                click the Add Column button. This action instantly adds the new
                 column to the table, enabling you to store and manage data of
                 that specific type.
               </li>
