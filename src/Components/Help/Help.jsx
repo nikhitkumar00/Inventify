@@ -11,18 +11,6 @@ const Help = () => {
       <div className="main_content_help">
         <div className="header_help">Help</div>
         <div className="info_help">
-          <div className="faqs_help">
-            <div className="faqs_title">FAQs</div>
-            <div className="faqs_content">
-            We are here to support you every step of the way. If you have any questions or need assistance, feel free to ask!
-              <ul className="faq">
-                <li className="faq_bullet">
-                  How to add new column to the table ?
-                </li>
-                <li className="faq_bullet">aaaaaaaaaaaaaaaaaaaa ?</li>
-              </ul>
-            </div>
-          </div>
           <div className="statistics_help">
             <div className="statistics_head_help">Statistics Page</div>
             <img
