@@ -1,10 +1,9 @@
 import "./Help.css";
-import statistics from './Help_pics/statistics.png'
-import stocks1 from "./Help_pics/Stocks1.png"
-import stocks2 from "./Help_pics/Stocks2.png"
-import column_1 from "./Help_pics/column_1.png"
-import column_2 from "./Help_pics/column_2.png"
-import billing_1 from "./Help_pics/billing_1.png"
+import statistics from "./Help_pics/statistics.png";
+import stocks1 from "./Help_pics/Stocks1.png";
+import stocks2 from "./Help_pics/Stocks2.png";
+import column_1 from "./Help_pics/column_1.png";
+import billing_1 from "./Help_pics/billing_1.png";
 const Help = () => {
   return (
     <div className="wrapper_help">
@@ -32,7 +31,8 @@ const Help = () => {
                 <li className="text_child_help">
                   <div className="subhead_help"> Total Order</div>This section displays the total number of orders placed by customers. It gives you an overview of the overall sales
                   volume and customer demand. By tracking this metric, you can
-                  assess the popularity of your products ,benchmark your performance and forecast future sales.
+                  assess the popularity of your products ,benchmark your
+                  performance and forecast future sales.
                 </li>
 
                 <li className="text_child_help">
@@ -47,10 +47,9 @@ const Help = () => {
                 <li className="text_child_help">
                   <div className="subhead_help"> Total Expense</div>
                   This section shows the total expenses incurred by your shop.
-                  Tracking your
-                  expenses helps you understand where your money is being
-                  allocated and identify areas where you can potentially reduce
-                  costs.
+                  Tracking your expenses helps you understand where your money
+                  is being allocated and identify areas where you can
+                  potentially reduce costs.
                 </li>
 
                 <li className="text_child_help">
@@ -94,30 +93,78 @@ const Help = () => {
                 <ul className="text_help">
                 <li className="text_child_help">
                   <div className="subhead_help">Add New Product</div>
-                  This is an option provided to add new products to the stock list.Seamlessly expand your stock list by leveraging the Add feature. This intuitive option allows you to effortlessly input details such as product name, description, price, and initial quantity, ensuring that your inventory stays up to date with the latest additions.
+                  This is an option provided to add new products to the stock
+                  list.Seamlessly expand your stock list by leveraging the Add
+                  feature. This intuitive option allows you to effortlessly
+                  input details such as product name, description, price, and
+                  initial quantity, ensuring that your inventory stays up to
+                  date with the latest additions.
                 </li>
               </ul>
-              This keeps your inventory accurate and reliable by promptly updating stock after each purchase.Take advantage of this robust features to effectively organize your stock, add new products, maintain accurate quantities swiftly.
+              This keeps your inventory accurate and reliable by promptly
+              updating stock after each purchase.Take advantage of this robust
+              features to effectively organize your stock, add new products,
+              maintain accurate quantities swiftly.
             </div>
           </div>
 
-
           <div className="billing_help">
-            <div className="head_help">Billing</div>
+            <div className="statistics_head_help">Billing Page</div>
             <img src={billing_1} className="billing_1" />
             <ul className="billing_help_content">
-            <li className="billing_help_content_child">The billing page is where you can easily create and print invoices for your customers purchases.</li> 
-            <li className="billing_help_content_child">To add items to the invoice, simply enter the serial number and quantity of each product in the provided columns and click the Add button.</li>
-            <li className="billing_help_content_child">The respective item will be added to the table. Repeat this process for all the required products.</li> 
-            <li className="billing_help_content_child">Once you have added all the items to the invoice, you can easily calculate the total amount. The page will automatically sum up the individual item prices and display the total amount. This ensures accurate and efficient billing for your customers.</li> 
+              <li className="billing_help_content_child">
+                The billing page is where you can easily create and print
+                invoices for your customers purchases.
+              </li>
+              <li className="billing_help_content_child">
+                To add items to the invoice, simply enter the serial number and
+                quantity of each product in the provided columns and click the
+                Add button.
+              </li>
+              <li className="billing_help_content_child">
+                The respective item will be added to the table. Repeat this
+                process for all the required products.
+              </li>
+              <li className="billing_help_content_child">
+                Once you have added all the items to the invoice, you can easily
+                calculate the total amount. The page will automatically sum up
+                the individual item prices and display the total amount. This
+                ensures accurate and efficient billing for your customers.
+              </li>
             </ul>
           </div>
           <div className="column_help">
-            <div className="head_help">Columns</div>
-            <div className="column_help_pics">
-              <img src={column_1} className="column_1" />
-              <img src={column_2} className="column_1" />
-            </div>
+            <div className="statistics_head_help">Columns Page</div>
+            <img src={column_1} className="column_1" />
+            <ul className="billing_help_content">
+              <li className="billing_help_content_child">
+                One of the major features of this website is the ability to
+                customize columns. The Columns page allows you to easily add new
+                columns to the table according to your specific requirements.
+              </li>
+              <li className="billing_help_content_child">
+                To add a new column, simply enter the desired column name in the
+                provided field. Then, select the type of value that the column
+                should contain from the dropdown menu. The dropdown menu
+                provides various options such as text, number or date.
+              </li>
+              <li className="billing_help_content_child">
+                After entering the column name and selecting the data type,
+                click the "Add Column" button. This action instantly adds the new
+                column to the table, enabling you to store and manage data of
+                that specific type.
+              </li>
+              <li className="billing_help_content_child">
+                This feature provides flexibility and customization, allowing
+                you to tailor the table structure to suit your specific needs.
+              </li>
+              <li className="billing_help_content_child">
+                With the customizable columns feature, you can easily adapt the
+                table to accommodate different types of data, ensuring a more
+                efficient and personalized experience for managing your
+                information.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
