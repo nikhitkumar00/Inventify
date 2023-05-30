@@ -1,4 +1,3 @@
-
 /* *{
     margin: 0;
     padding: 0;
@@ -7,125 +6,118 @@
     text-decoration: none;
   } */
 
-.billing_help{
-  display: flex;
-  flex-direction: column;
-}
-.billing_help_content{
-  font-size: 16px;
-}
-.billing_1{
-    width: 1000px;
-}
+  .billing_help{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .billing_help_head{
+    font-size: 25px;
+  }
+  .billing_help_content{
+    font-size: 18px;
+  }
+  .billing_1{
+      width: 1000px;
+  }
   .column_help{
-  display: flex;
-  flex-direction: column;
-  
-}
-.column_help_pics{
-  display: flex;
-  justify-content: space-around;
-}
-.column_1{
-  width: 700px;
-}
-
-.faqs_help{
-  display: flex;
-  justify-content: space-around;
-} 
-.faqs_title{
-  font-size: 30px ;
-  color: black;
-}
-.header_help{
-  font-size: 40px;
-    font-weight: bolder;
-    height: 90px;
-    display: flex;
-    align-items: center;
-}
-  .wrapper_help{
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    position: relative;
-    margin: 20px;
-  }
-  
-    
-  .main_content_help{
-    width: 100%;
-    font-family: 'Comfortaa';
-    /* margin-left: 80px; */
-    background-color: #ffffff;
-    border-radius: 20px;
-    margin-bottom: 20px;
-
-  }
-  
-
-  .info_help{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 30px;
-    background-color: #D7F0FE;
-    color: #000000;
-    line-height: 25px;
-    margin-bottom: 20px;
-  }
-  .statistics_help{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .statistics_head_help{
-    font-size: 28px;
-    font-weight: bolder;
-    color: black;
-  }
-  .statistics-style{
-    width: 750px;
-    display: flex;
-    padding: 30px;
-  }
-  .statistics_text_help{
-    padding: 20px;
-  }
-  .statistics_text_child_help{
     
   }
-  .intro_help{
-    font-size:18px;
+  .column_help_pics{
+    display: flex;
+    justify-content: space-around;
   }
-
-  .subhead_help{
-    margin:15px;
-    font-size:20px;
-    font-weight: 100;
+  .column_1{
+    width: 700px;
   }
-  .stocks_help{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .stocks_head_help{
-    font-size: 28px;
-    font-weight: bolder;
+  
+  .faqs_help{
+    display: flex;
+    justify-content: space-around;
+  } 
+  .faqs_title{
+    font-size: 30px ;
     color: black;
   }
-  .stocks-style{
-    width: 750px;
-    padding: 30px;
+  .header_help{
+    font-size: 40px;
+      font-weight: bolder;
+      height: 90px;
+      display: flex;
+      align-items: center;
   }
+    .wrapper_help{
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: 20px;
+      width: 100%;
+      height: 100vh;
+    }
+    
+      
+    .main_content_help{
+      width: 100%;
+      font-family: 'Comfortaa';
+      /* margin-left: 80px; */
+      background-color: #ffffff;
+      border-radius: 20px;
+      margin-bottom: 20px;
   
+    }
+    
   
-  /* .wrapper .main_content .info div{
-    margin-bottom: 20px;
-  }
-  
-   */
-  
+    .info_help{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 20px;
+      margin: 10px;
+      padding: 30px;
+      background-color: #D7F0FE;
+      color: #000000;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+    .statistics_help{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .statistics_head_help{
+      font-size: 35px;
+      font-weight: bolder;
+      color: black;
+    }
+    .statistics-style{
+      width: 750px;
+      display: flex;
+      padding: 30px;
+    }
+    .statistics_text_help{
+      padding: 10px;
+    }
+    .subhead_help{
+      margin:15px;
+      font-size:20px;
+    }
+    /* .wrapper .main_content .info div{
+      margin-bottom: 20px;
+    }
+    
+     */
+     .stocks-style{
+      width: 750px;
+      padding: 30px;
+    }
+    .intro_help{
+      font-size:20px;
+    }
+    .stocks_help{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+    }
