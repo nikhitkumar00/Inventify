@@ -32,7 +32,7 @@ export const Productinfo = () => {
                 display:'flex'
             }}>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <input type='text' placeholder='Seriel No.'  style={inputStyle.input}/>
+                    <input type='text' placeholder='Serial No.'  style={inputStyle.input}/>
                     <input type='text' placeholder='Qty'  style={inputStyle.input}/>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
