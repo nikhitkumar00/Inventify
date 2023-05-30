@@ -10,14 +10,18 @@
 .billing_help{
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+}
+.billing_help_head{
+  font-size: 25px;
 }
 .billing_help_content{
-  font-size: 16px;
+  font-size: 18px;
 }
 .billing_1{
     width: 1000px;
 }
-  .column_help{
+.column_help{
   display: flex;
   flex-direction: column;
   
@@ -51,6 +55,8 @@
     flex-direction: column;
     position: relative;
     margin: 20px;
+    width: 100%;
+    height: 100vh;
   }
   
     
@@ -98,7 +104,6 @@
   .subhead_help{
     margin:15px;
     font-size:20px;
-    font-style:;
   }
   /* .wrapper .main_content .info div{
     margin-bottom: 20px;
