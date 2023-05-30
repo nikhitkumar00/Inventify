@@ -6,31 +6,24 @@
     text-decoration: none;
   } */
 
-  .billing_help{
+  .billing_help,.statistics_help,.stocks_help,.column_help{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-  }
-  .billing_help_head{
-    font-size: 25px;
+    justify-content: space-between;
+    gap: 30px;
   }
   .billing_help_content{
     font-size: 18px;
   }
   .billing_1{
-      width: 1000px;
-  }
-  .column_help{
-    display: flex;
-    flex-direction: column;
-    
-  }
-  .column_help_pics{
-    display: flex;
-    justify-content: space-around;
+      width: 1100px;
+      max-width: 100%;
+      height: auto;
   }
   .column_1{
-    width: 700px;
+    width: 750px;
+    max-width: 100%;
+    height: auto;
   }
   
   .header_help{
@@ -69,25 +62,20 @@
       border-radius: 20px;
       margin: 10px;
       padding: 30px;
+      gap: 50px;
       background-color: #D7F0FE;
       color: #000000;
       line-height: 25px;
       margin-bottom: 20px;
-    }
-    .statistics_help{
-      display:flex;
-      flex-direction: column;
-      justify-content: center;
     }
     .statistics_head_help{
       font-size: 35px;
       font-weight: bolder;
       color: black;
     }
-    .statistics-style{
+    .statistics-style,.stocks-style{
       width: 750px;
-      display: flex;
-      padding: 30px;
+      max-width: 100%;
     }
     .statistics_text_help{
       padding: 10px;
@@ -101,15 +89,6 @@
     }
     
      */
-     .stocks-style{
-      width: 750px;
-      padding: 30px;
-    }
     .intro_help{
       font-size:20px;
-    }
-    .stocks_help{
-      display:flex;
-      flex-direction: column;
-      justify-content: center;
     }
