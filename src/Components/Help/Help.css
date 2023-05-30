@@ -6,7 +6,14 @@
     list-style: none;
     text-decoration: none;
   } */
-  
+.faqs_help{
+  display: flex;
+  justify-content: space-around;
+} 
+.faqs_title{
+  font-size: 30px ;
+  color: black;
+}
 .header_help{
   font-size: 40px;
     font-weight: bolder;
@@ -34,11 +41,14 @@
   
 
   .info_help{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 20px;
     margin: 10px;
     padding: 30px;
     background-color: #D7F0FE;
-    color: #717171;
+    color: #000000;
     line-height: 25px;
     margin-bottom: 20px;
   }
