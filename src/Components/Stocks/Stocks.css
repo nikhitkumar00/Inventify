@@ -10,16 +10,13 @@
 .StocksTable{
     font-family: comfortaa;
     font-size: 16px;
-    width: 100%;
+    width: calc(100vw - 355px);
+    height: 700px;
     margin-top: 20px;
     background-color: #FEF1D7;
     border-radius: 20px;
     margin-right: 20px;
     
-}
-.StocksTable:hover{
-  transform: scale(1.01);
-    transition: all 0.2s ease-in-out;
 }
 
 .StocksInput[type="text"]{
