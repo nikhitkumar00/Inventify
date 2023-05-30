@@ -1,4 +1,6 @@
 import "./Help.css";
+import statistics from '/src/img/Favicon/favicon_io/statistics.png';
+
 
 const Help = () => {
   return (
@@ -8,69 +10,38 @@ const Help = () => {
           Help
         </div>
         <div className="info_help">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed
-            nobis ut exercitationem atque accusamus sit natus officiis totam
-            blanditiis at eum nemo, nulla et quae eius culpa eveniet
-            voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio
-            perferendis itaque alias sint, beatae non maiores magnam ad, veniam
-            tenetur atque ea exercitationem earum eveniet totam ipsam magni
-            tempora aliquid ullam possimus? Tempora nobis facere porro,
-            praesentium magnam provident accusamus temporibus! Repellendus harum
-            veritatis itaque molestias repudiandae ea corporis maiores non
-            obcaecati libero, unde ipsum consequuntur aut consectetur culpa
-            magni omnis vero odio suscipit vitae dolor quod dignissimos
-            perferendis eos? Consequuntur! Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. A sed nobis ut exercitationem atque
-            accusamus sit natus officiis totam blanditiis at eum nemo, nulla et
-            quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis
-            porro. Quae fuga odio perferendis itaque alias sint, beatae non
-            maiores magnam ad, veniam tenetur atque ea exercitationem earum
-            eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora
-            nobis facere porro, praesentium magnam provident accusamus
-            temporibus! Repellendus harum veritatis itaque molestias repudiandae
-            ea corporis maiores non obcaecati libero, unde ipsum consequuntur
-            aut consectetur culpa magni omnis vero odio suscipit vitae dolor
-            quod dignissimos perferendis eos? Consequuntur! Lorem ipsum dolor
-            sit, amet consectetur adipisicing elit. A sed nobis ut
-            exercitationem atque accusamus sit natus officiis totam blanditiis
-            at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat
-            illum tenetur, facilis porro. Quae fuga odio perferendis itaque
-            alias sint, beatae non maiores magnam ad, veniam tenetur atque ea
-            exercitationem earum eveniet totam ipsam magni tempora aliquid ullam
-            possimus? Tempora nobis facere porro, praesentium magnam provident
-            accusamus temporibus! Repellendus harum veritatis itaque molestias
-            repudiandae ea corporis maiores non obcaecati libero, unde ipsum
-            consequuntur aut consectetur culpa magni omnis vero odio suscipit
-            vitae dolor quod dignissimos perferendis eos? Consequuntur!
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed
-            nobis ut exercitationem atque accusamus sit natus officiis totam
-            blanditiis at eum nemo, nulla et quae eius culpa eveniet
-            voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio
-            perferendis itaque alias sint, beatae non maiores magnam ad, veniam
-            tenetur atque ea exercitationem earum eveniet totam ipsam magni
-            tempora aliquid ullam possimus? Tempora nobis facere porro,
-            praesentium magnam provident accusamus temporibus! Repellendus harum
-            veritatis itaque molestias repudiandae ea corporis maiores non
-            obcaecati libero, unde ipsum consequuntur aut consectetur culpa
-            magni omnis vero odio suscipit vitae dolor quod dignissimos
-            perferendis eos? Consequuntur! Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. A sed nobis ut exercitationem atque
-            accusamus sit natus officiis totam blanditiis at eum nemo, nulla et
-            quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis
-            porro. Quae fuga odio perferendis itaque alias sint, beatae non
-            maiores magnam ad, veniam tenetur atque ea exercitationem earum
-            eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora
-            nobis facere porro, praesentium magnam provident accusamus
-            temporibus! Repellendus harum veritatis itaque molestias repudiandae
-            ea corporis maiores non obcaecati libero, unde ipsum consequuntur
-            aut consectetur culpa magni omnis vero odio suscipit vitae dolor
-            quod dignissimos perferendis eos? Consequuntur! Lorem ipsum dolor
-            sit, amet consectetur adipisicing elit. A sed nobis ut
-            exercitationem atque accusamus sit natus officiis totam
-          </p>
+          <div className="statistics_help">
+              <div className="statsiticshead_help">
+                Statistics Page
+              </div>
+              <img src={statistics}  alt="Statistics" className="statistics-style" />
+            
+              <div className="statistics_intro_help">
+                  <p>Welcome to the statistics webpage of our shop! This page is designed to provide you with valuable insights into the performance of your shop and help you make informed decisions.Let us take a closer look at the different  features of this page :</p>
+                  
+                <ul className="statistics_text_help">
+                    <li>
+                    <div className="subhead1_help"> Total Order:</div>
+                    This section displays the total number of orders placed by customers. It gives you an overview of the overall sales volume and customer demand. By tracking this metric, you can assess the popularity of your products and identify any trends or patterns.</li>
+                    
+                    <li><div className="subhead1_help"> Total Order:</div>
+                      In this section, you can see the total profit generated by your shop. It takes into account the revenue from sales minus the cost of goods sold and any other associated expenses. Monitoring your profit allows you to assess the financial health of your business and make strategic decisions to optimize profitability.</li>
+                  
+                    <li>
+                    <div className="subhead1_help"> Total Order:</div>
+                    This section shows the total expenses incurred by your shop. It includes costs such as inventory, utilities, wages, marketing, and other operational expenses. Tracking your expenses helps you understand where your money is being allocated and identify areas where you can potentially reduce costs.</li>
+                  
+                  
+                    <li><div className="subhead1_help"> Total Order:</div>
+                    Here, you will find a list of products that are approaching their expiration date. This feature is crucial for managing inventory and minimizing waste. By identifying these products, you can take proactive steps such as offering discounts or promotions to encourage their sale or planning their timely restocking to ensure freshness and avoid losses.</li>
+                  
+                    <li><div className="subhead1_help"> Total Order:</div>
+                      In this section, you will find a list of products that need to be restocked soon. It helps you maintain sufficient stock levels to meet customer demand and prevent stockouts. By keeping an eye on this information, you can ensure that popular products are readily available and avoid missed sales opportunities.</li>
+                  </ul>
+                </div>
+            </div>
+          
+          
         </div>
       </div>
     </div>

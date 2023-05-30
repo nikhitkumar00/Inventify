@@ -42,7 +42,26 @@
     line-height: 25px;
     margin-bottom: 20px;
   }
-  
+  .statistics_help{
+    justify-content: center;
+  }
+  .statisticshead_help{
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+  }
+  .statistics-style{
+    width: 700px;
+    display: flex;
+    align-self: center;
+    padding: 30px;
+  }
+  .statistics_text_help{
+    padding: 10px;
+  }
+  .subhead_head{
+    margin:20px;
+  }
   /* .wrapper .main_content .info div{
     margin-bottom: 20px;
   }
