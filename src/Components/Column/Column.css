@@ -1,5 +1,5 @@
 .wrapper_Column {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   font-family: comfortaa;
   padding: 20px;
@@ -20,21 +20,19 @@
   display: flex;
   margin-left: 80px;
 }
-.head1_Column,
-.head2_Column,
-.head3_Column,
-.head4_Column,
-.head5_Column {
+.head1_Column {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 18px;
   height: 80px;
-  min-width: 130px;
+  min-width: 140px;
   max-width: 250px;
   align-items: center;
   font-family: comfortaa;
   font-weight: 900;
 }
+
 .title_child_Column {
   border-radius: 20px;
   background-color: #d7f0fe;
@@ -61,18 +59,18 @@
 .table_Column {
   display: flex;
   flex-direction: column;
-  margin-left: 250px;
+  justify-content: space-evenly;
   border-radius: 8px;
-  width: 500px;
-  height: 250px;
+  width: 650px;
+  height: 200px;
   background-color: #e4e5ff;
-  padding-top: 30px;
+  padding: 20px 20px;
+  margin-left: 200px;
 }
 .container_Column{
   display: flex;
+  justify-content: space-around;
   gap: 30px;
-  margin-top: 43px;
-  margin-left: 15px;
 }
 .btn_Column{
   background-color: azure;
@@ -81,11 +79,10 @@
   height: 40px;
   padding: 7px 7px;
   border-radius: 7px;
-  margin-top: 40px;
   font-weight: 700;
-  margin-left: 150px;
   font-family: "Comfortaa", cursive;
   font-size: 22px;
+  margin-left: 200px
 }
 .newColumn{
   width: 210px;

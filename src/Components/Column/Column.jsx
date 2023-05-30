@@ -10,19 +10,19 @@ const Columns = () => {
             <div className="minus1_Column">-</div>
             <div className="title_child_Column">SL.NO</div>
           </div>
-          <div className="head2_Column">
+          <div className="head1_Column">
             <div className="minus2_Column">-</div>
             <div className="title_child_Column">NAME</div>
           </div>
-          <div className="head3_Column">
+          <div className="head1_Column">
             <div className="minus3_Column">-</div>
             <div className="title_child_Column">EXPIRY</div>
           </div>
-          <div className="head4_Column">
+          <div className="head1_Column">
             <div className="minus4_Column">-</div>
             <div className="title_child_Column">MRP</div>
           </div>
-          <div className="head5_Column">
+          <div className="head1_Column">
             <div className="minus5_Column">-</div>
             <div className="title_child_Column">QTY</div>
           </div>
@@ -42,7 +42,7 @@ const Columns = () => {
             </select>
             </div>
           </div>
-          <button className="btn_Column">ADD COLUMN</button>
+          <button className="btn_Column">Add Column</button>
         </form>
         {/*<form className="table_Column">
           <div className="odd_Column">
