@@ -1,10 +1,10 @@
 import "./Help.css";
-import statistics from "src/Components/Help/Help_pics/statistics.png";
-import stocks1 from "src/Components/Help/Help_pics/stocks1.png";
-import stocks2 from "src/Components/Help/Help_pics/stocks2.png";
-import column_1 from "src/Components/Help/Help_pics/column_1.png";
-import column_2 from "src/Components/Help/Help_pics/column_2.png";
-import billing_1 from "src/Components/Help/Help_pics/billing_1.png";
+import statistics from "/src/Components/Help/Help_pics/statistics.png";
+import stocks1 from "/src/Components/Help/Help_pics/stocks1.png";
+import stocks2 from "/src/Components/Help/Help_pics/stocks2.png";
+import column_1 from "/src/Components/Help/Help_pics/column_1.png";
+import column_2 from "/src/Components/Help/Help_pics/column_2.png";
+import billing_1 from "/src/Components/Help/Help_pics/billing_1.png";
 const Help = () => {
   return (
     <div className="wrapper_help">
