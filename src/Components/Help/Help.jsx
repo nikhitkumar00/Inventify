@@ -91,6 +91,13 @@ const Help = () => {
             </div>
             <img src={stocks}  alt="Stocks" className="stocks-style" />
           </div>
+          <div className="billing_help">
+            <div className="billing_help_head">Billing</div>
+            <div className="billing_help_content">
+              
+              <div className="billing_help_content_subhead"></div>
+            </div>
+          </div>
           <div className="column_help">
             <div className="column_help_head">Columns</div>
 
