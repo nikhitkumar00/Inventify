@@ -83,7 +83,7 @@
     justify-content: center;
   }
   .statistics_head_help{
-    font-size: 35px;
+    font-size: 28px;
     font-weight: bolder;
     color: black;
   }
@@ -93,27 +93,39 @@
     padding: 30px;
   }
   .statistics_text_help{
-    padding: 10px;
+    padding: 20px;
   }
+  .statistics_text_child_help{
+    
+  }
+  .intro_help{
+    font-size:18px;
+  }
+
   .subhead_help{
     margin:15px;
     font-size:20px;
-    font-style:;
-  }
-  /* .wrapper .main_content .info div{
-    margin-bottom: 20px;
-  }
-  
-   */
-   .stocks-style{
-    width: 750px;
-    padding: 30px;
-  }
-  .intro_help{
-    font-size:20px;
+    font-weight: 100;
   }
   .stocks_help{
     display:flex;
     flex-direction: column;
     justify-content: center;
   }
+  .stocks_head_help{
+    font-size: 28px;
+    font-weight: bolder;
+    color: black;
+  }
+  .stocks-style{
+    width: 750px;
+    padding: 30px;
+  }
+  
+  
+  /* .wrapper .main_content .info div{
+    margin-bottom: 20px;
+  }
+  
+   */
+  
