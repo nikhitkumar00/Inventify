@@ -77,3 +77,10 @@
   }
   
    */
+   .stocks-style{
+    width: 600px;
+    height:400px;
+    display: flex;
+    align-self: center;
+    padding: 30px;
+  }

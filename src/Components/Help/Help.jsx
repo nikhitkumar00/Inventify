@@ -1,6 +1,6 @@
 import "./Help.css";
 import statistics from "/src/img/Favicon/favicon_io/statistics.png";
-
+import stocks from "/src/img/Favicon/favicon_io/stocks.png";
 const Help = () => {
   return (
     <div className="wrapper_help">
@@ -84,6 +84,12 @@ const Help = () => {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="stocks_help">
+            <div className="stockshead_help">
+              Stock Page
+            </div>
+            <img src={stocks}  alt="Stocks" className="stocks-style" />
           </div>
           <div className="column_help">
             <div className="column_help_head">Columns</div>
