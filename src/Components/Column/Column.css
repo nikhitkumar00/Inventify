@@ -97,7 +97,7 @@
   outline: none;
 }
 .newColumn::placeholder {
-  color: var(--blackish);
+  color: var(--place);
   font-style: italic;
   font-family: "Comfortaa", cursive;
   font-weight: 600;

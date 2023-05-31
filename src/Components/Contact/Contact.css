@@ -1,7 +1,7 @@
 .ContactMainContainer{
     font-family: comfortaa;
     flex:1;
-
+    background-color: var(--mayo);
 }
 
 
@@ -57,7 +57,9 @@
     height: 50px;
     font-size: 18px;
     padding-left: 10px;
-
+}
+.UserName::placeholder,.Email::placeholder,.Content::placeholder{
+    color: var(--place)
 }
 .Email{
     border: none;
@@ -84,7 +86,10 @@
     font-size: 18px;
     padding: 10px 0 400px 10px;
     margin-top: 10px;
+    color: var(--tar);
+    background-color: var(--mayo);
 }
+
 
 .SubmitWrapper{
     display: flex;

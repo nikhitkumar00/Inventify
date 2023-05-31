@@ -26,7 +26,7 @@
       color: var(--tar);
   }
     .wrapper_help{
-      background-color: #ffffff;
+      background-color: var(--mayo);
       display: flex;
       flex-direction: column;
       position: relative;
@@ -40,7 +40,7 @@
       width: 100%;
       font-family: 'Comfortaa';
       /* margin-left: 80px; */
-      background-color: #ffffff;
+      background-color: var(--mayo);
       border-radius: 20px;
       margin-bottom: 20px;
   
