@@ -44,14 +44,26 @@
     font-weight: bold;
     font-family: 'Comfortaa';
     text-decoration: none;
-    cursor: pointer;
 }
-
-.nav-child:hover {
+.nav-child-theme{
+    box-shadow: 0px 0px 2px var(--tar);
+    border-radius: 10px;
+    height: 35px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 25%;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Comfortaa';
+    text-decoration: none;
+    color: var(--tar);
+}
+.nav-child:hover,.nav-child-theme:hover {
     background-color: var(--tar);
     color: var(--mayo);
     transition: all 0.1s ease-in-out;
-
+    cursor: pointer;
 }
 
 .active_navbar {
@@ -61,6 +73,7 @@
     border-radius: 10px;
     text-decoration: none;
 }
+
 
 .inactive_navbar {
     color: var(--tar);
