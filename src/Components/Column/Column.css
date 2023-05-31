@@ -76,7 +76,8 @@
   gap: 30px;
 }
 .btn_Column{
-  background-color: azure;
+  background-color: #9cadce;
+  color: var(--mayo);
   border: none;
   width: 200px;
   height: 40px;
@@ -85,7 +86,8 @@
   font-weight: 700;
   font-family: "Comfortaa", cursive;
   font-size: 22px;
-  margin-left: 200px
+  margin-left: 200px;
+  cursor: pointer;
 }
 .newColumn{
   width: 210px;
@@ -127,6 +129,7 @@
   font-size: 16px;
   color: var(--tar);
 }
+
 .opt1_Column{
   background-color: #969191;
   font-style: italic;
