@@ -3,7 +3,7 @@
     top: 0px;
     left: 0px;
     width: 250px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 2vw);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -92,5 +92,8 @@
 }
 
 .nav-logout {
+    color: rgb(197, 1, 1);
+}
+.nav-logout:hover {
     color: rgb(197, 1, 1);
 }
