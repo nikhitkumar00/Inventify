@@ -1,9 +1,11 @@
 import "./Statistics.css";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useState, useEffect } from "react";
 
 const Statistics = () => {
   const [restockData, setRestockData] = useState([]);
   const [expiryData, setExpiryData] = useState([]);
+  const [totalOrders, setTotalOrders] = useState(0);
 
   useEffect(() => {
     fetch("http://127.0.0.1/I_N_V_O%20Backend/restock.php")
@@ -14,6 +16,11 @@ const Statistics = () => {
     fetch("http://127.0.0.1/I_N_V_O%20Backend/expiry.php")
       .then((response) => response.json())
       .then((data) => setExpiryData(data))
+      .catch((error) => console.log(error));
+
+    fetch("http://127.0.0.1/I_N_V_O%20Backend/totalorders.php")
+      .then((response) => response.text())
+      .then((data) => setTotalOrders(parseInt(data)))
       .catch((error) => console.log(error));
   }, []);
 
@@ -56,7 +63,12 @@ const Statistics = () => {
           </div>
           <div className="data-child_statistics yellow_statistics">
             <div className="info_statistics">Total Orders</div>
-            <div className="info-data_statistics">252</div>
+            <div className="statistics_icons">
+              <div>
+                <AiOutlineShoppingCart className="statistics_logos"/>
+              </div>
+              <div className="info-data_statistics">{totalOrders}</div>
+            </div>
           </div>
           <div className="data-child_statistics purple_statistics">
             <div className="info_statistics">Growth This Month</div>
@@ -74,7 +86,7 @@ const Statistics = () => {
                   <th className="th_statistics">Expiry Date</th>
                 </tr>
               </thead>
-              <tbody>{expiryTable() }</tbody>
+              <tbody>{expiryTable()}</tbody>
             </table>
           </div>
           <div className="flex_statistics2">
