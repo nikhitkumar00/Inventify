@@ -10,7 +10,7 @@
 .StocksTable{
     font-family: comfortaa;
     font-size: 16px;
-    width: calc(100vw - 355px);
+    width: calc(100vw - 20vw);
     height: 700px;
     margin-top: 20px;
     background-color: var(--cream);
@@ -23,6 +23,8 @@
     border-radius: 10px;
     padding: 5px;
     font-size: 16px;
+    color: var(--tar);
+    background-color: var(--mayo);
 
 }
 
@@ -37,7 +39,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin:16px;
     background-color: var(--mayo);
   }
 
@@ -82,6 +83,8 @@
 .StocksInputForm{
   background-color: var(--sea);
   padding: 20px;
+  border-radius: 18px;
+  width: calc(100vw - 22.5vw);
 }
 
 .row_stocks {
