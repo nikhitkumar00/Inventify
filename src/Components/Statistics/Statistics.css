@@ -38,6 +38,17 @@
     justify-content: space-between;
 }
 
+.statistics_icons {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.statistics_logos {
+    font-size: 30px;
+}
+
 .data-child_statistics {
     height: 120px;
     width : 280px;
