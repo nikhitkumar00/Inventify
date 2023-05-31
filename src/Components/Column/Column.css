@@ -95,6 +95,9 @@
   border-radius: 8px;
   font-size: 20px;
   outline: none;
+  background-color: var(--mayo);
+  caret-color: var(--tar);
+  color: var(--tar);
 }
 .newColumn::placeholder {
   color: var(--place);
@@ -134,6 +137,8 @@
 .dropdown_Column select {
   padding: 5px 30px 5px 10px;
   width: 220px;
+  background-color: var(--mayo);
+  color: var(--tar);
 }
 
 

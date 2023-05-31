@@ -1,7 +1,8 @@
 .BillingContainer{
     flex-grow: 2;
-    margin: 20px;
+    margin: 20px var(--mayo);
     font-family: 'Comfortaa';
+    background-color: var(--mayo);
 }
 .BillingContainerChild1{
     display: flex;
