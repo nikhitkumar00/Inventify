@@ -15,7 +15,7 @@ const Navbar = () => {
   const [dark, setDark] = useState(false)
 
   const themechange = () => {
-    if (!dark) {
+    if (dark) {
       document.documentElement.style.setProperty("--mayo", "#ffffff");
       document.documentElement.style.setProperty("--tar", "#000000");
       document.documentElement.style.setProperty("--blackish", "#2e2e2e");
