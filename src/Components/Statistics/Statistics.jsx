@@ -1,5 +1,8 @@
 import "./Statistics.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { TbCash } from "react-icons/tb";
+import { TbPigMoney } from "react-icons/tb";
+import { MdDateRange } from "react-icons/md";
 import { useState, useEffect } from "react";
 
 const Statistics = () => {
@@ -55,24 +58,42 @@ const Statistics = () => {
         <div className="single-datas_statistics">
           <div className="data-child_statistics green_statistics">
             <div className="info_statistics">Total Profit</div>
-            <div className="info-data_statistics">22k</div>
-          </div>
-          <div className="data-child_statistics blue_statistics">
-            <div className="info_statistics">Total Expense</div>
-            <div className="info-data_statistics">1232</div>
-          </div>
-          <div className="data-child_statistics yellow_statistics">
-            <div className="info_statistics">Total Orders</div>
             <div className="statistics_icons">
               <div>
-                <AiOutlineShoppingCart className="statistics_logos"/>
+                <TbPigMoney className="statistics_logos" />
               </div>
               <div className="info-data_statistics">{totalOrders}</div>
             </div>
           </div>
+
+          <div className="data-child_statistics blue_statistics">
+            <div className="info_statistics">Total Expense</div>
+            <div className="statistics_icons">
+              <div>
+                <TbCash className="statistics_logos" />
+              </div>
+              <div className="info-data_statistics">{totalOrders}</div>
+            </div>
+          </div>
+
+          <div className="data-child_statistics yellow_statistics">
+            <div className="info_statistics">Total Orders</div>
+            <div className="statistics_icons">
+              <div>
+                <AiOutlineShoppingCart className="statistics_logos" />
+              </div>
+              <div className="info-data_statistics">{totalOrders}</div>
+            </div>
+          </div>
+
           <div className="data-child_statistics purple_statistics">
-            <div className="info_statistics">Growth This Month</div>
-            <div className="info-data_statistics">15 %</div>
+            <div className="info_statistics">Date</div>
+            <div className="statistics_icons">
+              <div>
+                <MdDateRange className="statistics_logos" />
+              </div>
+              <div className="info-data_statistics">{totalOrders}</div>
+            </div>
           </div>
         </div>
         <div className="tables_statistics">
