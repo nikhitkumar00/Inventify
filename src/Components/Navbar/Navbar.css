@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-width: 250px;
-    background-color: white;
+    background-color: var(--mayo);
     z-index: 9999;
 }
 
@@ -23,6 +23,7 @@
     font-size: 50px;
     text-align: center;
     margin: 10px 0px 20px 0px;
+    color: var(--tar);
 }
 
 .nav-parent {
@@ -32,7 +33,7 @@
 }
 
 .nav-child {
-    box-shadow: 0px 0px 2px black;
+    box-shadow: 0px 0px 2px var(--tar);
     border-radius: 10px;
     height: 35px;
     display: flex;
@@ -46,27 +47,27 @@
 }
 
 .nav-child:hover {
-    background-color: black;
-    color: white;
+    background-color: var(--tar);
+    color: var(--mayo);
     transition: all 0.1s ease-in-out;
 
 }
 
 .active_navbar {
-    background-color: black;
-    color: white;
+    background-color: var(--tar);
+    color: var(--mayo);
     transition: all 0.1s ease-in-out;
     border-radius: 10px;
     text-decoration: none;
 }
 
 .inactive_navbar {
-    color: black;
+    color: var(--tar);
     text-decoration: none;
 }
 
 .active_navbar:hover {
-    background-color: black;
+    background-color: var(--tar);
 }
 
 .nav-bottom {

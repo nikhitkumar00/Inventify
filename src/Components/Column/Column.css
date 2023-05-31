@@ -57,7 +57,7 @@
   border-radius: 50%;
   font-weight: 1500;
   font-size: 20px;
-  color: var(--tar);
+  color: #000000;
 }
 .table_Column {
   display: flex;
