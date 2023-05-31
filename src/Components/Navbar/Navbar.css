@@ -43,6 +43,7 @@
     font-weight: bold;
     font-family: 'Comfortaa';
     text-decoration: none;
+    cursor: pointer;
 }
 
 .nav-child:hover {

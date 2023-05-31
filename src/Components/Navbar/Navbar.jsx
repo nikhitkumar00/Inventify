@@ -5,10 +5,41 @@ import { FaMoneyBillAlt } from "react-icons/fa";
 import { BsColumnsGap } from "react-icons/bs";
 import { BiHelpCircle } from "react-icons/bi";
 import { MdContacts } from "react-icons/md";
-import { RiLogoutCircleRLine } from "react-icons/ri"
-import { NavLink} from "react-router-dom";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { RiLogoutCircleRLine } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const Navbar = () => {
+
+  const [dark, setDark] = useState(false)
+
+  const themechange = () => {
+    if (!dark) {
+      document.documentElement.style.setProperty("--mayo", "#ffffff");
+      document.documentElement.style.setProperty("--tar", "#000000");
+      document.documentElement.style.setProperty("--blackish", "#2e2e2e");
+      document.documentElement.style.setProperty("--sea", "#d7f0fe");
+      document.documentElement.style.setProperty("--sunset", "#ffd6d6");
+      document.documentElement.style.setProperty("--lavender", "#e4e5ff");
+      document.documentElement.style.setProperty("--pista", "#D8FDD9");
+      document.documentElement.style.setProperty("--cream", "#FEF1D7");
+      document.documentElement.style.setProperty("--place", "#8f8d90");
+    }
+    else {
+      document.documentElement.style.setProperty("--mayo", "#ffffff");
+      document.documentElement.style.setProperty("--tar", "#ffffff");
+      document.documentElement.style.setProperty("--blackish", "#ffffff");
+      document.documentElement.style.setProperty("--sea", "#ffffff");
+      document.documentElement.style.setProperty("--sunset", "#ffffff");
+      document.documentElement.style.setProperty("--lavender", "#ffffff");
+      document.documentElement.style.setProperty("--pista", "#ffffff");
+      document.documentElement.style.setProperty("--cream", "#ffffff");
+      document.documentElement.style.setProperty("--place", "#ffffff");     
+    }
+    setDark(!dark);
+  }
+
   return (
     <div className="nav-grandparent">
       <div className="nav-up">
@@ -76,6 +107,10 @@ const Navbar = () => {
               Help
             </div>
           </NavLink>
+          <div className="nav-child" onClick={themechange}>
+            <MdOutlineDarkMode className="icon" />
+            Dark Mode
+          </div>
         </div>
       </div>
 
