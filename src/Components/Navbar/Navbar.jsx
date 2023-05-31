@@ -27,9 +27,9 @@ const Navbar = () => {
       document.documentElement.style.setProperty("--place", "#8f8d90");
     }
     else {
-      document.documentElement.style.setProperty("--mayo", "#ffffff");
+      document.documentElement.style.setProperty("--mayo", "#2e2e2e");
       document.documentElement.style.setProperty("--tar", "#ffffff");
-      document.documentElement.style.setProperty("--blackish", "#ffffff");
+      document.documentElement.style.setProperty("--blackish", "#000000");
       document.documentElement.style.setProperty("--sea", "#ffffff");
       document.documentElement.style.setProperty("--sunset", "#ffffff");
       document.documentElement.style.setProperty("--lavender", "#ffffff");
@@ -107,7 +107,7 @@ const Navbar = () => {
               Help
             </div>
           </NavLink>
-          <div className="nav-child" onClick={themechange}>
+          <div className="nav-child-theme" onClick={themechange}>
             <MdOutlineDarkMode className="icon" />
             Dark Mode
           </div>
