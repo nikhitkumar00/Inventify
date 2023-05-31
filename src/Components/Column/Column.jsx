@@ -36,8 +36,9 @@ const Columns = () => {
             ></input>
             <div className="dropdown_Column">
             <select className="type_Column" id="dropdown">
+                <option className="opt_Column" hidden selected>Data Type</option>
                 <option className="opt_Column" value="text">Text</option>
-                <option className="opt_Column" value="number" selected>Number</option>
+                <option className="opt_Column" value="number">Number</option>
                 <option className="opt_Column" value="date">Date</option>
             </select>
             </div>

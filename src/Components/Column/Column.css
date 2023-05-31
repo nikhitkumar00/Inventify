@@ -120,11 +120,12 @@
 
 }
 .opt_Column{
-  background-color: #f8fdf8;
+  background-color: var(--mayo);
   font-style: italic;
   font-family: "Comfortaa", cursive;
   font-weight: 600;
   font-size: 16px;
+  color: var(--tar);
 }
 .opt1_Column{
   background-color: #969191;
@@ -140,6 +141,7 @@
   background-color: var(--mayo);
   color: var(--tar);
 }
+
 
 
 
