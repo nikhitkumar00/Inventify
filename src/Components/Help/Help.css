@@ -23,6 +23,7 @@
       height: 90px;
       display: flex;
       align-items: center;
+      color: var(--tar);
   }
     .wrapper_help{
       background-color: #ffffff;

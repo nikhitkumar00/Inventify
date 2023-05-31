@@ -8,7 +8,7 @@
 .ContactFormContainer{
     font-family: comfortaa;
     height: calc(100vh - 120px);
-    background-color: #D8FDD9;
+    background-color: var(--pista);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,6 +25,7 @@
     height: 90px;
     display: flex;
     align-items: center;
+    color: var(--tar);
 }
 
 .form_Contact{
@@ -40,6 +41,7 @@
     background-color: #0D3653;
     border-radius: 30px;
     max-width: 150px;
+    border: none;
     color: white;
     font-size: 20px;
     margin-top: 15px;
@@ -66,7 +68,6 @@
     height: 50px;
     flex-grow: 2;
     margin-left: 10px;
-
     font-size: 18px;
 
 }

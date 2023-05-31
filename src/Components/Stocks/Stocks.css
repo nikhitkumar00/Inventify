@@ -13,7 +13,7 @@
     width: calc(100vw - 355px);
     height: 700px;
     margin-top: 20px;
-    background-color: #FEF1D7;
+    background-color: var(--cream);
     border-radius: 20px;
     margin-right: 20px;
     
@@ -80,7 +80,7 @@
 }
 
 .StocksInputForm{
-  background-color: #D7F0FE;
+  background-color: var(--sea);
   padding: 20px;
 }
 

@@ -28,7 +28,7 @@ export const Add = () => {
         minWidth: "200px",
         maxWidth: "367px",
         height: "250px",
-        backgroundColor: "#D8FDD9",
+        backgroundColor: "var(--pista)",
         borderRadius: "10px",
         fontSize: "20px",
       }}

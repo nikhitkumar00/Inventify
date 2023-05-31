@@ -3,6 +3,7 @@
   height: 100vh;
   font-family: comfortaa;
   padding: 20px;
+  background-color: var(--mayo);
 }
 .child_wrap_Column {
   display: flex;
@@ -15,6 +16,7 @@
   height: 90px;
   display: flex;
   align-items: center;
+  color: var(--tar);
 }
 .header_Column {
   display: flex;
@@ -35,7 +37,7 @@
 
 .title_child_Column {
   border-radius: 20px;
-  background-color: #d7f0fe;
+  background-color: var(--sea);
   text-align: center;
   width: 200px;
   height: 33px;
@@ -49,12 +51,13 @@
 .minus3_Column,
 .minus4_Column,
 .minus5_Column {
-  background-color: #ffd6d6;
+  background-color: var(--sunset);
   text-align: center;
   padding: 9px 18px;
   border-radius: 50%;
   font-weight: 1500;
   font-size: 20px;
+  color: var(--tar);
 }
 .table_Column {
   display: flex;
@@ -63,7 +66,7 @@
   border-radius: 8px;
   width: 650px;
   height: 200px;
-  background-color: #e4e5ff;
+  background-color: var(--lavender);
   padding: 20px 20px;
   margin-left: 200px;
 }
@@ -94,7 +97,7 @@
   outline: none;
 }
 .newColumn::placeholder {
-  color: #1a1919;
+  color: var(--blackish);
   font-style: italic;
   font-family: "Comfortaa", cursive;
   font-weight: 600;
@@ -114,7 +117,7 @@
 
 }
 .opt_Column{
-  background-color: #fdf8fd;
+  background-color: #f8fdf8;
   font-style: italic;
   font-family: "Comfortaa", cursive;
   font-weight: 600;
