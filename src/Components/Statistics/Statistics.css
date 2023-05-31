@@ -5,7 +5,7 @@
     font-family: comfortaa;
     display: flex;
     flex-direction: column;
-    color: var(--tar);
+    color: #000000;
     background-color: var(--mayo);
 }
 
