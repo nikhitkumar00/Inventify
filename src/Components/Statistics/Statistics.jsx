@@ -9,6 +9,9 @@ const Statistics = () => {
   const [restockData, setRestockData] = useState([]);
   const [expiryData, setExpiryData] = useState([]);
   const [totalOrders, setTotalOrders] = useState(0);
+  const [profit, setProfit] = useState(0);
+  const [expense, setExpense] = useState(0);
+  const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
     fetch("http://127.0.0.1/I_N_V_O%20Backend/restock.php")
@@ -25,6 +28,25 @@ const Statistics = () => {
       .then((response) => response.text())
       .then((data) => setTotalOrders(parseInt(data)))
       .catch((error) => console.log(error));
+      
+    fetch("http://127.0.0.1/I_N_V_O%20Backend/profit.php")
+        .then((response) => response.text())
+        .then((data) => setProfit(parseFloat(data)))
+        .catch((error) => console.log(error));
+    
+    fetch("http://127.0.0.1/I_N_V_O%20Backend/expense.php")
+        .then((response) => response.text())
+        .then((data) => setExpense(parseFloat(data)))
+        .catch((error) => console.log(error));
+  }, []);
+  
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date().toLocaleTimeString());
+    }, 1000);
+    return () => {
+      clearInterval(timer);
+    };
   }, []);
 
   const restockTable = () => {
@@ -57,12 +79,12 @@ const Statistics = () => {
       <div className="content_statistics">
         <div className="single-datas_statistics">
           <div className="data-child_statistics green_statistics">
-            <div className="info_statistics">Total Profit</div>
+            <div className="info_statistics">Profit</div>
             <div className="statistics_icons">
               <div>
                 <TbPigMoney className="statistics_logos" />
               </div>
-              <div className="info-data_statistics">{totalOrders}</div>
+              <div className="info-data_statistics">{profit}</div>
             </div>
           </div>
 
@@ -72,7 +94,7 @@ const Statistics = () => {
               <div>
                 <TbCash className="statistics_logos" />
               </div>
-              <div className="info-data_statistics">{totalOrders}</div>
+              <div className="info-data_statistics">{expense}</div>
             </div>
           </div>
 
@@ -92,7 +114,7 @@ const Statistics = () => {
               <div>
                 <MdDateRange className="statistics_logos" />
               </div>
-              <div className="info-data_statistics">{totalOrders}</div>
+              <div className="info-data_statistics">{currentTime}</div>
             </div>
           </div>
         </div>
