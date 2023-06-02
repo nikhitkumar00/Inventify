@@ -67,7 +67,7 @@ const Columns = () => {
                 value={dataType}
                 onChange={(e) => {
                   setDataType(e.target.value);
-                  console.log(dataType)
+                  console.log(dataType);
                 }}
               >
                 <option className="opt_Column" value="VARCHAR(40)">

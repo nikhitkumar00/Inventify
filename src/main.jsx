@@ -11,6 +11,7 @@ import Contact from "./Components/Contact/Contact.jsx";
 import Signup from "./Components/Signup/Signup.jsx";
 import Login from "./Components/Login/Login.jsx";
 import Column from "./Components/Column/Column.jsx";
+import Faq from "./Components/FAQ/Faq.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/column",
         element: <Column />,
+      },
+      {
+        path: "/faq",
+        element: <Faq />,
       },
     ],
   },
