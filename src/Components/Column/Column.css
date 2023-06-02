@@ -46,11 +46,7 @@
   font-size: 22px;
 }
 
-.minus1_Column,
-.minus2_Column,
-.minus3_Column,
-.minus4_Column,
-.minus5_Column {
+.minus1_Column{
   background-color: var(--sunset);
   text-align: center;
   padding: 9px 18px;
@@ -97,9 +93,9 @@
   border-radius: 8px;
   font-size: 20px;
   outline: none;
-  background-color: var(--mayo);
-  caret-color: var(--tar);
-  color: var(--tar);
+  background-color: var(--inputf);
+  caret-color: #000000;
+  color: #000000;
 }
 .newColumn::placeholder {
   color: var(--place);
@@ -122,12 +118,12 @@
 
 }
 .opt_Column{
-  background-color: var(--mayo);
+  background-color: var(--inputf);
   font-style: italic;
   font-family: "Comfortaa", cursive;
   font-weight: 600;
   font-size: 16px;
-  color: var(--tar);
+  color: #000000;
 }
 
 .opt1_Column{
@@ -141,9 +137,10 @@
 .dropdown_Column select {
   padding: 5px 30px 5px 10px;
   width: 220px;
-  background-color: var(--mayo);
-  color: var(--tar);
+  background-color: var(--inputf);
+  color: var(--place);
 }
+
 
 
 

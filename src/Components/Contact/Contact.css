@@ -8,7 +8,7 @@
 .ContactFormContainer{
     font-family: comfortaa;
     height: calc(100vh - 120px);
-    background-color: var(--pista);
+    background-color: #cbfdcc;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,6 +57,7 @@
     height: 50px;
     font-size: 18px;
     padding-left: 10px;
+    background-color: var(--inputf);
 }
 .UserName::placeholder,.Email::placeholder,.Content::placeholder{
     color: var(--place)
@@ -71,7 +72,7 @@
     flex-grow: 2;
     margin-left: 10px;
     font-size: 18px;
-
+    background-color: var(--inputf);
 }
 
 .NameEmailContainer{
@@ -86,8 +87,8 @@
     font-size: 18px;
     padding: 10px 0 400px 10px;
     margin-top: 10px;
-    color: var(--tar);
-    background-color: var(--mayo);
+    color: #000000;
+    background-color: var(--inputf);
 }
 
 

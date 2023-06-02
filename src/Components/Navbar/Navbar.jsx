@@ -25,17 +25,19 @@ const Navbar = () => {
       document.documentElement.style.setProperty("--pista", "#D8FDD9");
       document.documentElement.style.setProperty("--cream", "#FEF1D7");
       document.documentElement.style.setProperty("--place", "#8f8d90");
+      document.documentElement.style.setProperty("--inputf", "#ffffff"); 
     }
     else {
       document.documentElement.style.setProperty("--mayo", "#2e2e2e");
       document.documentElement.style.setProperty("--tar", "#ffffff");
       document.documentElement.style.setProperty("--blackish", "#000000");
-      document.documentElement.style.setProperty("--sea", "#d7f0fe");
-      document.documentElement.style.setProperty("--sunset", "#ffd6d6");
-      document.documentElement.style.setProperty("--lavender", "#e4e5ff");
-      document.documentElement.style.setProperty("--pista", "#D8FDD9");
-      document.documentElement.style.setProperty("--cream", "#FEF1D7");
-      document.documentElement.style.setProperty("--place", "#8f8d90");    
+      document.documentElement.style.setProperty("--sea", "#c9ebfe");
+      document.documentElement.style.setProperty("--sunset", "#ffcdcd");
+      document.documentElement.style.setProperty("--lavender", "#d5d7ff");
+      document.documentElement.style.setProperty("--pista", "#d4fdd5");
+      document.documentElement.style.setProperty("--cream", "#feecc9");
+      document.documentElement.style.setProperty("--place", "#8f8d90");
+      document.documentElement.style.setProperty("--inputf", "#fafafa");     
     }
     setDark(!dark);
   }

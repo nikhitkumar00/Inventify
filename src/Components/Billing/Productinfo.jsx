@@ -6,7 +6,7 @@ var inputStyle={
       padding:'15px',
       margin:'15px',
       fontSize:'15px',
-      backgroundColor: "var(--mayo)",
+      backgroundColor: "var(--inputf)",
       color: "var(--tar)",
       placeholder: "var(--place)"
     },
@@ -16,7 +16,7 @@ var inputStyle={
       padding:'15px',
       flexGrow:'2',
       margin:'15px',
-      backgroundColor: "var(--mayo)",
+      backgroundColor: "var(--inputf)",
       color: "var(--tar)",
       fontSize:'15px'
     //   fontSize:'10px'
