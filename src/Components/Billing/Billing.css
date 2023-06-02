@@ -15,9 +15,9 @@
     font-family: 'Comfortaa';
 }
 
-.TableMainContainer{
+/*.TableMainContainer{
     
-}
+}*/
 
 .th_billingtable{
     /* background-color: teal; */
@@ -28,7 +28,6 @@
     width: 250px;
     font-size: 20px;
     border-bottom: 1px dotted black;
-    
 }
 
 .Billingtable{
