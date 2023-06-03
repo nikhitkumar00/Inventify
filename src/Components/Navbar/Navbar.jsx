@@ -1,12 +1,13 @@
 import "./Navbar.css";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { BsDatabaseCheck } from "react-icons/bs";
-import { FaMoneyBillAlt } from "react-icons/fa";
+import { RiBillLine } from "react-icons/ri";
 import { BsColumnsGap } from "react-icons/bs";
 import { BiHelpCircle } from "react-icons/bi";
 import { MdContacts } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { RiLogoutCircleRLine } from "react-icons/ri";
+import { BiMessageCheck } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
@@ -51,7 +52,7 @@ const Navbar = () => {
 
         <div className="nav-parent">
           <NavLink
-            to={"/statistics"}
+            to={"/"}
             className={({ isActive }) =>
               isActive ? "active_navbar" : "inactive_navbar"
             }
@@ -81,7 +82,7 @@ const Navbar = () => {
             }
           >
             <div className="nav-child">
-              <FaMoneyBillAlt className="icon" />
+              <RiBillLine className="icon" />
               Billing
             </div>
           </NavLink>
@@ -107,6 +108,17 @@ const Navbar = () => {
             <div className="nav-child">
               <BiHelpCircle className="icon" />
               Help
+            </div>
+          </NavLink>
+          <NavLink
+            to={"/faq"}
+            className={({ isActive }) =>
+              isActive ? "active_navbar" : "inactive_navbar"
+            }
+          >
+            <div className="nav-child">
+              <BiMessageCheck className="icon" />
+              FAQs
             </div>
           </NavLink>
           <div className="nav-child-theme" onClick={themechange}>

@@ -91,11 +91,9 @@ export const Stocks = () => {
       </table>
       <div>
         <form onSubmit={handleSubmit} className="StocksInputForm">
-          <table className="AddTable">
-            <tbody>
-              <tr>{getFormInputs()}</tr>
-            </tbody>
-          </table>
+          <div className="AddTable">
+            <div className="formInputStocks">{getFormInputs()}</div>
+          </div>
           <div className="StocksBottomTableWrapper">
             <button className="StocksAddButton" type="submit">
               Add
