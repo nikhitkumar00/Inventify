@@ -1,9 +1,6 @@
 import { toast } from "react-toastify";
-import Minus from "../Minus/Minus";
 import "./Column.css";
 import { useState } from "react";
-
-
 
 const Columns = () => {
   const [columnName, setColumnName] = useState("");
@@ -15,37 +12,46 @@ const Columns = () => {
     const url = `http://127.0.0.1/I_N_V_O%20Backend/newcolumn.php?columnName=${columnName}&dataType=${dataType}`;
 
     fetch(url)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
       .then((data) => {
         console.log(data);
+        toast.success("Column added successfully");
       })
-      .then(toast.success("Column added successfully"))
       .catch((error) => {
         console.log(error);
-        toast.error("Error occured while adding");
+        toast.error("Error occurred while adding");
       });
   };
-  
+
   const handleRemoveColumn = (e) => {
     e.preventDefault();
 
     const url = `http://127.0.0.1/I_N_V_O%20Backend/removecolumn.php?columnName=${columnName}`;
 
     fetch(url)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
       .then((data) => {
         console.log(data);
+        toast.success("Column removed successfully");
       })
-      .then(toast.success("Column removed successfully"))
       .catch((error) => {
         console.log(error);
-        toast.error("Error occured while removing");
+        toast.error("Error occurred while removing");
       });
   };
 
   const handleColumnNameChange = (e) => {
     setColumnName(e.target.value);
-    console.log(columnName);
   };
 
   return (
@@ -69,7 +75,7 @@ const Columns = () => {
             <div className="title_child_Column">QTY</div>
           </div>
         </div>
-        <form className="table_Column" onSubmit={handleAddColumn}>
+        <form className="table_Column">
           <div className="container_Column">
             <input
               className="newColumn"
@@ -85,7 +91,6 @@ const Columns = () => {
                 value={dataType}
                 onChange={(e) => {
                   setDataType(e.target.value);
-                  console.log(dataType);
                 }}
               >
                 <option className="opt_Column" value="VARCHAR(40)">
@@ -104,10 +109,10 @@ const Columns = () => {
             </div>
           </div>
           <div className="btn_class_Column">
-            <button className="btn_Column" type="submit">
+            <button className="btn_Column" type="submit" onClick={handleAddColumn}>
               Add Column
             </button>
-            <button className="btn_Column" type="submit">
+            <button className="btn_Column" type="submit" onClick={handleRemoveColumn}>
               Delete Column
             </button>
           </div>
