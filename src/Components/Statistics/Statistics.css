@@ -121,6 +121,7 @@
 .th_statistics{
     padding: 10px;
     border-bottom: 1px dotted black;
+    text-align: left;
 }
 
 .flex_statistics1 {

@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import "./Column.css";
 import { useState } from "react";
 
@@ -15,8 +16,10 @@ const Columns = () => {
       .then((data) => {
         console.log(data);
       })
+      .then(toast.success("Column added successfully"))
       .catch((error) => {
         console.log(error);
+        toast.error("Error occured");
       });
   };
 

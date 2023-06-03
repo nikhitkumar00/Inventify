@@ -6,8 +6,11 @@
   background-color: var(--mayo);
 }
 .child_wrap_Column {
+  height: 60%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 50px;
 }
 .h2_Column {
@@ -20,7 +23,6 @@
 }
 .header_Column {
   display: flex;
-  margin-left: 80px;
 }
 .head1_Column {
   display: flex;
@@ -63,13 +65,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border-radius: 8px;
+  align-items: center;
+  border-radius: 20px;
   width: 650px;
   height: 200px;
   background-color: var(--lavender);
   padding: 20px 20px;
-  margin-left: 200px;
+  box-shadow: 0px 0px 1px rgb(227, 203, 255);
 }
+
+.table_Column:hover {
+  transform: scale(1.01);
+  transition: all 1 ease-in-out;
+}
+
 .container_Column{
   display: flex;
   justify-content: space-around;
@@ -81,18 +90,20 @@
   border: none;
   width: 200px;
   height: 40px;
-  padding: 7px 7px;
-  border-radius: 7px;
-  font-weight: 700;
+  padding: 7px;
+  border-radius: 10px;
   font-family: "Comfortaa", cursive;
-  font-size: 22px;
-  margin-left: 200px;
+  font-size: 18px;
   cursor: pointer;
 }
+
+.btn_Column:hover {
+  box-shadow: 0px 0px 2px black;
+}
+
 .newColumn{
   width: 210px;
   height: 40px;
-  padding-left: 10px;
   border: none;
   border-radius: 8px;
   font-size: 20px;
@@ -105,8 +116,8 @@
   color: var(--place);
   font-style: italic;
   font-family: "Comfortaa", cursive;
-  font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
+  padding-left: 5px;
 }
 .type_Column{
   border: none;
@@ -114,18 +125,15 @@
   height: 40px;
   border-radius: 8px;
   outline: none;
-  font-size: 18px;
-  padding-left: 10px;
+  font-size: 15px;
   font-style: italic;
   font-family: "Comfortaa", cursive;
-  font-weight: 600;
 
 }
 .opt_Column{
   background-color: var(--mayo);
   font-style: italic;
   font-family: "Comfortaa", cursive;
-  font-weight: 600;
   font-size: 16px;
   color: var(--tar);
 }
@@ -134,7 +142,6 @@
   background-color: #969191;
   font-style: italic;
   font-family: "Comfortaa", cursive;
-  font-weight: 600;
   font-size: 12px;
 }
 
