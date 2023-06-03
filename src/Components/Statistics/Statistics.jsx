@@ -1,12 +1,19 @@
-import "./Statistics.css";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import "./Statistics.css"
+import React, { useState, useEffect } from "react";
+import { toast } from "react-toastify";
+import { AiOutlineDelete } from "react-icons/ai";
 import { TbCash } from "react-icons/tb";
 import { TbPigMoney } from "react-icons/tb";
 import { MdDateRange } from "react-icons/md";
-import { useState, useEffect } from "react";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const getFormattedTime = () => {
-  const options = { hour: "numeric", minute: "numeric", second: "numeric" , hour12: true };
+  const options = {
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    hour12: true,
+  };
   return new Date().toLocaleTimeString([], options);
 };
 
@@ -19,6 +26,17 @@ const Statistics = () => {
   const [currentTime, setCurrentTime] = useState(getFormattedTime());
 
   useEffect(() => {
+    fetchData();
+    const interval = setInterval(() => {
+      setCurrentTime(getFormattedTime());
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  const fetchData = () => {
     fetch("http://127.0.0.1/I_N_V_O%20Backend/restock.php")
       .then((response) => response.json())
       .then((data) => setRestockData(data))
@@ -43,16 +61,7 @@ const Statistics = () => {
       .then((response) => response.text())
       .then((data) => setExpense(parseFloat(data)))
       .catch((error) => console.log(error));
-  }, []);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(getFormattedTime());
-    }, 1000);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+  };
 
   const restockTable = () => {
     return restockData.map((restock, index) => (
@@ -66,6 +75,29 @@ const Statistics = () => {
     ));
   };
 
+  const handleDeleteRow = (rowId, index) => {
+    const updatedExpiryData = [...expiryData];
+    updatedExpiryData.splice(index, 1);
+    setExpiryData(updatedExpiryData);
+
+    fetch(`http://127.0.0.1/I_N_V_O%20Backend/deleterow.php?rowId=${rowId}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        toast.success("Row deleted successfully");
+        fetchData(); // Fetch updated data after successful deletion
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Error occurred while deleting the row");
+      });
+  };
+
   const expiryTable = () => {
     return expiryData.map((expiry, index) => (
       <tr key={index}>
@@ -74,6 +106,9 @@ const Statistics = () => {
             {values}
           </td>
         ))}
+        <td className="td_icon_statistics">
+          <AiOutlineDelete onClick={() => handleDeleteRow(expiry.item_id, index)} />
+        </td>
       </tr>
     ));
   };
