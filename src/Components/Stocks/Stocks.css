@@ -82,7 +82,7 @@
   background-color: var(--sea);
   padding: 20px;
   border-radius: 18px;
-  width: 97%;
+  max-width: 97%;
 }
 
 .row_stocks {

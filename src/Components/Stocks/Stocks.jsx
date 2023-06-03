@@ -5,13 +5,14 @@ import "./Stocks.css";
 export const Stocks = () => {
   const [stockData, setStockData] = useState([]);
   const [formData, setFormData] = useState({});
+  const [refreshTable, setRefreshTable] = useState(false);
 
   useEffect(() => {
     fetch("http://127.0.0.1/I_N_V_O%20Backend/retrieve.php")
       .then((response) => response.json())
       .then((data) => setStockData(data))
       .catch((error) => console.log(error));
-  }, []);
+  }, [refreshTable]);
 
   const getTableHeaders = () => {
     if (stockData.length > 0) {
@@ -57,8 +58,9 @@ export const Stocks = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        setRefreshTable(!refreshTable);
       })
-      .then(toast.success("Data Added Successful"))
+      .then(toast.success("Data Added Successfully"))
       .catch((error) => console.log(error));
   };
 
