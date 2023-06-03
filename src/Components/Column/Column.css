@@ -8,7 +8,6 @@
 .child_wrap_Column {
   height: 60%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
@@ -23,6 +22,7 @@
 }
 .header_Column {
   display: flex;
+  flex-direction: column;
 }
 .head1_Column {
   display: flex;
@@ -80,16 +80,21 @@
   justify-content: space-around;
   gap: 30px;
 }
+.btn_class_Column{
+  display: flex;
+  gap: 20px;
+}
+
 .btn_Column{
   background-color: #9cadce;
   color: var(--mayo);
   border: none;
-  width: 200px;
+  width: 120px;
   height: 40px;
   padding: 7px;
-  border-radius: 10px;
+  border-radius: 50px;
   font-family: "Comfortaa", cursive;
-  font-size: 18px;
+  font-size: 10px;
   cursor: pointer;
 }
 
