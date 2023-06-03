@@ -3,6 +3,8 @@ var inputStyle = {
     border: "1px solid black",
     borderRadius: "10px",
     padding: "10px",
+    backgroundColor: "var(--inputf)",
+    color: "var(--tar)"
   },
   button: {
     borderRadius: "10px",

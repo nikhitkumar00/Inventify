@@ -38,19 +38,19 @@ const Columns = () => {
             <div className="title_child_Column">SL.NO</div>
           </div>
           <div className="head1_Column">
-            <div className="minus2_Column">-</div>
+            <div className="minus1_Column">-</div>
             <div className="title_child_Column">NAME</div>
           </div>
           <div className="head1_Column">
-            <div className="minus3_Column">-</div>
+            <div className="minus1_Column">-</div>
             <div className="title_child_Column">EXPIRY</div>
           </div>
           <div className="head1_Column">
-            <div className="minus4_Column">-</div>
+            <div className="minus1_Column">-</div>
             <div className="title_child_Column">MRP</div>
           </div>
           <div className="head1_Column">
-            <div className="minus5_Column">-</div>
+            <div className="minus1_Column">-</div>
             <div className="title_child_Column">QTY</div>
           </div>
         </div>

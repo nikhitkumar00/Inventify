@@ -14,4 +14,6 @@
 
   .td_billingtable{
     padding-left:70px;
+    background-color: var(--inputf);
+    color: #000000;
   }
