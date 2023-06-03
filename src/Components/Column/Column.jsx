@@ -19,7 +19,24 @@ const Columns = () => {
       .then(toast.success("Column added successfully"))
       .catch((error) => {
         console.log(error);
-        toast.error("Error occured");
+        toast.error("Error occured while adding");
+      });
+  };
+  
+  const handleRemoveColumn = (e) => {
+    e.preventDefault();
+
+    const url = `http://127.0.0.1/I_N_V_O%20Backend/removecolumn.php?columnName=${columnName}`;
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .then(toast.success("Column removed successfully"))
+      .catch((error) => {
+        console.log(error);
+        toast.error("Error occured while removing");
       });
   };
 
