@@ -6,6 +6,10 @@
     text-align: left;
 }
 
+.td_STOCKS {
+  padding-left: 8px;
+}
+
 .StocksTable{
     font-family: comfortaa;
     font-size: 16px;

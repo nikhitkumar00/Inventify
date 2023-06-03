@@ -130,7 +130,7 @@ const Columns = () => {
                   setDataType(e.target.value);
                 }}
               >
-                <option className="opt_Column" value="VARCHAR(40)">
+                <option className="opt_Column" value="VARCHAR(20)">
                   Text
                 </option>
                 <option className="opt_Column" value="INT">

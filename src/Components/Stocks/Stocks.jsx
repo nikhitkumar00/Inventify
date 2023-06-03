@@ -29,7 +29,7 @@ export const Stocks = () => {
     return stockData.map((stock, index) => (
       <tr key={index} className="row_stocks">
         {Object.values(stock).map((value, index) => (
-          <td key={index} className=".td_STOCKS">
+          <td key={index} className="td_STOCKS">
             {value}
           </td>
         ))}
