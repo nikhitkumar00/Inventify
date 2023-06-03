@@ -27,6 +27,13 @@ const Statistics = () => {
 
   useEffect(() => {
     fetchData();
+    const interval = setInterval(() => {
+      setCurrentTime(getFormattedTime());
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   const fetchData = () => {
