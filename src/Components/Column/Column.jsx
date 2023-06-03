@@ -1,6 +1,9 @@
 import { toast } from "react-toastify";
+import Minus from "../Minus/Minus";
 import "./Column.css";
 import { useState } from "react";
+
+
 
 const Columns = () => {
   const [columnName, setColumnName] = useState("");
@@ -34,23 +37,23 @@ const Columns = () => {
       <div className="child_wrap_Column">
         <div className="header_Column">
           <div className="head1_Column">
-            <div className="minus1_Column">-</div>
+            <Minus/>
             <div className="title_child_Column">SL.NO</div>
           </div>
           <div className="head1_Column">
-            <div className="minus1_Column">-</div>
+            <Minus/>
             <div className="title_child_Column">NAME</div>
           </div>
           <div className="head1_Column">
-            <div className="minus1_Column">-</div>
+            <Minus/>
             <div className="title_child_Column">EXPIRY</div>
           </div>
           <div className="head1_Column">
-            <div className="minus1_Column">-</div>
+            <Minus/>
             <div className="title_child_Column">MRP</div>
           </div>
           <div className="head1_Column">
-            <div className="minus1_Column">-</div>
+            <Minus/>
             <div className="title_child_Column">QTY</div>
           </div>
         </div>
