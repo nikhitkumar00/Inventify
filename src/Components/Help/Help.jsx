@@ -1,5 +1,5 @@
 import "./Help.css";
-import statistics from "./Help_pics/statistics.png";
+import statistics from "./Help_pics/i.png";
 import stocks1 from "./Help_pics/Stocks1.png";
 import stocks2 from "./Help_pics/Stocks2.png";
 import column_1 from "./Help_pics/column_1.png";
