@@ -1,22 +1,19 @@
-
 .th_STOCKS{
     padding: 15px;
     width: 250px;
-    font-size: 20px;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    font-size: 18px;
+    border-bottom: 1px dotted black;
+    text-align: left;
 }
 
 .StocksTable{
     font-family: comfortaa;
     font-size: 16px;
-    width: calc(100vw - 20vw);
+    width: 100%;
     height: 700px;
     margin-top: 20px;
     background-color: var(--cream);
-    border-radius: 20px;
-    margin-right: 20px;
-    
+    border-radius: 20px;    
 }
 
 .StocksInput[type="text"]{
@@ -28,31 +25,31 @@
 
 }
 
-.StocksTable tr td:last-child,.AddTable tr td:last-child{
-    border-right: none;
-  }
-.StocksTable tr th:last-child,.AddTable tr th:last-child{
-    border-right: none;
-  }
-
   .Stocks{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10px;
     background-color: var(--mayo);
+    padding: 15px;
   }
 
   .AddTable{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .StocksAddButton{
-    font-size: 25px;
-    padding: 10px 40px 10px 40px;
+    font-size: 15px;
+    padding: 10px 40px;
     border-radius: 20px;
-    margin-top: 20px
+    border: none;
+}
+
+.StocksAddButton:hover {
+  box-shadow: 0px 0px 2px black;
 }
 
 .StocksBottomTableWrapper{
@@ -62,7 +59,8 @@
 }
 
 .StocksInput{
-    border: 1px solid black;
+  border: none;
+  margin: 5px; 
 }
 
 .StocksHeader{
@@ -84,7 +82,7 @@
   background-color: var(--sea);
   padding: 20px;
   border-radius: 18px;
-  width: calc(100vw - 22.5vw);
+  max-width: 97%;
 }
 
 .row_stocks {
