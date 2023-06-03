@@ -3,6 +3,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { TbCash } from "react-icons/tb";
 import { TbPigMoney } from "react-icons/tb";
 import { MdDateRange } from "react-icons/md";
+import { AiOutlineDelete } from "react-icons/ai";
 import { useState, useEffect } from "react";
 
 const getFormattedTime = () => {
@@ -74,6 +75,7 @@ const Statistics = () => {
             {values}
           </td>
         ))}
+        <td className="td_icon_statistics"><AiOutlineDelete/></td>
       </tr>
     ));
   };

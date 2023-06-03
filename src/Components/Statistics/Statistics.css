@@ -124,6 +124,17 @@
     text-align: left;
 }
 
+.td_icon_statistics{
+    width: 20px;
+    text-align: center;
+    border-radius: 999px;
+    border: 1px solid var(--lavender);
+}
+
+.td_icon_statistics:hover{
+    border: 1px solid black;
+}
+
 .flex_statistics1 {
     flex: 0.6;
 }
