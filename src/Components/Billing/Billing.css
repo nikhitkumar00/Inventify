@@ -56,3 +56,31 @@ tfoot tr{
     align-items: center;
     color: var(--tar);
 }
+
+.Product_Add_Button{
+    background-color: #0D3653;
+    border-radius: 30px;
+    max-width: 150px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    min-width: 100px;
+
+}
+
+.Inner_Child_1{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-right: 10px;
+    /* justify-content: space-between; */
+
+}
+
+.Product_Add_Button_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
