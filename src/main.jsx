@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./main.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Slide, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Statistics from "./Components/Statistics/Statistics.jsx";
 import Stocks from "./Components/Stocks/Stocks.jsx";
 import Billing from "./Components/Billing/Billing.jsx";
@@ -61,5 +63,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer
+        theme="colored"
+        newestOnTop={true}
+        closeOnClick
+        transition={Slide}
+      />
   </React.StrictMode>
 );
