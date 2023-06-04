@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar"
 import Statistics from "./Components/Statistics/Statistics";
 import { createBrowserRouter,Outlet,RouterProvider } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
     <div className="App">
       <Navbar />
       <Outlet />
-      <ToastContainer />
+      <ToastContainer theme="colored" newestOnTop={true} closeOnClick transition={Slide} />
     </div>
   );
 };
