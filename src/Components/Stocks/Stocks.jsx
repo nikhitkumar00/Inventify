@@ -118,12 +118,7 @@ export const Stocks = () => {
 
   return (
     <div className="Stocks">
-      <table className="StocksTable">
-        <thead>
-          <tr>{getTableHeaders()}</tr>
-        </thead>
-        <tbody>{getTableRows()}</tbody>
-      </table>
+      <div className="header_statistics">Stocks</div>
       <div>
         <form onSubmit={handleSubmit} className="StocksInputForm">
           <div className="AddTable">
@@ -135,6 +130,14 @@ export const Stocks = () => {
             </button>
           </div>
         </form>
+      </div>
+      <div className="table_container_stocks">
+        <table>
+          <thead>
+            <tr>{getTableHeaders()}</tr>
+          </thead>
+          <tbody>{getTableRows()}</tbody>
+        </table>
       </div>
     </div>
   );

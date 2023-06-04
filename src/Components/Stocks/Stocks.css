@@ -4,20 +4,26 @@
   font-size: 18px;
   border-bottom: 1px dotted black;
   text-align: left;
+  background-color: var(--sunset);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .td_STOCKS {
   padding-left: 8px;
+  
 }
 
-.StocksTable{
+.table_container_stocks{
   font-family: comfortaa;
   font-size: 16px;
   width: 100%;
-  height: 700px;
   margin-top: 20px;
-  background-color: var(--cream);
-  border-radius: 20px;    
+  background-color: var(--sunset);
+  border-radius: 20px;
+  height: 600px;
+  overflow: auto;
 }
 
 .StocksInput[type="text"]{

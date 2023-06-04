@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     color: var(--tar);
+    font-family: comfortaa;
 }
 
 .head_statistics {
