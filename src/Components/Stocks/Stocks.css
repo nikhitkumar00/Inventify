@@ -93,3 +93,14 @@
   height: 30px;
   padding-left: 10px;
 }
+
+.td_icon_stocks{
+  width: 20px;
+  text-align: center;
+  border-radius: 999px;
+  border: 1px solid var(--lavender);
+}
+
+.td_icon_stocks:hover{
+  border: 1px solid black;
+}

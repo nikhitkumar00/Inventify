@@ -32,7 +32,12 @@ export const Stocks = () => {
           <td key={index} className="td_STOCKS">
             {value}
           </td>
+          
+          
         ))}
+        <td className="td_icon_stocks">
+          <AiOutlineDelete onClick={() => handleDeleteRow(expiry.item_id, index)} />
+        </td>
       </tr>
     ));
   };
@@ -87,7 +92,8 @@ export const Stocks = () => {
     <div className="Stocks">
       <table className="StocksTable">
         <thead>
-          <tr>{getTableHeaders()}</tr>
+          <tr>{getTableHeaders()}
+          </tr>
         </thead>
         <tbody>{getTableRows()}</tbody>
       </table>
