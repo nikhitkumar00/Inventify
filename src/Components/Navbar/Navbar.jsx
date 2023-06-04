@@ -12,8 +12,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const Navbar = () => {
-
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(false);
 
   const themechange = () => {
     if (dark) {
@@ -26,9 +25,8 @@ const Navbar = () => {
       document.documentElement.style.setProperty("--pista", "#D8FDD9");
       document.documentElement.style.setProperty("--cream", "#FEF1D7");
       document.documentElement.style.setProperty("--place", "#8f8d90");
-      document.documentElement.style.setProperty("--inputf", "#ffffff"); 
-    }
-    else {
+      document.documentElement.style.setProperty("--inputf", "#ffffff");
+    } else {
       document.documentElement.style.setProperty("--mayo", "#2e2e2e");
       document.documentElement.style.setProperty("--tar", "#ffffff");
       document.documentElement.style.setProperty("--blackish", "#000000");
@@ -38,10 +36,10 @@ const Navbar = () => {
       document.documentElement.style.setProperty("--pista", "#d4fdd5");
       document.documentElement.style.setProperty("--cream", "#feecc9");
       document.documentElement.style.setProperty("--place", "#8f8d90");
-      document.documentElement.style.setProperty("--inputf", "#fafafa");     
+      document.documentElement.style.setProperty("--inputf", "#fafafa");
     }
     setDark(!dark);
-  }
+  };
 
   return (
     <div className="nav-grandparent">

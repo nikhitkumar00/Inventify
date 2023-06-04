@@ -74,7 +74,6 @@
     text-decoration: none;
 }
 
-
 .inactive_navbar {
     color: var(--tar);
     text-decoration: none;
@@ -94,6 +93,7 @@
 .nav-logout {
     color: rgb(197, 1, 1);
 }
+
 .nav-logout:hover {
     color: rgb(197, 1, 1);
 }

@@ -29,10 +29,12 @@ const Help = () => {
 
               <ul className="text_help">
                 <li className="text_child_help">
-                  <div className="subhead_help"> Total Order</div>This section displays the total number of orders placed by customers. It gives you an overview of the overall sales
-                  volume and customer demand. By tracking this metric, you can
-                  assess the popularity of your products ,benchmark your
-                  performance and forecast future sales.
+                  <div className="subhead_help"> Total Order</div>This section
+                  displays the total number of orders placed by customers. It
+                  gives you an overview of the overall sales volume and customer
+                  demand. By tracking this metric, you can assess the popularity
+                  of your products ,benchmark your performance and forecast
+                  future sales.
                 </li>
 
                 <li className="text_child_help">
@@ -65,9 +67,7 @@ const Help = () => {
                 </li>
 
                 <li className="text_child_help">
-                  <div className="subhead_help">
-                    Products to be Restocked
-                  </div>
+                  <div className="subhead_help">Products to be Restocked</div>
                   In this section, you will find a list of products that need to
                   be restocked soon. It helps you maintain sufficient stock
                   levels to meet customer demand and prevent stockouts. By
@@ -82,14 +82,25 @@ const Help = () => {
             <div className="head_help">Stocks</div>
             <img src={stocks1} alt="Stocks" className="stocks_style" />
             <div className="intro_help">
-            Introducing the Stocks Webpage . This pge is designed to empower you with complete control over your product data and inventory status. Whether you want to explore existing stock details, add new products, or update quantities after each purchase, this user-friendly interface has got you covered Let us explore the features and functionalities of this page:
+              Introducing the Stocks Webpage . This pge is designed to empower
+              you with complete control over your product data and inventory
+              status. Whether you want to explore existing stock details, add
+              new products, or update quantities after each purchase, this
+              user-friendly interface has got you covered Let us explore the
+              features and functionalities of this page:
               <ul className="text_help">
-                <li className="text_child_help"><div className="subhead_help">
-                Product Data Overview  </div>
-                The page displays a comprehensive list of products currently in stock at your shop. It includes essential details such as the product name, description, price, quantity available, and any other relevant information. This overview helps you quickly assess the inventory and understand the range of products you offer.
-                </li></ul>
-                <img src={stocks2} alt="Stocks" className="stocks_style" />
-                <ul className="text_help">
+                <li className="text_child_help">
+                  <div className="subhead_help">Product Data Overview </div>
+                  The page displays a comprehensive list of products currently
+                  in stock at your shop. It includes essential details such as
+                  the product name, description, price, quantity available, and
+                  any other relevant information. This overview helps you
+                  quickly assess the inventory and understand the range of
+                  products you offer.
+                </li>
+              </ul>
+              <img src={stocks2} alt="Stocks" className="stocks_style" />
+              <ul className="text_help">
                 <li className="text_child_help">
                   <div className="subhead_help">Add New Product</div>
                   This is an option provided to add new products to the stock

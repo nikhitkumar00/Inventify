@@ -1,102 +1,102 @@
-  .billing_help,.statistics_help,.stocks_help,.column_help{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 25px;
-  }
-  .billing_help_content{
-    font-size: 18px;
-  }
+.billing_help,.statistics_help,.stocks_help,.column_help{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+}
 
-  .header_help{
-    font-size: 40px;
-    font-weight: bolder;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    color: var(--tar);
-    padding-left: 20px;
-    padding-top: 20px;
-  }
-    .wrapper_help{
-      background-color: var(--mayo);
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      width: 100%;
-      height: 100vh;
-    }
-    
-      
-    .main_content_help{
-      width: 100%;
-      font-family: 'Comfortaa';
-      /* margin-left: 80px; */
-      background-color: var(--mayo);
-      border-radius: 20px;
-      margin-bottom: 20px;
-  
-    }
-    
-  
-    .info_help{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border-radius: 20px;
-      margin: 10px;
-      padding: 30px;
-      gap: 50px;
-      background-color: var(--sea);
-      color: #000000;
-      line-height: 25px;
-      margin-bottom: 20px;
-    }
-    .head_help{
-      font-size: 35px;
-      font-weight: bolder;
-      color: black;
-      padding: 20px;
-    }
-    .intro_help{
-      font-size:20px;
-      padding:10px;
-    }
-    .subhead_help{
-      padding: 15px 15px 15px 0px;
-      font-size:20px;
-      font-weight:bold;
-    }
-    .text_help{
-      padding: 15px;
-      margin-left: 20px;
-    }
-    
-    .statistics_help{
-      display:flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    
-    .statistics-style,.stocks_style{
-      width: 950px;
-      max-width: 100%;
-    }
-    .billing_1{
-      width: 1300px;
-      max-width: 100%;
-      height: auto;
-    }
-    .column_1{
-      width: 950px;
-      max-width: 100%;
-      height: auto;
-    }
-    /* .wrapper .main_content .info div{
-      margin-bottom: 20px;
-    }
-    
-     */
-    .intro_help{
-      font-size:20px;
-    }
+.billing_help_content{
+  font-size: 18px;
+}
+
+.header_help{
+  font-size: 40px;
+  font-weight: bolder;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  color: var(--tar);
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.wrapper_help{
+  background-color: var(--mayo);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.main_content_help{
+  width: 100%;
+  font-family: 'Comfortaa';
+  background-color: var(--mayo);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.info_help{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 30px;
+  gap: 50px;
+  background-color: var(--sea);
+  color: #000000;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.head_help{
+  font-size: 35px;
+  font-weight: bolder;
+  color: black;
+  padding: 20px;
+}
+
+.intro_help{
+  font-size:20px;
+  padding:10px;
+}
+
+.subhead_help{
+  padding: 15px 15px 15px 0px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.text_help{
+  padding: 15px;
+  margin-left: 20px;
+}
+
+.statistics_help{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.statistics-style,.stocks_style{
+  width: 950px;
+  max-width: 100%;
+}
+
+.billing_1{
+  width: 1300px;
+  max-width: 100%;
+  height: auto;
+}
+
+.column_1{
+  width: 950px;
+  max-width: 100%;
+  height: auto;
+}
+
+.intro_help{
+  font-size:20px;
+}

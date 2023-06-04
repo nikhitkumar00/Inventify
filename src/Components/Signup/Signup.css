@@ -7,10 +7,12 @@
   background-color: #e0ecf4;
   font-family: 'Comfortaa';
 }
+
 .logo_signup {
   font-family: "Pacifico";
   font-size: 100px;
 }
+
 .container_signup {
   width: 400px;
   height: 500px;
@@ -22,14 +24,17 @@
   border-radius: 30px;
   background-color: rgb(192, 216, 241);
 }
+
 .p_signup{
   display: flex;
 }
+
 .head_signup {
   font-size: 50px;
   color: #072032;
   margin-top: 30px;
 }
+
 .SignUpForm {
   display: flex;
   flex-direction: column;
@@ -49,6 +54,7 @@
   border: none;
   outline: none;
 }
+
 .input_signup::placeholder {
   color: #948989;
   font-style: italic;
@@ -56,6 +62,7 @@
   font-weight: 600;
   font-size: 14px;
 }
+
 .button_signup{
   width: 150px;
   height: 40px;
@@ -71,9 +78,11 @@
   font-family: 'Comfortaa';
   margin-top: 12px;
 }
+
 .button_signup:hover {
   background-color: #072032;
 }
+
 .t_signup{
   font-weight: bolder;
   margin-left: 5px;
@@ -82,6 +91,7 @@
   font-size: small;
   color: black;
 }
+
 .p_signup{
   font-style: italic;
   font-size: small;

@@ -35,19 +35,23 @@ export const Stocks = () => {
           </td>
         ))}
         <td className="td_icon_stocks">
-          <AiOutlineDelete onClick={() => handleDeleteRow(stock.item_id, index)} />
+          <AiOutlineDelete
+            onClick={() => handleDeleteRow(stock.item_id, index)}
+          />
         </td>
       </tr>
     ));
   };
 
   const handleDeleteRow = (rowId, index) => {
-    const confirmDelete = window.confirm("Are you sure you want to delete this row?");
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this row?"
+    );
     if (confirmDelete) {
       const updatedStockData = [...stockData];
       updatedStockData.splice(index, 1);
       setStockData(updatedStockData);
-  
+
       fetch(`http://127.0.0.1/I_N_V_O%20Backend/deleterow.php?rowId=${rowId}`)
         .then((response) => {
           if (!response.ok) {
@@ -116,8 +120,7 @@ export const Stocks = () => {
     <div className="Stocks">
       <table className="StocksTable">
         <thead>
-          <tr>{getTableHeaders()}
-          </tr>
+          <tr>{getTableHeaders()}</tr>
         </thead>
         <tbody>{getTableRows()}</tbody>
       </table>

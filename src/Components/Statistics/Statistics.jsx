@@ -1,4 +1,4 @@
-import "./Statistics.css"
+import "./Statistics.css";
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { AiOutlineDelete } from "react-icons/ai";
@@ -76,30 +76,31 @@ const Statistics = () => {
   };
 
   const handleDeleteRow = (rowId, index) => {
-  const confirmDelete = window.confirm("Are you sure you want to delete this row?");
-  if (confirmDelete) {
-    const updatedExpiryData = [...expiryData];
-    updatedExpiryData.splice(index, 1);
-    setExpiryData(updatedExpiryData);
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this row?"
+    );
+    if (confirmDelete) {
+      const updatedExpiryData = [...expiryData];
+      updatedExpiryData.splice(index, 1);
+      setExpiryData(updatedExpiryData);
 
-    fetch(`http://127.0.0.1/I_N_V_O%20Backend/deleterow.php?rowId=${rowId}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-        toast.success("Row deleted successfully");
-      })
-      .catch((error) => {
-        console.log(error);
-        toast.error("Error occurred while deleting the row");
-      });
-  }
-};
-
+      fetch(`http://127.0.0.1/I_N_V_O%20Backend/deleterow.php?rowId=${rowId}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          toast.success("Row deleted successfully");
+        })
+        .catch((error) => {
+          console.log(error);
+          toast.error("Error occurred while deleting the row");
+        });
+    }
+  };
 
   const expiryTable = () => {
     return expiryData.map((expiry, index) => (
@@ -110,7 +111,9 @@ const Statistics = () => {
           </td>
         ))}
         <td className="td_icon_statistics">
-          <AiOutlineDelete onClick={() => handleDeleteRow(expiry.item_id, index)} />
+          <AiOutlineDelete
+            onClick={() => handleDeleteRow(expiry.item_id, index)}
+          />
         </td>
       </tr>
     ));

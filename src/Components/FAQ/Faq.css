@@ -1,107 +1,118 @@
 .wrapper_faq{
-    background-color: var(--mayo);
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 100%;
-    flex: 1;
-  }
- 
-  .header_faq{
-    font-size: 40px;
-    font-weight: bolder;
-    height: 90px;
-    font-family: 'Comfortaa';
-    align-items: center;
-    padding-left: 20px;
-    padding-top: 20px;
-  }
-  .info_faq{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: 'Comfortaa';
-    border-radius: 20px;
-    margin: 10px;
-    padding: 0 30px 30px 30px;
-    gap: 50px;
-    color: #000000;
-    line-height: 25px;
-    margin-bottom: 20px;
-  }
-  .container_faq{
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    background-color: #FFF;
-    border-radius:8px;
-    box-shadow: 5px 12px 32px rgba(48, 47, 47, 0.1);
-  }
-  .item_faq{
-    padding:10px;
-    margin: 20px;
-    color: var(--violet);
-    box-shadow: 0 2px 6px rgba(38, 38, 38, 0.1);
-    border-radius: 4px;
-    position: relative;
-    transition: all .25s ease;
-    
-  }
-  .item_faq::after {
-    content: '';
-    width: 5px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius:4px;
-  }
-  .item_faq:nth-child(1) {
-    background-color: var(--sea);
-  }
-  .item_faq:nth-child(1)::after {
-    background-color:var(--sky);
-  }
-  .item_faq:nth-child(2) {
-    background-color: var(--lavender);
-  }
-  .item_faq:nth-child(2)::after {
-    background-color: var(--purple);
-  }
-  .item_faq:nth-child(3) {
-    background-color: var(--sunset);
-  }
-  .item_faq:nth-child(3)::after {
-    background-color: var(--peach);
-  }
- 
-  .item_faq:nth-child(4) {
-    background-color: var(--cream);
-  }
-  .item_faq:nth-child(4)::after {
-    background-color: var(--orange);
-  }
-  .item_faq:nth-child(5) {
-    background-color: var(--pista);
-  }
-  .item_faq:nth-child(5)::after {
-    background-color: var(--green);
-  }
-  
-  
-  .head_faq{
-    display: flex;
-    column-gap: .5rem;
-    font-size:25px;
-    cursor: pointer;
-    padding: 1.25rem 1.25rem 1.25rem 1rem;
+  background-color: var(--mayo);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
 
-  }
+.header_faq{
+  font-size: 40px;
+  font-weight: bolder;
+  height: 90px;
+  font-family: 'Comfortaa';
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.info_faq{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Comfortaa';
+  border-radius: 20px;
+  margin: 10px;
+  padding: 0 30px 30px 30px;
+  gap: 50px;
+  color: #000000;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.container_faq{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  background-color: #FFF;
+  border-radius:8px;
+  box-shadow: 5px 12px 32px rgba(48, 47, 47, 0.1);
+}
+
+.item_faq{
+  padding:10px;
+  margin: 20px;
+  color: var(--violet);
+  box-shadow: 0 2px 6px rgba(38, 38, 38, 0.1);
+  border-radius: 4px;
+  position: relative;
+  transition: all .25s ease;
+}
+
+.item_faq::after {
+  content: '';
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius:4px;
+}
+
+.item_faq:nth-child(1) {
+  background-color: var(--sea);
+}
+
+.item_faq:nth-child(1)::after {
+  background-color:var(--sky);
+}
+
+.item_faq:nth-child(2) {
+  background-color: var(--lavender);
+}
+
+.item_faq:nth-child(2)::after {
+  background-color: var(--purple);
+}
+
+.item_faq:nth-child(3) {
+  background-color: var(--sunset);
+}
+
+.item_faq:nth-child(3)::after {
+  background-color: var(--peach);
+}
+
+.item_faq:nth-child(4) {
+  background-color: var(--cream);
+}
+
+.item_faq:nth-child(4)::after {
+  background-color: var(--orange);
+}
+
+.item_faq:nth-child(5) {
+  background-color: var(--pista);
+}
+
+.item_faq:nth-child(5)::after {
+  background-color: var(--green);
+}
+
+.head_faq{
+  display: flex;
+  column-gap: .5rem;
+  font-size:25px;
+  cursor: pointer;
+  padding: 1.25rem 1.25rem 1.25rem 1rem;
+}
+
 .button_faq{
   font-weight: 400;
   transition: 2s;
-  
-  }
+}
+
 .desc_faq{
   padding:15px;
   font-size:20px;

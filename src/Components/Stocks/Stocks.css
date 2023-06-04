@@ -1,9 +1,9 @@
 .th_STOCKS{
-    padding: 15px;
-    width: 250px;
-    font-size: 18px;
-    border-bottom: 1px dotted black;
-    text-align: left;
+  padding: 15px;
+  width: 250px;
+  font-size: 18px;
+  border-bottom: 1px dotted black;
+  text-align: left;
 }
 
 .td_STOCKS {
@@ -11,38 +11,38 @@
 }
 
 .StocksTable{
-    font-family: comfortaa;
-    font-size: 16px;
-    width: 100%;
-    height: 700px;
-    margin-top: 20px;
-    background-color: var(--cream);
-    border-radius: 20px;    
+  font-family: comfortaa;
+  font-size: 16px;
+  width: 100%;
+  height: 700px;
+  margin-top: 20px;
+  background-color: var(--cream);
+  border-radius: 20px;    
 }
 
 .StocksInput[type="text"]{
-    border-radius: 10px;
-    padding: 5px;
-    font-size: 16px;
-    color: var(--tar);
-    background-color: var(--mayo);
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 16px;
+  color: var(--tar);
+  background-color: var(--mayo);
 
 }
 
-  .Stocks{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
-    background-color: var(--mayo);
-    padding: 15px;
-  }
+.Stocks{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: var(--mayo);
+  padding: 15px;
+}
 
-  .AddTable{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
+.AddTable{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .StocksAddButton{
@@ -79,7 +79,6 @@
 .AddTableInputRow{
   display: flex;
   gap: 30px;
-
 }
 
 .StocksInputForm{

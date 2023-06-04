@@ -73,12 +73,10 @@
 
 .purple_statistics {
     background-color: var(--lavender);
-
 }
 
 .red_statistics {
     background-color: var(--sunset);
-
 }
 
 .green_statistics:hover, .blue_statistics:hover, .yellow_statistics:hover, .red_statistics:hover, .purple_statistics:hover {
