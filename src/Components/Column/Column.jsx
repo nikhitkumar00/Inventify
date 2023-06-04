@@ -38,18 +38,18 @@ const Columns = () => {
 
   const handleAddColumn = (e) => {
     e.preventDefault();
-
+  
     if (columnName === "") {
       toast.info("Enter column name");
       return;
     }
-    
+  
     if (columnNames.map((column) => column.COLUMN_NAME).includes(columnName)) {
       toast.info("Column already exists");
       return;
     }
-
-    const url = `http://127.0.0.1/I_N_V_O%20Backend/newcolumn.php?columnName=${columnName}&dataType=${dataType}`;
+  
+    const url = `http://127.0.0.1/I_N_V_O%20Backend/newcolumn.php?columnName=${encodeURIComponent(columnName)}&dataType=${encodeURIComponent(dataType)}`;
 
     fetch(url)
       .then((response) => {
@@ -77,24 +77,29 @@ const Columns = () => {
       return;
     }
 
-    const url = `http://127.0.0.1/I_N_V_O%20Backend/removecolumn.php?columnName=${columnName}`;
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this row?"
+    );
+    if (confirmDelete) {
+      const url = `http://127.0.0.1/I_N_V_O%20Backend/removecolumn.php?columnName=${columnName}`;
 
-    fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-        toast.success("Column removed successfully");
-        setRefreshColumnNames(!refreshColumnNames);
-      })
-      .catch((error) => {
-        console.log(error);
-        toast.error("Error occurred while removing");
-      });
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          toast.success("Column removed successfully");
+          setRefreshColumnNames(!refreshColumnNames);
+        })
+        .catch((error) => {
+          console.log(error);
+          toast.error("Error occurred while removing");
+        });
+    }
   };
 
   const handleColumnNameChange = (e) => {

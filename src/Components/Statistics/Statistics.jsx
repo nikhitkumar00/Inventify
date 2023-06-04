@@ -76,6 +76,8 @@ const Statistics = () => {
   };
 
   const handleDeleteRow = (rowId, index) => {
+  const confirmDelete = window.confirm("Are you sure you want to delete this row?");
+  if (confirmDelete) {
     const updatedExpiryData = [...expiryData];
     updatedExpiryData.splice(index, 1);
     setExpiryData(updatedExpiryData);
@@ -90,13 +92,14 @@ const Statistics = () => {
       .then((data) => {
         console.log(data);
         toast.success("Row deleted successfully");
-        fetchData(); // Fetch updated data after successful deletion
       })
       .catch((error) => {
         console.log(error);
         toast.error("Error occurred while deleting the row");
       });
-  };
+  }
+};
+
 
   const expiryTable = () => {
     return expiryData.map((expiry, index) => (
