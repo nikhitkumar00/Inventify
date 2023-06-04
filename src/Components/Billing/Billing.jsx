@@ -1,8 +1,8 @@
 import React from 'react'
 import './Billing.css'
 import  Add  from './Add'
-// import  Productinfo  from './Productinfo'
-import  Billingtable  from './Billingtable'
+
+
 
 var inputStyle={
   input:{
@@ -51,12 +51,12 @@ const Billing = () => {
                 display:'flex'
             }}>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <input type='text' placeholder='Serial No.'  style={inputStyle.input}/>
+                    <input type='text' placeholder='Item Id'  style={inputStyle.input}/>
                     <input type='text' placeholder='Qty'  style={inputStyle.input}/>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <input type='text' placeholder='Unit Price'  style={inputStyle.input}/>
-                    <input type='text' placeholder='Expiry'  style={inputStyle.input}/>
+                    <input type='text' placeholder='Unit Price'  style={inputStyle.input} readOnly/>
+                    <input type='text' placeholder='Expiry'  style={inputStyle.input} readOnly/>
                 </div>
                 <div className='Inner_Child_1'>
                 <input type='input' placeholder='Total' style={inputStyle.input1}/>
@@ -71,7 +71,137 @@ const Billing = () => {
         </div>
 
       </div>
-      <Billingtable />
+
+      <div className='BillingTable'>
+            <table className='TableBody'>
+                <thead> <tr>
+                    <th className='th_billingtable'>Sl.no</th>
+                    <th className='th_billingtable'>Name</th>
+                    <th className='th_billingtable'>Expiry</th>
+                    <th className='th_billingtable'>Qty</th>
+                    <th className='th_billingtable'>Rate</th>
+                    <th className='th_billingtable'>GST</th>
+                    <th className='th_billingtable'>Total</th>
+                </tr></thead>
+                <tbody><tr>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                </tr>
+                <tr>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                </tr><tr>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                </tr><tr>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                </tr>
+                    <tr>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                    </tr>
+                    
+                    <tr>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                    </tr>
+                    <tr>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                        <td className='td_billingtable'>data</td>
+                    </tr>
+                    <tr>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                </tr><tr>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                </tr>
+                <tr>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                </tr><tr>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                </tr><tr>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                    <td className='td_billingtable'>data</td>
+                </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td className='td_billingtable'></td>
+                            <td className='td_billingtable'></td>
+                            <td className='td_billingtable'></td>
+                            <td className='td_billingtable'></td>
+                            <td className='td_billingtable'></td>
+                            <td className='td_billingtable'>Total</td>
+                            <td className='td_billingtable'>Data</td>
+                        </tr>
+                    </tfoot>
+
+            </table>
+        </div>
     </div>
   )
 }
