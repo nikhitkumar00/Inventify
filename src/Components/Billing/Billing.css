@@ -15,12 +15,7 @@
     font-family: 'Comfortaa';
 }
 
-/*.TableMainContainer{
-    
-}*/
-
 .th_billingtable{
-    /* background-color: teal; */
     z-index: 1;
     position: sticky;
     top:0px;
@@ -38,7 +33,6 @@
 }
 .Table{
     min-width: 100%;
-   
 }
 
 tfoot tr{
@@ -66,7 +60,6 @@ tfoot tr{
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     min-width: 100px;
-
 }
 
 .Inner_Child_1{
@@ -74,8 +67,6 @@ tfoot tr{
     flex-direction: row;
     flex: 1;
     margin-right: 10px;
-    /* justify-content: space-between; */
-
 }
 
 .Product_Add_Button_div{
