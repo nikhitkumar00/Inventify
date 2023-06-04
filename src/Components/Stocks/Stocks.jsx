@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { AiOutlineDelete } from "react-icons/ai";
 import { toast } from "react-toastify";
 import "./Stocks.css";
 
@@ -32,14 +33,37 @@ export const Stocks = () => {
           <td key={index} className="td_STOCKS">
             {value}
           </td>
-          
-          
         ))}
         <td className="td_icon_stocks">
-          <AiOutlineDelete onClick={() => handleDeleteRow(expiry.item_id, index)} />
+          <AiOutlineDelete onClick={() => handleDeleteRow(stock.item_id, index)} />
         </td>
       </tr>
     ));
+  };
+
+  const handleDeleteRow = (rowId, index) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this row?");
+    if (confirmDelete) {
+      const updatedStockData = [...stockData];
+      updatedStockData.splice(index, 1);
+      setStockData(updatedStockData);
+  
+      fetch(`http://127.0.0.1/I_N_V_O%20Backend/deleterow.php?rowId=${rowId}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          toast.success("Row deleted successfully");
+        })
+        .catch((error) => {
+          console.log(error);
+          toast.error("Error occurred while deleting the row");
+        });
+    }
   };
 
   const handleInputChange = (event) => {

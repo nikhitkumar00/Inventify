@@ -95,10 +95,10 @@
 }
 
 .td_icon_stocks{
-  width: 20px;
+  width: 50px;
   text-align: center;
   border-radius: 999px;
-  border: 1px solid var(--lavender);
+  border: 1px solid var(--cream);
 }
 
 .td_icon_stocks:hover{
