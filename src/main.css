@@ -27,3 +27,21 @@
     --greyish:#5c5c5c;
     --green:#56b459;
 }
+
+::-webkit-scrollbar {
+width: 8px;
+height: 8px;
+}
+
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+background: #a6a6a6;
+border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
