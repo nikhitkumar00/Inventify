@@ -35,6 +35,8 @@
   background-color: var(--mayo);
   border-radius: 20px;
   margin-bottom: 20px;
+  overflow: auto;
+
 }
 
 .info_help{
@@ -49,6 +51,7 @@
   color: #000000;
   line-height: 25px;
   margin-bottom: 20px;
+
 }
 
 .head_help{
