@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Billing.css";
 
 var inputStyle = {
@@ -26,6 +26,39 @@ var inputStyle = {
 };
 
 const Billing = () => {
+  const [productName, setProductName] = useState("");
+  const [itemId, setItemId] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [unitPrice, setUnitPrice] = useState("");
+  const [expiry, setExpiry] = useState("");
+  const [total, setTotal] = useState("");
+
+  useEffect(() => {
+    if (productName) {
+      fetch(`http://127.0.0.1/I_N_V_O%20Backend/billingsearch.php?productName=${productName}`)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.status === "success") {
+            const fetchedData = data.data;
+            setItemId(fetchedData.item_id);
+            setQuantity(fetchedData.quantity);
+            setUnitPrice(fetchedData.cost_price);
+            setExpiry(fetchedData.expiry_date);
+            setTotal(fetchedData.mrp);
+          } else {
+            console.error("Error fetching data from API:", data.message);
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching data from API:", error);
+        });
+    }
+  }, [productName]);
+
+  const handleProductChange = (event) => {
+    setProductName(event.target.value);
+  };
+
   return (
     <div className="BillingContainer">
       <div className="BillingHeader">Billing</div>
@@ -45,6 +78,8 @@ const Billing = () => {
             type="text"
             placeholder="Name of the product"
             style={inputStyle.input}
+            value={productName}
+            onChange={handleProductChange}
           />
           <div
             style={{
@@ -56,20 +91,30 @@ const Billing = () => {
                 type="text"
                 placeholder="Item Id"
                 style={inputStyle.input}
+                value={itemId}
+                readOnly
               />
-              <input type="text" placeholder="Qty" style={inputStyle.input} />
+              <input
+                type="text"
+                placeholder="Qty"
+                style={inputStyle.input}
+                value={quantity}
+                readOnly
+              />
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <input
                 type="text"
                 placeholder="Unit Price"
                 style={inputStyle.input}
+                value={unitPrice}
                 readOnly
               />
               <input
                 type="text"
                 placeholder="Expiry"
                 style={inputStyle.input}
+                value={expiry}
                 readOnly
               />
             </div>
@@ -78,11 +123,13 @@ const Billing = () => {
                 type="input"
                 placeholder="Total"
                 style={inputStyle.input1}
+                value={total}
+                readOnly
               />
               <div className="Product_Add_Button_div">
                 <input
                   type="button"
-                  value="Add "
+                  value="Add"
                   className="Product_Add_Button"
                 />
               </div>
@@ -94,127 +141,17 @@ const Billing = () => {
       <div className="BillingTable">
         <table className="TableBody">
           <thead>
-            {" "}
             <tr>
               <th className="th_billingtable">Sl.no</th>
               <th className="th_billingtable">Name</th>
               <th className="th_billingtable">Expiry</th>
               <th className="th_billingtable">Qty</th>
               <th className="th_billingtable">Rate</th>
-              <th className="th_billingtable">GST</th>
               <th className="th_billingtable">Total</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
-
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
-            <tr>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-              <td className="td_billingtable">data</td>
-            </tr>
+            {/* Table body rows */}
           </tbody>
           <tfoot>
             <tr>
