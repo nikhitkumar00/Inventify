@@ -185,38 +185,34 @@ const Billing = () => {
       </div>
 
       <div className="BillingTable">
-        <table className="TableBody">
-          <thead>
-            <tr>
-              <th className="th_billingtable">Sl.no</th>
-              <th className="th_billingtable">Name</th>
-              <th className="th_billingtable">Qty</th>
-              <th className="th_billingtable">Rate</th>
-              <th className="th_billingtable">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tableData.map((data, index) => (
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{data.productName}</td>
-                <td>{data.quantity}</td>
-                <td>{data.unitPrice}</td>
-                <td>{data.total}</td>
+        <div className="TableBodyContainer">
+          <table className="TableBody">
+            <thead>
+              <tr>
+                <th className="th_billingtable">Sl.no</th>
+                <th className="th_billingtable">Name</th>
+                <th className="th_billingtable">Qty</th>
+                <th className="th_billingtable">Rate</th>
+                <th className="th_billingtable">Total</th>
               </tr>
-            ))}
-          </tbody>
-          <tfoot>
-            <tr>
-              <td className="td_billingtable"></td>
-              <td className="td_billingtable"></td>
-              <td className="td_billingtable"></td>
-              <td className="td_billingtable"></td>
-              <td className="td_billingtable">Total</td>
-              <td className="td_billingtable">{grandTotal}</td>
-            </tr>
-          </tfoot>
-        </table>
+            </thead>
+            <tbody>
+              {tableData.map((data, index) => (
+                <tr key={index}>
+                  <td>{index + 1}</td>
+                  <td>{data.productName}</td>
+                  <td>{data.quantity}</td>
+                  <td>{data.unitPrice}</td>
+                  <td>{data.total}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="TotalContainer">
+          <h2>Total:{grandTotal}</h2>
+          <button className="Bill_Add_Button">Add Bill</button>
+        </div>
       </div>
     </div>
   );
