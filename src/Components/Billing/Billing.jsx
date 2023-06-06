@@ -30,20 +30,22 @@ const Billing = () => {
   const [itemId, setItemId] = useState("");
   const [quantity, setQuantity] = useState("");
   const [unitPrice, setUnitPrice] = useState("");
-  const [expiry, setExpiry] = useState("");
   const [total, setTotal] = useState("");
+  const [tableData, setTableData] = useState([]);
+  const [grandTotal, setGrandTotal] = useState(0);
+  const [billId, setBillId] = useState("");
 
   useEffect(() => {
     if (productName) {
-      fetch(`http://127.0.0.1/I_N_V_O%20Backend/billingsearch.php?productName=${productName}`)
+      fetch(
+        `http://127.0.0.1/I_N_V_O%20Backend/billingsearch.php?productName=${productName}`
+      )
         .then((response) => response.json())
         .then((data) => {
           if (data.status === "success") {
             const fetchedData = data.data;
             setItemId(fetchedData.item_id);
-            setQuantity(fetchedData.quantity);
             setUnitPrice(fetchedData.cost_price);
-            setExpiry(fetchedData.expiry_date);
             setTotal(fetchedData.mrp);
           } else {
             console.error("Error fetching data from API:", data.message);
@@ -55,9 +57,52 @@ const Billing = () => {
     }
   }, [productName]);
 
+  useEffect(() => {
+    fetch("http://127.0.0.1/I_N_V_O%20Backend/billid.php")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.status === "success") {
+          setBillId(data.billId);
+        } else {
+          console.error("Error fetching Bill ID from API:", data.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching Bill ID from API:", error);
+      });
+  }, []);
+
   const handleProductChange = (event) => {
     setProductName(event.target.value);
   };
+
+  const handleQuantityChange = (event) => {
+    setQuantity(event.target.value);
+  };
+
+  const handleAddClick = () => {
+    const newData = {
+      productName,
+      itemId,
+      quantity,
+      unitPrice,
+      total: quantity * unitPrice,
+    };
+    setTableData([...tableData, newData]);
+    setProductName("");
+    setItemId("");
+    setQuantity("");
+    setUnitPrice("");
+    setTotal("");
+  };
+
+  useEffect(() => {
+    let total = 0;
+    tableData.forEach((data) => {
+      total += data.total;
+    });
+    setGrandTotal(total);
+  }, [tableData]);
 
   return (
     <div className="BillingContainer">
@@ -99,7 +144,7 @@ const Billing = () => {
                 placeholder="Qty"
                 style={inputStyle.input}
                 value={quantity}
-                readOnly
+                onChange={handleQuantityChange}
               />
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -112,9 +157,9 @@ const Billing = () => {
               />
               <input
                 type="text"
-                placeholder="Expiry"
+                placeholder="Bill Id"
                 style={inputStyle.input}
-                value={expiry}
+                value={billId}
                 readOnly
               />
             </div>
@@ -131,6 +176,7 @@ const Billing = () => {
                   type="button"
                   value="Add"
                   className="Product_Add_Button"
+                  onClick={handleAddClick}
                 />
               </div>
             </div>
@@ -144,14 +190,21 @@ const Billing = () => {
             <tr>
               <th className="th_billingtable">Sl.no</th>
               <th className="th_billingtable">Name</th>
-              <th className="th_billingtable">Expiry</th>
               <th className="th_billingtable">Qty</th>
               <th className="th_billingtable">Rate</th>
               <th className="th_billingtable">Total</th>
             </tr>
           </thead>
           <tbody>
-            {/* Table body rows */}
+            {tableData.map((data, index) => (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{data.productName}</td>
+                <td>{data.quantity}</td>
+                <td>{data.unitPrice}</td>
+                <td>{data.total}</td>
+              </tr>
+            ))}
           </tbody>
           <tfoot>
             <tr>
@@ -159,9 +212,8 @@ const Billing = () => {
               <td className="td_billingtable"></td>
               <td className="td_billingtable"></td>
               <td className="td_billingtable"></td>
-              <td className="td_billingtable"></td>
               <td className="td_billingtable">Total</td>
-              <td className="td_billingtable">Data</td>
+              <td className="td_billingtable">{grandTotal}</td>
             </tr>
           </tfoot>
         </table>
