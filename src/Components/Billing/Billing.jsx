@@ -210,7 +210,7 @@ const Billing = () => {
           </table>
         </div>
         <div className="TotalContainer">
-          <h2>Total:{grandTotal}</h2>
+          <h2>Total : {grandTotal}</h2>
           <button className="Bill_Add_Button">Add Bill</button>
         </div>
       </div>
