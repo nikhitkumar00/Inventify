@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 25px;
+  gap: 20px;
 }
 
 .billing_help_content{
   font-size: 18px;
+  padding: 20px;
 }
 
 .header_help{
@@ -46,7 +47,7 @@
   border-radius: 20px;
   margin: 10px;
   padding: 30px;
-  gap: 50px;
+  gap:35px;
   background-color: var(--sea);
   color: #000000;
   line-height: 25px;
@@ -55,25 +56,25 @@
 }
 
 .head_help{
-  font-size: 35px;
-  font-weight: bolder;
+  font-size: 30px;
+  font-weight: bold;
   color: black;
-  padding: 20px;
+  padding: 10px;
 }
 
 .intro_help{
-  font-size:20px;
+  font-size:18px;
   padding:10px;
 }
 
 .subhead_help{
-  padding: 15px 15px 15px 0px;
-  font-size:20px;
+  padding: 5px 10px 10px 0px;
+  font-size:18px;
   font-weight:bold;
 }
 
 .text_help{
-  padding: 15px;
+  padding: 5px;
   margin-left: 20px;
 }
 
@@ -100,6 +101,3 @@
   height: auto;
 }
 
-.intro_help{
-  font-size:20px;
-}
