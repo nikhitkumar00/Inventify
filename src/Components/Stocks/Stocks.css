@@ -52,14 +52,17 @@
 }
 
 .StocksAddButton{
-    font-size: 15px;
-    padding: 10px 40px;
-    border-radius: 20px;
+    font-size: 16px;
+    padding: 8px 35px;
+    border-radius: 15px;
     border: none;
+    color: #fff;
+    background-color: #838ee3;
+    cursor: pointer;
 }
 
 .StocksAddButton:hover {
-  box-shadow: 0px 0px 2px black;
+  background-color: #4b55a3;
 }
 
 .StocksBottomTableWrapper{
