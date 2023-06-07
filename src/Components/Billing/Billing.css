@@ -19,7 +19,9 @@
     margin-right: 20px;
     padding: 10px;
     flex: 1;
-    
+}
+.billing_rows{
+    padding: 5px;
 }
 .btnContainer{
     padding-right: 20px;

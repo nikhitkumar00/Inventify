@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import {toast} from "react-toastify"
+import React, { useState, useEffect, useRef } from "react";
+import { toast } from "react-toastify";
 import "./Billing.css";
 
-var inputStyle = {
+const inputStyle = {
   input: {
     border: "1px solid black",
     borderRadius: "10px",
@@ -27,6 +27,14 @@ var inputStyle = {
 };
 
 const Billing = () => {
+  const productNameRef = useRef(null);
+  const quantityRef = useRef(null);
+  const addButtonRef = useRef(null);
+
+  useEffect(() => {
+    productNameRef.current.focus();
+  }, []);
+
   const [productName, setProductName] = useState("");
   const [itemId, setItemId] = useState("");
   const [quantity, setQuantity] = useState("");
@@ -78,23 +86,35 @@ const Billing = () => {
   };
 
   const handleQuantityChange = (event) => {
-    setQuantity(event.target.value);
+    const newQuantity = event.target.value;
+    setQuantity(newQuantity);
+    if (newQuantity !== "" && !isNaN(newQuantity) && newQuantity > 0) {
+      const newTotal = newQuantity * unitPrice;
+      setTotal(newTotal);
+    } else {
+      setTotal("");
+    }
+  };
+
+  const handleEnterKey = (event, ref) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      ref.current.focus();
+    }
   };
 
   const handleAddClick = () => {
-    if (productName === "" ) {
+    if (productName === "") {
       toast.info("Enter product name");
       return;
     }
-    if (quantity === "" ) {
-      toast.info("Enter quanity value");
+    if (quantity === "") {
+      toast.info("Enter quantity value");
       return;
-    }
-    else if (quantity <= 0) {
+    } else if (quantity <= 0) {
       toast.info("Enter valid quantity value");
       return;
     }
-
 
     const newData = {
       productName,
@@ -109,6 +129,8 @@ const Billing = () => {
     setQuantity("");
     setUnitPrice("");
     setTotal("");
+
+    productNameRef.current.focus();
   };
 
   useEffect(() => {
@@ -140,12 +162,11 @@ const Billing = () => {
             style={inputStyle.input}
             value={productName}
             onChange={handleProductChange}
+            autoFocus
+            ref={productNameRef}
+            onKeyDown={(e) => handleEnterKey(e, quantityRef)}
           />
-          <div
-            style={{
-              display: "flex",
-            }}
-          >
+          <div style={{ display: "flex" }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <input
                 type="text"
@@ -160,6 +181,8 @@ const Billing = () => {
                 style={inputStyle.input}
                 value={quantity}
                 onChange={handleQuantityChange}
+                ref={quantityRef}
+                onKeyDown={(e) => handleEnterKey(e, addButtonRef)}
               />
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -192,6 +215,7 @@ const Billing = () => {
                   value="Add"
                   className="Product_Add_Button"
                   onClick={handleAddClick}
+                  ref={addButtonRef}
                 />
               </div>
             </div>
@@ -214,11 +238,11 @@ const Billing = () => {
             <tbody>
               {tableData.map((data, index) => (
                 <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td>{data.productName}</td>
-                  <td>{data.quantity}</td>
-                  <td>{data.unitPrice}</td>
-                  <td>{data.total}</td>
+                  <td className="billing_rows">{index + 1}</td>
+                  <td className="billing_rows">{data.productName}</td>
+                  <td className="billing_rows">{data.quantity}</td>
+                  <td className="billing_rows">{data.unitPrice}</td>
+                  <td className="billing_rows">{data.total}</td>
                 </tr>
               ))}
             </tbody>
