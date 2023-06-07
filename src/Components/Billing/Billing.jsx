@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { AiOutlineDelete } from "react-icons/ai";
 import { toast } from "react-toastify";
 import "./Billing.css";
 
@@ -139,12 +140,12 @@ const Billing = () => {
           setTotal("");
           productNameRef.current.focus();
         } else {
-          toast.error("API request failed");
+          toast.error("Insufficient Stocks Available");
         }
       })
       .catch((error) => {
         console.error("Error calling API:", error);
-        toast.error("API request failed");
+        toast.error("Insufficient Stocks Available");
       });
   };
 
@@ -155,6 +156,41 @@ const Billing = () => {
     });
     setGrandTotal(total);
   }, [tableData]);
+
+  const handleDeleteRow = (rowId, index) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this row?"
+    );
+    if (confirmDelete) {
+      const updatedTableData = [...tableData];
+      const deletedRow = updatedTableData[index];
+      updatedTableData.splice(index, 1);
+      setTableData(updatedTableData);
+
+      fetch(
+        `http://127.0.0.1/I_N_V_O%20Backend/deletebillitem.php?billId=${billId}&itemId=${deletedRow.itemId}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.status === "success") {
+            toast.success("Row deleted successfully");
+          } else {
+            toast.error("Failed to delete row");
+            setTableData([...tableData, deletedRow]);
+          }
+        })
+        .catch((error) => {
+          console.error("Error calling API:", error);
+          toast.error("Failed to delete row");
+          setTableData([...tableData, deletedRow]);
+        });
+    }
+  };
+
+  const handleAddBill = () => {
+    toast.success("Bill Added Successfully");
+    window.location.reload();
+  };
 
   return (
     <div className="BillingContainer">
@@ -258,6 +294,11 @@ const Billing = () => {
                   <td className="billing_rows">{data.quantity}</td>
                   <td className="billing_rows">{data.unitPrice}</td>
                   <td className="billing_rows">{data.total}</td>
+                  <td className="td_icon_stocks">
+                    <AiOutlineDelete
+                      onClick={() => handleDeleteRow(data.itemId, index)}
+                    />
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -268,7 +309,7 @@ const Billing = () => {
             <h2>Total : {grandTotal}</h2>
           </div>
           <div className="btnContainer">
-            <button className="Bill_Add_Button">Add Bill</button>
+            <button className="Bill_Add_Button" onClick={handleAddBill}>Add Bill</button>
           </div>
         </div>
       </div>
