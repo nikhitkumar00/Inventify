@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {toast} from "react-toastify"
 import "./Billing.css";
 
 var inputStyle = {
@@ -45,8 +46,8 @@ const Billing = () => {
           if (data.status === "success") {
             const fetchedData = data.data;
             setItemId(fetchedData.item_id);
-            setUnitPrice(fetchedData.cost_price);
-            setTotal(fetchedData.mrp);
+            setUnitPrice(fetchedData.mrp);
+            setTotal(fetchedData.total);
           } else {
             console.error("Error fetching data from API:", data.message);
           }
@@ -81,6 +82,20 @@ const Billing = () => {
   };
 
   const handleAddClick = () => {
+    if (productName === "" ) {
+      toast.info("Enter product name");
+      return;
+    }
+    if (quantity === "" ) {
+      toast.info("Enter quanity value");
+      return;
+    }
+    else if (quantity <= 0) {
+      toast.info("Enter valid quantity value");
+      return;
+    }
+
+
     const newData = {
       productName,
       itemId,
