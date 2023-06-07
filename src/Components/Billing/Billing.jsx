@@ -224,9 +224,13 @@ const Billing = () => {
             </tbody>
           </table>
         </div>
-        <div className="TotalContainer">
-          <h2>Total : {grandTotal}</h2>
-          <button className="Bill_Add_Button">Add Bill</button>
+        <div className="total_billing">
+          <div className="TotalContainer">
+            <h2>Total : {grandTotal}</h2>
+          </div>
+          <div className="btnContainer">
+            <button className="Bill_Add_Button">Add Bill</button>
+          </div>
         </div>
       </div>
     </div>

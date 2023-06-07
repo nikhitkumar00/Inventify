@@ -9,24 +9,33 @@
     font-family: 'Comfortaa';
 
 }
-.TotalContainer{
+.total_billing{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+.TotalContainer{
     background-color: var(--pista);
     border-radius: 10px;
     margin-right: 20px;
     padding: 10px;
+    flex: 1;
+    
+}
+.btnContainer{
+    padding-right: 20px;
 }
 .Bill_Add_Button{
-    background-color: var(--green);
-    border-radius: 30px;
+    background-color: var(--lgreen);
+    border-radius: 10px;
     max-width: 150px;
     border: none;
-    color: white;
+    color: rgb(61, 60, 60);
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     min-width: 100px;
+}
+.Bill_Add_Button:hover{
+    background-color: #B6E389;
 }
 .TableBodyContainer{
     background-color: var(--lavender);
