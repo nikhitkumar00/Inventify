@@ -18,21 +18,24 @@
     border-radius: 10px;
     margin-right: 20px;
     padding: 10px;
-    width: 1000px;
+    flex: 1;
     
 }
 .btnContainer{
-    padding-right: 50px;
+    padding-right: 20px;
 }
 .Bill_Add_Button{
-    background-color: var(--green);
-    border-radius: 30px;
+    background-color: var(--lgreen);
+    border-radius: 10px;
     max-width: 150px;
     border: none;
-    color: white;
+    color: rgb(61, 60, 60);
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     min-width: 100px;
+}
+.Bill_Add_Button:hover{
+    background-color: #B6E389;
 }
 .TableBodyContainer{
     background-color: var(--lavender);
