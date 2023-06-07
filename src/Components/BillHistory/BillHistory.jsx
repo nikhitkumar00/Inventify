@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./BillHistory.css"
+import "./BillHistory.css";
 
 const BillHistory = () => {
   const [bills, setBills] = useState([]);
@@ -52,59 +52,62 @@ const BillHistory = () => {
       await fetchBillItems(billId);
     }
   };
-    
+
   return (
-    <div>
-      {bills.map((bill) => (
-        <div key={bill.bill_id} className="bill-item">
-          <div
-            className="bill-header"
-            onClick={() => handleBillClick(bill.bill_id)}
-          >
-            <div className="bill-info">
-              <div className="bill-id">{bill.bill_id}</div>
-              <div className="bill-date">
-                Purchase Date: {bill.purchase_date}
-              </div>
-              <div className="bill-amount">
-                Total Amount: {bill.total_amount}
+    <div className="billwrapper">
+      <h1 className="bill-heading">Bill History</h1>
+      <div className="bill-container">
+        {bills.map((bill) => (
+          <div key={bill.bill_id} className="bill-item">
+            <div
+              className="bill-header"
+              onClick={() => handleBillClick(bill.bill_id)}
+            >
+              <div className="bill-info">
+                <div className="bill-id">{bill.bill_id}</div>
+                <div className="bill-date">
+                  Purchase Date: {bill.purchase_date}
+                </div>
+                <div className="bill-amount">
+                  Total Amount: {bill.total_amount}
+                </div>
+                <div className="bill-toggle">
+                  {selectedBill === bill.bill_id ? "-" : "+"}
+                </div>
               </div>
             </div>
-            <div className="bill-toggle">
-              {selectedBill === bill.bill_id ? "-" : "+"}
-            </div>
-          </div>
-          {selectedBill === bill.bill_id && (
-            <div className="bill-details">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Item Name</th>
-                    <th>Quantity</th>
-                    <th>Amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {billItems.length > 0 ? (
-                    billItems.map((item, index) => (
-                      <tr key={item.name + index}>
-                        <td>{item.name}</td>
-                        <td>{item.bill_quantity}</td>
-                        <td>{item.amount}</td>
-                      </tr>
-                    ))
-                  ) : (
+            {selectedBill === bill.bill_id && (
+              <div className="bill-details">
+                <table className="bill-table">
+                  <thead>
                     <tr>
-                      <td colSpan="3">No items found.</td>
+                      <th className="bill-table-header">Item Name</th>
+                      <th className="bill-table-header">Quantity</th>
+                      <th className="bill-table-header">Amount</th>
                     </tr>
-                  )}
-                </tbody>
-              </table>
-              <p>Total Amount: {totalAmount}</p>
-            </div>
-          )}
-        </div>
-      ))}
+                  </thead>
+                  <tbody>
+                    {billItems.length > 0 ? (
+                      billItems.map((item, index) => (
+                        <tr key={item.name + index}>
+                          <td className="bill-row">{item.name}</td>
+                          <td className="bill-row">{item.bill_quantity}</td>
+                          <td className="bill-row">{item.amount}</td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="3">No items found.</td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+                <p>Total Amount: {totalAmount}</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
