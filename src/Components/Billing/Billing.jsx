@@ -191,8 +191,8 @@ const Billing = () => {
               <tr>
                 <th className="th_billingtable">Sl.no</th>
                 <th className="th_billingtable">Name</th>
-                <th className="th_billingtable">Qty</th>
-                <th className="th_billingtable">Rate</th>
+                <th className="th_billingtable">Quantity</th>
+                <th className="th_billingtable">Unit Price</th>
                 <th className="th_billingtable">Total</th>
               </tr>
             </thead>

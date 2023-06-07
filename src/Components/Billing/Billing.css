@@ -1,5 +1,4 @@
 .BillingContainer{
-    flex-grow: 2;
     margin: 20px var(--mayo);
     font-family: 'Comfortaa';
     background-color: var(--mayo);
@@ -50,6 +49,7 @@
     width: 250px;
     font-size: 20px;
     border-bottom: 1px dotted black;
+    text-align: left;
 }
 
 .Billingtable{
