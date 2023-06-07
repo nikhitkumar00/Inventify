@@ -1,5 +1,6 @@
 import "react-accessible-accordion/dist/fancy-example.css";
 import "./Faq.css";
+import React, { useState } from 'react';
 import {
   Accordion,
   AccordionItem,
@@ -16,7 +17,7 @@ const Faq = () => {
         <Accordion className="container_faq">
           <AccordionItem className="item_faq">
             <AccordionItemHeading className="head_faq">
-              <AccordionItemButton className="button_faq">
+              <AccordionItemButton className="button_faq" >
                 What is the purpose of this website ?
               </AccordionItemButton>
             </AccordionItemHeading>

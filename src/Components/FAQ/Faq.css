@@ -119,6 +119,8 @@
   padding:15px;
   font-size:18px;
 }
-
+.content_faq{
+  transition: max-height 0.2s ease-out;
+}
   
 
