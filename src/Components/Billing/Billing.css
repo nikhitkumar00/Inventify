@@ -9,14 +9,20 @@
     font-family: 'Comfortaa';
 
 }
-.TotalContainer{
+.total_billing{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+.TotalContainer{
     background-color: var(--pista);
     border-radius: 10px;
     margin-right: 20px;
     padding: 10px;
+    width: 1000px;
+    
+}
+.btnContainer{
+    padding-right: 50px;
 }
 .Bill_Add_Button{
     background-color: var(--green);
