@@ -1,6 +1,5 @@
 import "react-accessible-accordion/dist/fancy-example.css";
 import "./Faq.css";
-import React, { useState } from 'react';
 import {
   Accordion,
   AccordionItem,
