@@ -123,14 +123,29 @@ const Billing = () => {
       unitPrice,
       total: quantity * unitPrice,
     };
-    setTableData([...tableData, newData]);
-    setProductName("");
-    setItemId("");
-    setQuantity("");
-    setUnitPrice("");
-    setTotal("");
 
-    productNameRef.current.focus();
+    fetch(
+      `http://127.0.0.1/I_N_V_O%20Backend/addbillitem.php?billId=${billId}&itemId=${itemId}&quantity=${quantity}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.status === "success") {
+          toast.success("API request successful");
+          setTableData([...tableData, newData]);
+          setProductName("");
+          setItemId("");
+          setQuantity("");
+          setUnitPrice("");
+          setTotal("");
+          productNameRef.current.focus();
+        } else {
+          toast.error("API request failed");
+        }
+      })
+      .catch((error) => {
+        console.error("Error calling API:", error);
+        toast.error("API request failed");
+      });
   };
 
   useEffect(() => {
