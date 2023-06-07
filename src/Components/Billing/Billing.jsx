@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { toast } from "react-toastify";
 import "./Billing.css";
 
-var inputStyle = {
+const inputStyle = {
   input: {
     border: "1px solid black",
     borderRadius: "10px",
@@ -26,6 +27,14 @@ var inputStyle = {
 };
 
 const Billing = () => {
+  const productNameRef = useRef(null);
+  const quantityRef = useRef(null);
+  const addButtonRef = useRef(null);
+
+  useEffect(() => {
+    productNameRef.current.focus();
+  }, []);
+
   const [productName, setProductName] = useState("");
   const [itemId, setItemId] = useState("");
   const [quantity, setQuantity] = useState("");
@@ -45,8 +54,8 @@ const Billing = () => {
           if (data.status === "success") {
             const fetchedData = data.data;
             setItemId(fetchedData.item_id);
-            setUnitPrice(fetchedData.cost_price);
-            setTotal(fetchedData.mrp);
+            setUnitPrice(fetchedData.mrp);
+            setTotal(fetchedData.total);
           } else {
             console.error("Error fetching data from API:", data.message);
           }
@@ -77,10 +86,36 @@ const Billing = () => {
   };
 
   const handleQuantityChange = (event) => {
-    setQuantity(event.target.value);
+    const newQuantity = event.target.value;
+    setQuantity(newQuantity);
+    if (newQuantity !== "" && !isNaN(newQuantity) && newQuantity > 0) {
+      const newTotal = newQuantity * unitPrice;
+      setTotal(newTotal);
+    } else {
+      setTotal("");
+    }
+  };
+
+  const handleEnterKey = (event, ref) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      ref.current.focus();
+    }
   };
 
   const handleAddClick = () => {
+    if (productName === "") {
+      toast.info("Enter product name");
+      return;
+    }
+    if (quantity === "") {
+      toast.info("Enter quantity value");
+      return;
+    } else if (quantity <= 0) {
+      toast.info("Enter valid quantity value");
+      return;
+    }
+
     const newData = {
       productName,
       itemId,
@@ -88,12 +123,29 @@ const Billing = () => {
       unitPrice,
       total: quantity * unitPrice,
     };
-    setTableData([...tableData, newData]);
-    setProductName("");
-    setItemId("");
-    setQuantity("");
-    setUnitPrice("");
-    setTotal("");
+
+    fetch(
+      `http://127.0.0.1/I_N_V_O%20Backend/addbillitem.php?billId=${billId}&itemId=${itemId}&quantity=${quantity}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.status === "success") {
+          toast.success("API request successful");
+          setTableData([...tableData, newData]);
+          setProductName("");
+          setItemId("");
+          setQuantity("");
+          setUnitPrice("");
+          setTotal("");
+          productNameRef.current.focus();
+        } else {
+          toast.error("API request failed");
+        }
+      })
+      .catch((error) => {
+        console.error("Error calling API:", error);
+        toast.error("API request failed");
+      });
   };
 
   useEffect(() => {
@@ -125,12 +177,11 @@ const Billing = () => {
             style={inputStyle.input}
             value={productName}
             onChange={handleProductChange}
+            autoFocus
+            ref={productNameRef}
+            onKeyDown={(e) => handleEnterKey(e, quantityRef)}
           />
-          <div
-            style={{
-              display: "flex",
-            }}
-          >
+          <div style={{ display: "flex" }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <input
                 type="text"
@@ -145,6 +196,8 @@ const Billing = () => {
                 style={inputStyle.input}
                 value={quantity}
                 onChange={handleQuantityChange}
+                ref={quantityRef}
+                onKeyDown={(e) => handleEnterKey(e, addButtonRef)}
               />
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -177,6 +230,7 @@ const Billing = () => {
                   value="Add"
                   className="Product_Add_Button"
                   onClick={handleAddClick}
+                  ref={addButtonRef}
                 />
               </div>
             </div>
@@ -199,11 +253,11 @@ const Billing = () => {
             <tbody>
               {tableData.map((data, index) => (
                 <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td>{data.productName}</td>
-                  <td>{data.quantity}</td>
-                  <td>{data.unitPrice}</td>
-                  <td>{data.total}</td>
+                  <td className="billing_rows">{index + 1}</td>
+                  <td className="billing_rows">{data.productName}</td>
+                  <td className="billing_rows">{data.quantity}</td>
+                  <td className="billing_rows">{data.unitPrice}</td>
+                  <td className="billing_rows">{data.total}</td>
                 </tr>
               ))}
             </tbody>
