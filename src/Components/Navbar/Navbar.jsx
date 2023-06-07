@@ -28,6 +28,9 @@ const Navbar = () => {
       document.documentElement.style.setProperty("--inputf", "#ffffff");
       document.documentElement.style.setProperty("--shadow", "#828282");
       document.documentElement.style.setProperty("--textt", "#000000");
+      document.documentElement.style.setProperty("--faqshadow", "#302f2f1a");
+      document.documentElement.style.setProperty("--faqitemshadow", "#2626261a");
+
     } else {
       document.documentElement.style.setProperty("--mayo", "#2e2e2e");
       document.documentElement.style.setProperty("--tar", "#ffffff");
@@ -41,6 +44,7 @@ const Navbar = () => {
       document.documentElement.style.setProperty("--inputf", "#fafafa");
       document.documentElement.style.setProperty("--shadow", "#828282");
       document.documentElement.style.setProperty("--textt", "#000000");
+      document.documentElement.style.setProperty("--faqshadow", "#474545");
     }
     setDark(!dark);
   };

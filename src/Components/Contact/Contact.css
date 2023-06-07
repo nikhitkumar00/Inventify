@@ -23,6 +23,8 @@
     display: flex;
     align-items: center;
     color: var(--tar);
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
 .form_Contact{
