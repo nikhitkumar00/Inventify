@@ -11,7 +11,7 @@ const inputStyle = {
     margin: "10px",
     fontSize: "15px",
     backgroundColor: "var(--inputf)",
-    color: "var(--tar)",
+    color: "var(--textt)",
     placeholder: "var(--place)",
 
   },
@@ -22,7 +22,7 @@ const inputStyle = {
     flexGrow: "1",
     margin: "10px",
     backgroundColor: "var(--inputf)",
-    color: "var(--tar)",
+    color: "var(--textt)",
     fontSize: "25px",
     maxWidth: "500px",
   },
