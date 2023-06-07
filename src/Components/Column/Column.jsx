@@ -141,7 +141,7 @@ const Columns = () => {
                   Text
                 </option>
                 <option className="opt_Column" value="INT">
-                  Number
+                  Number 
                 </option>
                 <option className="opt_Column" value="DATE">
                   Date

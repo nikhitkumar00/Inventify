@@ -32,13 +32,13 @@
     border-radius: 10px;
     max-width: 150px;
     border: none;
-    color: rgb(61, 60, 60);
+    color: #000000;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     min-width: 100px;
 }
 .Bill_Add_Button:hover{
-    background-color: #B6E389;
+    background-color: #66b57d;
 }
 .TableBodyContainer{
     background-color: var(--lavender);
@@ -91,16 +91,20 @@ tfoot tr{
 }
 
 .Product_Add_Button{
-    background-color: #0D3653;
-    border-radius: 30px;
-    max-width: 150px;
+    background-color: #2b7ab2;
+    border-radius: 27px;
+    max-width: 190px;
     border: none;
     color: white;
     font-size: 20px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 4px;
     min-width: 100px;
+    cursor: pointer;
+    width: 140px;
 }
-
+.Product_Add_Button:hover{
+    background-color: #135788;
+}
 .Inner_Child_1{
     display: flex;
     flex-direction: row;

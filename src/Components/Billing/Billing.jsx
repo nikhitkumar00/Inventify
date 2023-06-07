@@ -227,7 +227,7 @@ const Billing = () => {
               <div className="Product_Add_Button_div">
                 <input
                   type="button"
-                  value="Add"
+                  value="ADD"
                   className="Product_Add_Button"
                   onClick={handleAddClick}
                   ref={addButtonRef}
