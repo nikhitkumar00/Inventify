@@ -1,0 +1,65 @@
+.bill-item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.bill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.bill-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.bill-id {
+  font-weight: bold;
+}
+
+.bill-date {
+  font-size: 14px;
+}
+
+.bill-amount {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.bill-toggle {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.bill-details {
+  margin-top: 10px;
+}
+
+.bill-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bill-details table th,
+.bill-details table td {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.bill-details table th {
+  font-weight: bold;
+  text-align: left;
+}
+
+.bill-details table td {
+  text-align: left;
+}
+
+.bill-details p {
+  margin-top: 10px;
+  font-weight: bold;
+}

@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
-import "./BillHistory.css";
+import "./BillHistory.css"
 
 const BillHistory = () => {
   const [bills, setBills] = useState([]);
@@ -20,7 +13,9 @@ const BillHistory = () => {
 
   const fetchBills = async () => {
     try {
-      const response = await fetch("http://127.0.0.1/I_N_V_O%20Backend/billlog.php");
+      const response = await fetch(
+        "http://127.0.0.1/I_N_V_O%20Backend/billlog.php"
+      );
       const data = await response.json();
       setBills(data);
     } catch (error) {
@@ -30,21 +25,26 @@ const BillHistory = () => {
 
   const fetchBillItems = async (billId) => {
     try {
-      const response = await fetch(`API_ENDPOINT_FOR_BILL_ITEMS/${billId}`);
+      const response = await fetch(
+        `http://127.0.0.1/I_N_V_O%20Backend/billitemslog.php?billId=${billId}`
+      );
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
+      }
       const data = await response.json();
-      setBillItems(data.items);
-      calculateTotalAmount(data.items);
+      setBillItems(data);
+      calculateTotalAmount(data);
     } catch (error) {
       console.error("Error fetching bill items:", error);
     }
   };
 
   const calculateTotalAmount = (items) => {
-    const total = items.reduce((acc, item) => acc + item.amount, 0);
+    const total = items.reduce((acc, item) => acc + parseFloat(item.amount), 0);
     setTotalAmount(total);
   };
 
-  const handleAccordionItemClick = async (billId) => {
+  const handleBillClick = async (billId) => {
     if (selectedBill === billId) {
       setSelectedBill(null);
     } else {
@@ -52,43 +52,59 @@ const BillHistory = () => {
       await fetchBillItems(billId);
     }
   };
-
+    
   return (
     <div>
-      <Accordion>
-        {bills.map((bill) => (
-          <AccordionItem key={bill.bill_id}>
-            <AccordionItemHeading>
-              <AccordionItemButton onClick={() => handleAccordionItemClick(bill.bill_id)}>
-                {bill.bill_id} - {bill.purchase_date} - Total Amount: {bill.total_amount}
-              </AccordionItemButton>
-            </AccordionItemHeading>
-            {selectedBill === bill.bill_id && (
-              <AccordionItemPanel>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Item Name</th>
-                      <th>Quantity</th>
-                      <th>Amount</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {billItems.map((item) => (
-                      <tr key={item.id}>
+      {bills.map((bill) => (
+        <div key={bill.bill_id} className="bill-item">
+          <div
+            className="bill-header"
+            onClick={() => handleBillClick(bill.bill_id)}
+          >
+            <div className="bill-info">
+              <div className="bill-id">{bill.bill_id}</div>
+              <div className="bill-date">
+                Purchase Date: {bill.purchase_date}
+              </div>
+              <div className="bill-amount">
+                Total Amount: {bill.total_amount}
+              </div>
+            </div>
+            <div className="bill-toggle">
+              {selectedBill === bill.bill_id ? "-" : "+"}
+            </div>
+          </div>
+          {selectedBill === bill.bill_id && (
+            <div className="bill-details">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {billItems.length > 0 ? (
+                    billItems.map((item, index) => (
+                      <tr key={item.name + index}>
                         <td>{item.name}</td>
-                        <td>{item.quantity}</td>
+                        <td>{item.bill_quantity}</td>
                         <td>{item.amount}</td>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <p>Total Amount: {totalAmount}</p>
-              </AccordionItemPanel>
-            )}
-          </AccordionItem>
-        ))}
-      </Accordion>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="3">No items found.</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+              <p>Total Amount: {totalAmount}</p>
+            </div>
+          )}
+        </div>
+      ))}
     </div>
   );
 };
