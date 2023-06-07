@@ -14,6 +14,7 @@ import Signup from "./Components/Signup/Signup.jsx";
 import Login from "./Components/Login/Login.jsx";
 import Column from "./Components/Column/Column.jsx";
 import Faq from "./Components/FAQ/Faq.jsx";
+import BillHistory from "./Components/BillHistory/BillHistory.jsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/faq",
         element: <Faq />,
+      },
+      {
+        path: "/billhistory",
+        element: <BillHistory />,
       },
     ],
   },
