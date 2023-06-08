@@ -132,7 +132,7 @@ const Billing = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "success") {
-          toast.success("API request successful");
+          toast.success("Item Added to Bill");
           setTableData([...tableData, newData]);
           setProductName("");
           setItemId("");
@@ -264,7 +264,7 @@ const Billing = () => {
               <div className="Product_Add_Button_div">
                 <input
                   type="button"
-                  value="ADD"
+                  value="ADD ITEM"
                   className="Product_Add_Button"
                   onClick={handleAddClick}
                   ref={addButtonRef}
@@ -310,7 +310,7 @@ const Billing = () => {
             <h2>Total : {grandTotal}</h2>
           </div>
           <div className="btnContainer">
-            <button className="Bill_Add_Button" onClick={handleAddBill}>Add Bill</button>
+            <button className="Bill_Add_Button" onClick={handleAddBill}>ADD BILL</button>
           </div>
         </div>
       </div>
