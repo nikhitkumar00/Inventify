@@ -132,7 +132,7 @@ const Billing = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "success") {
-          toast.success("API request successful");
+          toast.success("Item Added to Bill");
           setTableData([...tableData, newData]);
           setProductName("");
           setItemId("");

@@ -65,7 +65,7 @@ export const Stocks = () => {
         })
         .catch((error) => {
           console.log(error);
-          toast.error("Error occurred while deleting the row");
+          toast.error("Foreign Key Constraint");
         });
     }
   };
