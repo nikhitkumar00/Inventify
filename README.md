@@ -36,7 +36,7 @@ The Invoice Management System operates in the following environment:
 - Client/server system
 - Operating system: All systems
 - Database: MySQL
-- Platform: Node.js
+- Platform: React Js
 
 ## Design and Implementation Constraints
 The users of the system are primarily engaged in the following activities:
