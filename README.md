@@ -51,15 +51,22 @@ The constraints of the Invoice Management System include scalability, data input
 ## Mockups
 Please find below the mockups of the user interface:
 
-1. ![Mockup 1](mockup_link_1)
-2. ![Mockup 2](mockup_link_2)
-3. ![Mockup 3](mockup_link_3)
+1. ![Mockup 1](mockups/mockup1.png)
+2. ![Mockup 2](mockups/mockup2.png)
+3. ![Mockup 3](mockups/mockup3.png)
+3. ![Mockup 4](mockups/mockup4.png)
+3. ![Mockup 5](mockups/mockup5.png)
+3. ![Mockup 6](mockups/mockup6.png)
+3. ![Mockup 7](mockups/mockup7.png)
+3. ![Mockup 8](mockups/mockup8.png)
+3. ![Mockup 9](mockups/mockup9.png)
+3. ![Mockup 10](mockups/mockup10.png)
+3. ![Mockup 11](mockups/mockup11.png)
 
-Replace the above placeholders with actual mockup images of the application's user interface.
+Please ensure that you have the mockup images in a folder named `mockups` within your project repository. Update the image filenames and paths accordingly.
 
 ## Contact
 For any technical support or inquiries, please contact:
-- [Your Name](mailto:yourname@example.com)
-- [Your Co-Developer's Name](mailto:codeveloper@example.com)
+- [INVO](mailto:nikhitkumar00@gmail.com)
 
 We are here to assist you and enhance your experience with the Invoice Management System.
