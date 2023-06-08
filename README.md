@@ -63,8 +63,6 @@ Please find below the mockups of the user interface:
 3. ![Mockup 10](mockups/mockup10.png)
 3. ![Mockup 11](mockups/mockup11.png)
 
-Please ensure that you have the mockup images in a folder named `mockups` within your project repository. Update the image filenames and paths accordingly.
-
 ## Contact
 For any technical support or inquiries, please contact:
 - [INVO](mailto:nikhitkumar00@gmail.com)
