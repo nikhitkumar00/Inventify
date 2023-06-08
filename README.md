@@ -49,19 +49,39 @@ The users of the system are primarily engaged in the following activities:
 The constraints of the Invoice Management System include scalability, data input, the ability to handle multiple attributes, and a user-friendly interface.
 
 ## Mockups
-Please find below the mockups of the user interface:
 
-Statistics ![Mockup 1](mockups/mockup1.png)
-Stocks ![Mockup 2](mockups/mockup2.png)
-Billing ![Mockup 3](mockups/mockup3.png)
-Bill History ![Mockup 4](mockups/mockup4.png)
-Customize Columns ![Mockup 5](mockups/mockup5.png)
-Help ![Mockup 6](mockups/mockup6.png)
-FAQ ![Mockup 7](mockups/mockup7.png)
-Contact ![Mockup 8](mockups/mockup8.png)
-Dark Mode ![Mockup 9](mockups/mockup9.png)
-Login ![Mockup 10](mockups/mockup10.png)
-Signup ![Mockup 11](mockups/mockup11.png)
+### Statistics
+![Mockup 1](mockups/mockup1.png)
+
+### Stocks
+![Mockup 2](mockups/mockup2.png)
+
+### Billing
+![Mockup 3](mockups/mockup3.png)
+
+### Bill History
+![Mockup 4](mockups/mockup4.png)
+
+### Customize Columns
+![Mockup 5](mockups/mockup5.png)
+
+### Help
+![Mockup 6](mockups/mockup6.png)
+
+### FAQ
+![Mockup 7](mockups/mockup7.png)
+
+### Contact
+![Mockup 8](mockups/mockup8.png)
+
+### Dark Mode
+![Mockup 9](mockups/mockup9.png)
+
+### Login
+![Mockup 10](mockups/mockup10.png)
+
+### Signup
+![Mockup 11](mockups/mockup11.png)
 
 ## Contact
 For any technical support or inquiries, please contact:
