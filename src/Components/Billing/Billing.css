@@ -11,16 +11,20 @@
 .total_billing{
     display: flex;
     justify-content: space-between;
+    align-items:center ;
+    height: 70px;
 }
 .TotalContainer{
+    height: 50px;
     background-color: var(--pista);
     border-radius: 10px;
     margin-right: 20px;
     padding: 10px;
     flex: 1;
-    height: 24px;
-    text-align: end;
     padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 .billing_rows{
     padding: 5px;
@@ -29,6 +33,7 @@
     padding-right: 20px;
 }
 .Bill_Add_Button{
+    height: 70px;
     background-color: var(--lgreen);
     border-radius: 10px;
     max-width: 150px;
@@ -36,7 +41,7 @@
     color: #000000;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
-    min-width: 100px;
+    min-width: 250px;
 }
 .Bill_Add_Button:hover{
     background-color: #66b57d;
@@ -92,16 +97,15 @@ tfoot tr{
 }
 
 .Product_Add_Button{
-    background-color: #2b7ab2;
-    border-radius: 27px;
-    max-width: 190px;
+    background-color: #0D3653;
+    border-radius: 10px;
     border: none;
     color: white;
     font-size: 20px;
-    padding: 10px 4px;
-    min-width: 100px;
     cursor: pointer;
-    width: 140px;
+    flex: 1;
+    height: 114px;
+    margin-left: 10px;
 }
 .Product_Add_Button:hover{
     background-color: #135788;
