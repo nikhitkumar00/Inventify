@@ -5,6 +5,7 @@ import { RiBillLine } from "react-icons/ri";
 import { BsColumnsGap } from "react-icons/bs";
 import { BiHelpCircle } from "react-icons/bi";
 import { MdContacts } from "react-icons/md";
+import { MdOutlineHistory } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import { BiMessageCheck } from "react-icons/bi";
@@ -29,8 +30,10 @@ const Navbar = () => {
       document.documentElement.style.setProperty("--shadow", "#828282");
       document.documentElement.style.setProperty("--textt", "#000000");
       document.documentElement.style.setProperty("--faqshadow", "#302f2f1a");
-      document.documentElement.style.setProperty("--faqitemshadow", "#2626261a");
-
+      document.documentElement.style.setProperty(
+        "--faqitemshadow",
+        "#2626261a"
+      );
     } else {
       document.documentElement.style.setProperty("--mayo", "#2e2e2e");
       document.documentElement.style.setProperty("--tar", "#ffffff");
@@ -127,10 +130,17 @@ const Navbar = () => {
               FAQs
             </div>
           </NavLink>
-          <div className="nav-child-theme" onClick={themechange}>
-            <MdOutlineDarkMode className="icon" />
-            Dark Mode
-          </div>
+          <NavLink
+            to={"/billhistory"}
+            className={({ isActive }) =>
+              isActive ? "active_navbar" : "inactive_navbar"
+            }
+          >
+            <div className="nav-child">
+              <MdOutlineHistory className="icon" />
+              Bill Log
+            </div>
+          </NavLink>
         </div>
       </div>
 
@@ -146,6 +156,10 @@ const Navbar = () => {
             Contact
           </div>
         </NavLink>
+        <div className="nav-child-theme" onClick={themechange}>
+            <MdOutlineDarkMode className="icon" />
+            Dark Mode
+          </div>
         <NavLink
           to={"/login"}
           className={({ isActive }) =>

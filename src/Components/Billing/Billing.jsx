@@ -146,7 +146,7 @@ const Billing = () => {
       })
       .catch((error) => {
         console.error("Error calling API:", error);
-        toast.error("Insufficient Stocks Available");
+        toast.error("Error calling API");
       });
   };
 

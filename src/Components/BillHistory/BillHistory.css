@@ -1,0 +1,54 @@
+.billwrapper {
+  height: 100vh;
+  width: 100%;
+  font-family: comfortaa;
+  padding: 15px;
+}
+
+.bill-heading {
+  font-size: 40px;
+  font-weight: bolder;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  font-family: comfortaa;
+}
+
+.bill-container {
+  background-color: var(--sea);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.bill-header {
+  background-color: var(--sunset);
+  border-radius: 10px;
+}
+
+.bill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.bill-details {
+  height: 300px;
+  overflow: auto;
+}
+
+.bill-table {
+  width: 100%;
+}
+
+.bill-table-header {
+  font-size: 20px;
+  text-align: left;
+  border-bottom: 1px dotted black;
+  padding: 9px;
+}
+
+.bill-row {
+  padding: 5px;
+}
