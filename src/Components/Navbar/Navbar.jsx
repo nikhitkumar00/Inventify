@@ -95,6 +95,17 @@ const Navbar = () => {
               Billing
             </div>
           </NavLink>
+          <NavLink
+            to={"/billhistory"}
+            className={({ isActive }) =>
+              isActive ? "active_navbar" : "inactive_navbar"
+            }
+          >
+            <div className="nav-child">
+              <MdOutlineHistory className="icon" />
+              Bill Log
+            </div>
+          </NavLink>
 
           <NavLink
             to={"/column"}
@@ -130,17 +141,6 @@ const Navbar = () => {
               FAQs
             </div>
           </NavLink>
-          <NavLink
-            to={"/billhistory"}
-            className={({ isActive }) =>
-              isActive ? "active_navbar" : "inactive_navbar"
-            }
-          >
-            <div className="nav-child">
-              <MdOutlineHistory className="icon" />
-              Bill Log
-            </div>
-          </NavLink>
         </div>
       </div>
 
@@ -157,9 +157,9 @@ const Navbar = () => {
           </div>
         </NavLink>
         <div className="nav-child-theme" onClick={themechange}>
-            <MdOutlineDarkMode className="icon" />
-            Dark Mode
-          </div>
+          <MdOutlineDarkMode className="icon" />
+          Dark Mode
+        </div>
         <NavLink
           to={"/login"}
           className={({ isActive }) =>
