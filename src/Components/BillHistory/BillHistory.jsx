@@ -102,7 +102,7 @@ const BillHistory = () => {
                     )}
                   </tbody>
                 </table>
-                <p>Total Amount: {totalAmount}</p>
+                <p className="total-bill">Total Amount  : {totalAmount}</p>
               </div>
             )}
           </div>

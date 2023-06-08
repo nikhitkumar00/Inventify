@@ -3,6 +3,7 @@
   width: 100%;
   font-family: comfortaa;
   padding: 15px;
+  background-color: var(--mayo);
 }
 
 .bill-heading {
@@ -12,16 +13,17 @@
   display: flex;
   align-items: center;
   font-family: comfortaa;
+  color: var(--tar);
 }
 
 .bill-container {
-  background-color: #FBFAF8;
+  background-color: var(--sea);
   border-radius: 20px;
   padding: 30px;
 }
 
 .bill-header {
-  background-color: var(--sunset);
+  background-color: #FBFAF8;
   border-radius: 10px;
 }
 
@@ -31,11 +33,15 @@
   margin-top: 20px;
   font-size: 18px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .bill-details {
   height: 300px;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .bill-table {
@@ -51,4 +57,15 @@
 
 .bill-row {
   padding: 5px;
+}
+
+.total-bill {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 70px; 
+}
+
+.bill-id ,.bill-date, .bill-amount, .bill-toggle {
+  font-weight: bold;
 }
