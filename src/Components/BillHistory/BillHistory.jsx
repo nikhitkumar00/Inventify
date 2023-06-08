@@ -64,7 +64,7 @@ const BillHistory = () => {
               onClick={() => handleBillClick(bill.bill_id)}
             >
               <div className="bill-info">
-                <div className="bill-id">{bill.bill_id}</div>
+                <div className="bill-id">Bill No. {bill.bill_id}</div>
                 <div className="bill-date">
                   Purchase Date: {bill.purchase_date}
                 </div>
