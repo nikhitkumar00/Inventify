@@ -9,7 +9,7 @@ export const Stocks = () => {
   const [refreshTable, setRefreshTable] = useState(false);
 
   useEffect(() => {
-    fetch("http://127.0.0.1/I_N_V_O%20Backend/retrieve.php")
+    fetch("http://127.0.0.1/I_N_V_O_Backend/retrieve.php")
       .then((response) => response.json())
       .then((data) => setStockData(data))
       .catch((error) => console.log(error));
@@ -52,7 +52,7 @@ export const Stocks = () => {
       updatedStockData.splice(index, 1);
       setStockData(updatedStockData);
 
-      fetch(`http://127.0.0.1/I_N_V_O%20Backend/deleterow.php?rowId=${rowId}`)
+      fetch(`http://127.0.0.1/I_N_V_O_Backend/deleterow.php?rowId=${rowId}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
@@ -81,7 +81,7 @@ export const Stocks = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch("http://127.0.0.1/I_N_V_O%20Backend/add.php", {
+    fetch("http://127.0.0.1/I_N_V_O_Backend/add.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

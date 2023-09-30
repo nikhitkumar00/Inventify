@@ -14,7 +14,7 @@ const BillHistory = () => {
   const fetchBills = async () => {
     try {
       const response = await fetch(
-        "http://127.0.0.1/I_N_V_O%20Backend/billlog.php"
+        "http://127.0.0.1/I_N_V_O_Backend/billlog.php"
       );
       const data = await response.json();
       setBills(data);

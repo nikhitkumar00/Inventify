@@ -37,27 +37,27 @@ const Statistics = () => {
   }, []);
 
   const fetchData = () => {
-    fetch("http://127.0.0.1/I_N_V_O%20Backend/restock.php")
+    fetch("http://127.0.0.1/I_N_V_O_Backend/restock.php")
       .then((response) => response.json())
       .then((data) => setRestockData(data))
       .catch((error) => console.log(error));
 
-    fetch("http://127.0.0.1/I_N_V_O%20Backend/expiry.php")
+    fetch("http://127.0.0.1/I_N_V_O_Backend/expiry.php")
       .then((response) => response.json())
       .then((data) => setExpiryData(data))
       .catch((error) => console.log(error));
 
-    fetch("http://127.0.0.1/I_N_V_O%20Backend/totalorders.php")
+    fetch("http://127.0.0.1/I_N_V_O_Backend/totalorders.php")
       .then((response) => response.text())
       .then((data) => setTotalOrders(parseInt(data)))
       .catch((error) => console.log(error));
 
-    fetch("http://127.0.0.1/I_N_V_O%20Backend/profit.php")
+    fetch("http://127.0.0.1/I_N_V_O_Backend/profit.php")
       .then((response) => response.text())
       .then((data) => setProfit(parseFloat(data)))
       .catch((error) => console.log(error));
 
-    fetch("http://127.0.0.1/I_N_V_O%20Backend/expense.php")
+    fetch("http://127.0.0.1/I_N_V_O_Backend/expense.php")
       .then((response) => response.text())
       .then((data) => setExpense(parseFloat(data)))
       .catch((error) => console.log(error));

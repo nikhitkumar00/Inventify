@@ -21,7 +21,7 @@ const Columns = () => {
     const fetchColumnNames = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1/I_N_V_O%20Backend/tableattribute.php"
+          "http://127.0.0.1/I_N_V_O_Backend/tableattribute.php"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -49,7 +49,7 @@ const Columns = () => {
       return;
     }
 
-    const url = `http://127.0.0.1/I_N_V_O%20Backend/newcolumn.php?columnName=${encodeURIComponent(
+    const url = `http://127.0.0.1/I_N_V_O_Backend/newcolumn.php?columnName=${encodeURIComponent(
       columnName
     )}&dataType=${encodeURIComponent(dataType)}`;
 
@@ -83,7 +83,7 @@ const Columns = () => {
       "Are you sure you want to delete this row?"
     );
     if (confirmDelete) {
-      const url = `http://127.0.0.1/I_N_V_O%20Backend/removecolumn.php?columnName=${columnName}`;
+      const url = `http://127.0.0.1/I_N_V_O_Backend/removecolumn.php?columnName=${columnName}`;
 
       fetch(url)
         .then((response) => {

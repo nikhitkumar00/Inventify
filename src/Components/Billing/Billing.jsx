@@ -49,7 +49,7 @@ const Billing = () => {
   useEffect(() => {
     if (productName) {
       fetch(
-        `http://127.0.0.1/I_N_V_O%20Backend/billingsearch.php?productName=${productName}`
+        `http://127.0.0.1/I_N_V_O_Backend/billingsearch.php?productName=${productName}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -69,7 +69,7 @@ const Billing = () => {
   }, [productName]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1/I_N_V_O%20Backend/billid.php")
+    fetch("http://127.0.0.1/I_N_V_O_Backend/billid.php")
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "success") {
@@ -127,7 +127,7 @@ const Billing = () => {
     };
 
     fetch(
-      `http://127.0.0.1/I_N_V_O%20Backend/addbillitem.php?billId=${billId}&itemId=${itemId}&quantity=${quantity}`
+      `http://127.0.0.1/I_N_V_O_Backend/addbillitem.php?billId=${billId}&itemId=${itemId}&quantity=${quantity}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -169,7 +169,7 @@ const Billing = () => {
       setTableData(updatedTableData);
 
       fetch(
-        `http://127.0.0.1/I_N_V_O%20Backend/deletebillitem.php?billId=${billId}&itemId=${deletedRow.itemId}`
+        `http://127.0.0.1/I_N_V_O_Backend/deletebillitem.php?billId=${billId}&itemId=${deletedRow.itemId}`
       )
         .then((response) => response.json())
         .then((data) => {
