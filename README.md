@@ -34,7 +34,7 @@ The Invoice Management System operates in the following environment:
 
 - Distributed database
 - Client/server system
-- Operating system: All systems
+- Operating system: Web App
 - Database: MySQL
 - Platform: React Js
 
