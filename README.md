@@ -85,6 +85,6 @@ The constraints of the Invoice Management System include scalability, data input
 
 ## Contact
 For any technical support or inquiries, please contact:
-- [INVO](mailto:nikhitkumar00@gmail.com)
+- [Inventify](mailto:nikhitkumar00@gmail.com)
 
 We are here to assist you and enhance your experience with the Invoice Management System.

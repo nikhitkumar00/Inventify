@@ -56,7 +56,7 @@ const Navbar = () => {
     <div className="nav-grandparent">
       <div className="nav-up">
         <div className="nav-parent">
-          <div className="logo">INVO</div>
+          <div className="logo">Inventify</div>
         </div>
 
         <div className="nav-parent">
